@@ -1,0 +1,409 @@
+# BMAD Operations Checklists - Kiểm Soát Chất Lượng Vận hành
+
+---
+
+## ⚙️ DevOps Engineer (Tom) - Infrastructure & Deployment Validation Checklist
+
+### Mục đích
+Comprehensive framework để DevOps Engineer validate production deployment readiness, infrastructure reliability, và operational excellence. DevOps Engineer phải systematically work through từng item, ensuring infrastructure meets all technical, security, và performance requirements.
+
+## 1. PRODUCTION DEPLOYMENT READINESS
+
+### 1.1 Infrastructure Preparation
+- [ ] **Infrastructure as Code**: All infrastructure defined trong versioned code
+- [ ] **Environment Parity**: Production environment matches staging với documented differences
+- [ ] **Resource Sizing**: Infrastructure appropriately sized cho expected load
+- [ ] **Auto-scaling**: Auto-scaling policies configured với tested thresholds
+- [ ] **Load Balancing**: Load balancers configured với health checks
+- [ ] **Network Configuration**: Security groups, firewalls, VPCs properly configured
+- [ ] **DNS Configuration**: DNS entries configured với appropriate TTL values
+
+### 1.2 Application Deployment Pipeline
+- [ ] **CI/CD Pipeline**: Automated deployment pipeline tested với all environments
+- [ ] **Artifact Management**: Deployment artifacts properly versioned và stored securely
+- [ ] **Configuration Management**: Environment-specific configurations properly externalized
+- [ ] **Secret Management**: All secrets properly managed với rotation capabilities
+- [ ] **Database Migration**: Database migration scripts tested với rollback procedures
+- [ ] **Feature Flags**: Feature toggle system configured cho gradual rollouts
+- [ ] **Deployment Strategy**: Blue-green, canary, hoặc rolling deployment strategy validated
+
+### 1.3 Security & Compliance Validation
+- [ ] **Security Scanning**: Container images và dependencies scanned cho vulnerabilities
+- [ ] **Access Controls**: Production access properly restricted với audit logging
+- [ ] **Encryption**: Data encryption at rest và in transit properly configured
+- [ ] **Certificate Management**: SSL certificates valid với automatic renewal setup
+- [ ] **Backup Procedures**: Automated backup systems tested với restoration validation
+- [ ] **Disaster Recovery**: DR procedures documented và tested
+- [ ] **Compliance Controls**: All relevant compliance requirements met
+
+### 1.4 Performance & Reliability Validation
+- [ ] **Load Testing**: System tested under expected peak load conditions
+- [ ] **Stress Testing**: System behavior validated under extreme load
+- [ ] **Failover Testing**: Failover mechanisms tested với recovery validation
+- [ ] **Performance Baselines**: Performance baselines established cho comparison
+- [ ] **Resource Monitoring**: Comprehensive monitoring configured với alerting
+- [ ] **Capacity Planning**: Growth projections analyzed với scaling plans ready
+- [ ] **SLA Requirements**: All SLA requirements validated với measurement systems
+
+## 2. MONITORING & OBSERVABILITY
+
+### 2.1 System Monitoring Setup
+- [ ] **Infrastructure Metrics**: CPU, memory, disk, network monitoring configured
+- [ ] **Application Metrics**: Custom application metrics collected và visualized
+- [ ] **Database Monitoring**: Database performance và health monitoring setup
+- [ ] **Log Aggregation**: Centralized logging với structured log formats
+- [ ] **Distributed Tracing**: Request tracing across microservices implemented
+- [ ] **Synthetic Monitoring**: Automated synthetic tests running continuously
+- [ ] **Real User Monitoring**: End-user experience monitoring configured
+
+### 2.2 Alerting & Notification Systems
+- [ ] **Alert Rules**: Intelligent alerting rules configured với appropriate thresholds
+- [ ] **Escalation Procedures**: Alert escalation paths defined với on-call rotation
+- [ ] **Notification Channels**: Multiple notification channels configured (email, SMS, chat)
+- [ ] **Alert Fatigue Prevention**: Alert tuning completed để minimize false positives
+- [ ] **Runbook Integration**: Automated runbooks linked to common alerts
+- [ ] **Incident Management**: Incident response procedures integrated với monitoring
+- [ ] **Status Page**: Public status page configured với automatic updates
+
+### 2.3 Dashboard & Visualization
+- [ ] **Operations Dashboard**: Comprehensive operations dashboard với key metrics
+- [ ] **Business Dashboard**: Business-critical metrics dashboard cho stakeholders
+- [ ] **Performance Dashboard**: Detailed performance metrics cho technical team
+- [ ] **Security Dashboard**: Security metrics dashboard với threat indicators
+- [ ] **Mobile Access**: Mobile-optimized dashboards cho on-call engineers
+- [ ] **Historical Analysis**: Historical data retention với trend analysis capability
+- [ ] **Custom Queries**: Ad-hoc query capability cho troubleshooting
+
+## 3. OPERATIONAL PROCEDURES
+
+### 3.1 Change Management
+- [ ] **Change Approval Process**: Formal change approval workflow implemented
+- [ ] **Change Documentation**: All changes documented với impact assessment
+- [ ] **Rollback Procedures**: Tested rollback procedures cho all change types
+- [ ] **Maintenance Windows**: Scheduled maintenance windows với stakeholder communication
+- [ ] **Emergency Changes**: Emergency change procedures với reduced approval time
+- [ ] **Change Testing**: All changes tested trong non-production environment first
+- [ ] **Change Tracking**: Change tracking system với success/failure metrics
+
+### 3.2 Incident Response & Recovery
+- [ ] **Incident Response Plan**: Detailed incident response procedures documented
+- [ ] **Communication Plan**: Stakeholder communication templates và escalation paths
+- [ ] **Recovery Procedures**: Service recovery procedures tested với validation steps
+- [ ] **Post-Incident Analysis**: Blameless post-mortem process established
+- [ ] **Learning Integration**: Process improvements integrated từ incident learnings
+- [ ] **Business Continuity**: Business continuity plans tested với acceptable RTOs
+- [ ] **Data Recovery**: Data recovery procedures tested với RPO validation
+
+### 3.3 Capacity & Performance Management
+- [ ] **Capacity Monitoring**: Resource utilization monitoring với growth trending
+- [ ] **Performance Optimization**: Performance optimization opportunities identified
+- [ ] **Scaling Procedures**: Manual và automatic scaling procedures validated
+- [ ] **Resource Allocation**: Resource allocation aligned với business priorities
+- [ ] **Cost Optimization**: Cost optimization measures implemented với tracking
+- [ ] **Vendor Management**: Third-party service level agreements validated
+- [ ] **Technology Refresh**: Technology refresh planning với lifecycle management
+
+## 4. AUTOMATION & EFFICIENCY
+
+### 4.1 Infrastructure Automation
+- [ ] **Provisioning Automation**: Infrastructure provisioning fully automated
+- [ ] **Configuration Management**: Server configuration automated với drift detection
+- [ ] **Patch Management**: Automated patching với testing và rollback capabilities
+- [ ] **Backup Automation**: Automated backup systems với restoration testing
+- [ ] **Scaling Automation**: Automatic scaling based on demand patterns
+- [ ] **Self-Healing**: Self-healing capabilities implemented cho common issues
+- [ ] **Compliance Automation**: Automated compliance checking với remediation
+
+### 4.2 Operational Automation
+- [ ] **Deployment Automation**: Zero-downtime deployment automation implemented
+- [ ] **Testing Automation**: Automated testing integrated throughout pipeline
+- [ ] **Monitoring Automation**: Automated monitoring setup cho new services
+- [ ] **Alert Response**: Automated response cho common alert scenarios
+- [ ] **Report Generation**: Automated operational reporting với stakeholder distribution
+- [ ] **Maintenance Automation**: Routine maintenance tasks automated
+- [ ] **Documentation Updates**: Automated documentation updates từ infrastructure changes
+
+---
+
+## 🔒 Security Engineer (Lisa) - Security Operations Validation Checklist
+
+### Mục đích
+Comprehensive framework để Security Engineer validate production security posture, compliance adherence, và threat prevention capabilities. Security Engineer phải systematically work through từng item, ensuring security controls are properly implemented và effective.
+
+## 1. SECURITY ARCHITECTURE VALIDATION
+
+### 1.1 Network Security Controls
+- [ ] **Network Segmentation**: Proper network segmentation với DMZ implementation
+- [ ] **Firewall Rules**: Firewall rules follow least privilege principle
+- [ ] **Intrusion Detection**: Network intrusion detection systems properly configured
+- [ ] **VPN Security**: Secure VPN access với multi-factor authentication
+- [ ] **DDoS Protection**: DDoS mitigation controls tested và validated
+- [ ] **Network Monitoring**: Network traffic monitoring với anomaly detection
+- [ ] **Wireless Security**: Wireless network security controls implemented
+
+### 1.2 Application Security Controls
+- [ ] **Authentication System**: Strong authentication mechanisms implemented
+- [ ] **Authorization Framework**: Granular authorization controls với privilege management
+- [ ] **Session Management**: Secure session handling với timeout policies
+- [ ] **Input Validation**: Comprehensive input validation cho all user inputs
+- [ ] **Output Encoding**: Proper output encoding để prevent XSS attacks
+- [ ] **CSRF Protection**: Anti-CSRF tokens implemented cho all state-changing operations
+- [ ] **Security Headers**: HTTP security headers properly configured
+
+### 1.3 Data Protection Controls
+- [ ] **Data Classification**: All data properly classified với handling procedures
+- [ ] **Encryption Implementation**: Strong encryption implemented cho data at rest và in transit
+- [ ] **Key Management**: Secure key management với rotation policies
+- [ ] **Data Loss Prevention**: DLP controls implemented cho sensitive data
+- [ ] **Privacy Controls**: Privacy protection controls aligned với regulations
+- [ ] **Data Retention**: Data retention policies implemented với secure deletion
+- [ ] **Cross-Border Transfer**: International data transfer controls compliant
+
+## 2. THREAT DETECTION & PREVENTION
+
+### 2.1 Security Monitoring Implementation
+- [ ] **SIEM Deployment**: Security Information và Event Management system operational
+- [ ] **Log Collection**: Comprehensive security log collection từ all systems
+- [ ] **Event Correlation**: Security event correlation rules configured
+- [ ] **Threat Intelligence**: Threat intelligence feeds integrated với monitoring
+- [ ] **Behavioral Analysis**: User và entity behavioral analysis implemented
+- [ ] **Anomaly Detection**: Machine learning-based anomaly detection operational
+- [ ] **Real-time Monitoring**: 24/7 security monitoring với alert response
+
+### 2.2 Vulnerability Management
+- [ ] **Vulnerability Scanning**: Regular vulnerability scanning với remediation tracking
+- [ ] **Penetration Testing**: Regular penetration testing với findings remediation
+- [ ] **Security Assessment**: Comprehensive security assessments completed
+- [ ] **Code Security Review**: Security code review process integrated
+- [ ] **Dependency Scanning**: Third-party dependency vulnerability scanning
+- [ ] **Configuration Assessment**: Security configuration assessment regularly performed
+- [ ] **Red Team Exercises**: Red team exercises conducted với lessons learned
+
+### 2.3 Incident Response Readiness
+- [ ] **Response Procedures**: Incident response procedures documented và tested
+- [ ] **Response Team**: Incident response team trained với contact information current
+- [ ] **Communication Plan**: Incident communication plans tested
+- [ ] **Forensic Capabilities**: Digital forensic capabilities available với procedures
+- [ ] **Evidence Handling**: Legal evidence handling procedures established
+- [ ] **Recovery Planning**: Security incident recovery procedures validated
+- [ ] **Regulatory Notification**: Breach notification procedures compliant với regulations
+
+## 3. COMPLIANCE & GOVERNANCE
+
+### 3.1 Regulatory Compliance
+- [ ] **SOC 2 Controls**: SOC 2 Type II controls implemented và tested annually
+- [ ] **ISO 27001 Compliance**: Information security management system certified
+- [ ] **GDPR Compliance**: European data protection regulations fully compliant
+- [ ] **Industry Standards**: Relevant industry-specific compliance requirements met
+- [ ] **Audit Readiness**: Audit evidence collection automated với documentation current
+- [ ] **Policy Compliance**: Security policies enforced với compliance monitoring
+- [ ] **Training Compliance**: Security awareness training completion tracked
+
+### 3.2 Security Governance
+- [ ] **Security Policies**: Comprehensive security policies approved và published
+- [ ] **Risk Assessment**: Regular security risk assessments với mitigation tracking
+- [ ] **Third-Party Security**: Vendor security assessments completed với contracts updated
+- [ ] **Security Metrics**: Security KPIs tracked với regular reporting to management
+- [ ] **Security Reviews**: Regular security architecture reviews conducted
+- [ ] **Change Management**: Security change management process integrated
+- [ ] **Continuous Improvement**: Security program maturity assessment với improvement plans
+
+### 3.3 Access & Identity Management
+- [ ] **Identity Lifecycle**: Automated identity lifecycle management implemented
+- [ ] **Privileged Access**: Privileged access management solution deployed
+- [ ] **Access Reviews**: Regular access certification với privilege validation
+- [ ] **Multi-Factor Authentication**: MFA enforced cho all privileged accounts
+- [ ] **Single Sign-On**: SSO implementation với centralized identity management
+- [ ] **Service Accounts**: Service account management với minimal privileges
+- [ ] **Guest Access**: Temporary access procedures với time-limited permissions
+
+---
+
+## 📊 Site Reliability Engineer (Chris) - Reliability & Performance Validation Checklist
+
+### Mục đích
+Comprehensive framework để Site Reliability Engineer validate system reliability, performance characteristics, và operational excellence. SRE phải systematically work through từng item, ensuring systems meet reliability targets với predictable performance.
+
+## 1. SERVICE LEVEL MANAGEMENT
+
+### 1.1 SLI/SLO/SLA Definition & Implementation
+- [ ] **Service Level Indicators**: Meaningful SLIs defined với accurate measurement
+- [ ] **Service Level Objectives**: Realistic SLOs set với business alignment
+- [ ] **Service Level Agreements**: Customer-facing SLAs documented với penalties
+- [ ] **Error Budget Management**: Error budget tracking với burn-down monitoring
+- [ ] **SLO Alerting**: Proactive alerting cho SLO risk với escalation procedures
+- [ ] **SLA Reporting**: Regular SLA performance reporting to stakeholders
+- [ ] **Continuous Calibration**: SLI/SLO/SLA regular review với adjustment based on data
+
+### 1.2 Reliability Testing & Validation
+- [ ] **Chaos Engineering**: Regular chaos experiments với controlled failure injection
+- [ ] **Disaster Recovery Testing**: DR procedures tested với RTO/RPO validation
+- [ ] **Failover Testing**: Service failover mechanisms tested với automation
+- [ ] **Load Testing**: Regular load testing với performance characteristic validation
+- [ ] **Stress Testing**: System breaking points identified với graceful degradation
+- [ ] **Endurance Testing**: Long-running stability tests với memory leak detection
+- [ ] **Game Day Exercises**: Full-scale incident simulation exercises
+
+### 1.3 Capacity Planning & Scaling
+- [ ] **Traffic Forecasting**: Demand forecasting models với growth projections
+- [ ] **Capacity Modeling**: System capacity models với resource requirement prediction
+- [ ] **Auto-scaling Validation**: Automatic scaling policies tested với various load patterns
+- [ ] **Resource Right-sizing**: Infrastructure resources optimized cho cost và performance
+- [ ] **Bottleneck Analysis**: System bottlenecks identified với mitigation plans
+- [ ] **Scaling Testing**: Horizontal và vertical scaling tested với validation
+- [ ] **Cost Optimization**: Capacity planning balanced với cost considerations
+
+## 2. PERFORMANCE ENGINEERING
+
+### 2.1 Performance Monitoring & Analysis
+- [ ] **Application Performance Monitoring**: APM tools configured với comprehensive coverage
+- [ ] **Database Performance**: Database query performance monitored với optimization
+- [ ] **Network Performance**: Network latency và throughput monitored
+- [ ] **Client-Side Performance**: Real user monitoring với Core Web Vitals tracking
+- [ ] **Third-Party Performance**: External service performance monitoring
+- [ ] **Performance Baselines**: Performance baselines established với trend analysis
+- [ ] **Performance Regression**: Automated performance regression detection
+
+### 2.2 Performance Optimization
+- [ ] **Code Optimization**: Performance-critical code paths optimized
+- [ ] **Database Optimization**: Database queries optimized với proper indexing
+- [ ] **Caching Strategy**: Multi-layer caching strategy implemented với validation
+- [ ] **CDN Implementation**: Content delivery network optimized cho global performance
+- [ ] **Resource Optimization**: Static resource optimization với compression
+- [ ] **Connection Pooling**: Database connection pooling optimized
+- [ ] **Async Processing**: Background job processing optimized cho throughput
+
+### 2.3 Scalability Architecture
+- [ ] **Horizontal Scaling**: Services designed cho horizontal scaling
+- [ ] **Stateless Design**: Stateless service design cho scalability
+- [ ] **Data Partitioning**: Data partitioning strategy implemented cho scale
+- [ ] **Service Decomposition**: Monolithic services decomposed appropriately
+- [ ] **Circuit Breakers**: Circuit breaker pattern implemented cho resilience
+- [ ] **Bulkhead Pattern**: Resource isolation implemented cho fault containment
+- [ ] **Rate Limiting**: Intelligent rate limiting implemented với adaptive thresholds
+
+## 3. OPERATIONAL EXCELLENCE
+
+### 3.1 Observability & Debugging
+- [ ] **Distributed Tracing**: Request tracing across all service boundaries
+- [ ] **Structured Logging**: Consistent structured logging với correlation IDs
+- [ ] **Metrics Collection**: Comprehensive business với technical metrics
+- [ ] **Custom Instrumentation**: Application-specific metrics với business context
+- [ ] **Debug Capabilities**: Production debugging capabilities với safety controls
+- [ ] **Performance Profiling**: Regular performance profiling với optimization identification
+- [ ] **Error Tracking**: Comprehensive error tracking với impact analysis
+
+### 3.2 Incident Management & Response
+- [ ] **Incident Response Process**: Well-defined incident response process với roles
+- [ ] **Escalation Procedures**: Clear escalation paths với contact information
+- [ ] **Communication Templates**: Incident communication templates với stakeholder updates
+- [ ] **War Room Procedures**: Virtual war room procedures với collaboration tools
+- [ ] **Post-Mortem Process**: Blameless post-mortem process với action tracking
+- [ ] **Knowledge Base**: Incident knowledge base với searchable solutions
+- [ ] **Training Program**: Incident response training với regular drills
+
+### 3.3 Toil Reduction & Automation
+- [ ] **Toil Identification**: Manual operational work identified với automation opportunities
+- [ ] **Runbook Automation**: Manual runbooks automated với self-service capabilities
+- [ ] **Alert Response**: Common alert scenarios automated với intelligent response
+- [ ] **Maintenance Automation**: Routine maintenance tasks automated
+- [ ] **Self-Healing Systems**: Self-healing capabilities implemented cho common failures
+- [ ] **Documentation Automation**: Operational documentation automated với updates
+- [ ] **Process Optimization**: Operational processes optimized cho efficiency
+
+## 4. CONTINUOUS IMPROVEMENT
+
+### 4.1 Reliability Engineering Culture
+- [ ] **Error Budget Culture**: Error budget decisions integrated into feature planning
+- [ ] **Reliability Requirements**: Reliability requirements defined cho new features
+- [ ] **SRE Practices**: SRE practices embedded trong development lifecycle
+- [ ] **Reliability Reviews**: Regular reliability architecture reviews
+- [ ] **Knowledge Sharing**: SRE knowledge shared với development teams
+- [ ] **Training Programs**: Reliability engineering training cho all engineers
+- [ ] **Innovation Time**: Dedicated time cho reliability improvement projects
+
+### 4.2 Metrics & Measurement
+- [ ] **Reliability Metrics**: Key reliability metrics tracked với trends
+- [ ] **Performance Metrics**: System performance metrics với business correlation
+- [ ] **Operational Metrics**: Operational efficiency metrics với improvement tracking
+- [ ] **Business Impact**: Reliability impact on business metrics measured
+- [ ] **Cost Metrics**: Infrastructure cost metrics với optimization tracking
+- [ ] **Team Metrics**: SRE team productivity metrics với satisfaction
+- [ ] **Industry Benchmarks**: Performance benchmarking against industry standards
+
+### 4.3 Process Evolution
+- [ ] **Practice Assessment**: Regular assessment của SRE practices effectiveness
+- [ ] **Tool Evaluation**: Continuous evaluation của monitoring và automation tools
+- [ ] **Process Improvement**: Data-driven process improvement với measurable outcomes
+- [ ] **Technology Adoption**: New technology evaluation với reliability impact assessment
+- [ ] **Community Engagement**: Participation trong SRE community với best practice sharing
+- [ ] **Research & Development**: Investment trong reliability research với innovation
+- [ ] **Organizational Learning**: SRE learnings shared across organization
+
+---
+
+## ✅ Operations Phase Validation Summary
+
+### Category Status Assessment
+
+| Category | Status | Critical Issues | Resolution Plan |
+|----------|--------|----------------|----------------|
+| **Infrastructure & Deployment** | PASS/FAIL/PARTIAL | | |
+| **Security & Compliance** | PASS/FAIL/PARTIAL | | |
+| **Monitoring & Observability** | PASS/FAIL/PARTIAL | | |
+| **Performance & Reliability** | PASS/FAIL/PARTIAL | | |
+| **Operational Procedures** | PASS/FAIL/PARTIAL | | |
+| **Automation & Efficiency** | PASS/FAIL/PARTIAL | | |
+| **Incident Response Readiness** | PASS/FAIL/PARTIAL | | |
+| **Continuous Improvement** | PASS/FAIL/PARTIAL | | |
+
+### Critical Deficiencies
+**List all critical issues cần address trước production go-live:**
+- {Critical issue 1}
+- {Critical issue 2}  
+- {Critical issue 3}
+
+### Recommendations
+**Specific recommendations for addressing deficiencies:**
+- {Recommendation 1}
+- {Recommendation 2}
+- {Recommendation 3}
+
+### Final Decision
+
+#### ✅ READY FOR PRODUCTION
+**Criteria Met:**
+- [ ] All infrastructure properly configured với comprehensive monitoring
+- [ ] Security controls implemented với compliance validation
+- [ ] Reliability targets met với tested disaster recovery procedures
+- [ ] Performance benchmarks satisfied với scalability validated
+- [ ] Operational procedures documented với team training completed
+- [ ] Automation implemented với reduced manual intervention
+
+#### ❌ NEEDS ADDITIONAL PREPARATION
+**Reason:**
+- {Specific areas requiring additional work}
+- {Timeline for completion}
+- {Required resources for resolution}
+
+---
+
+**Validation Completed by:** {Names}  
+**Date:** {Date}  
+**Production Go-Live:** {Scheduled Date}  
+**Next Review:** {Review Date}
+
+---
+
+## 🚀 Operations Excellence Delivered!
+
+Các checklists này đảm bảo:
+
+- ⚙️ **Infrastructure Excellence**: Robust, scalable, automated infrastructure
+- 🔒 **Security Excellence**: Comprehensive security với compliance adherence  
+- 📊 **Reliability Excellence**: Predictable, highly available systems
+- ✅ **Operational Excellence**: Efficient processes với continuous improvement
+- 🤖 **Automation Excellence**: Comprehensive automation với reduced toil
+- 📈 **Performance Excellence**: Optimized systems với capacity planning
+
+**Use these checklists to ensure bulletproof production operations! 🛡️✨**

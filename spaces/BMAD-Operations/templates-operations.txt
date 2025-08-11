@@ -1,0 +1,805 @@
+# BMAD Operations Templates - Template Vận hành Toàn diện
+
+---
+
+## 🚀 Production Deployment Plan Template
+
+### Purpose
+Comprehensive template cho planning và executing production deployments với risk mitigation, rollback procedures, và post-deployment validation.
+
+### Deployment Plan Structure
+
+```markdown
+# Production Deployment Plan: {Release Version}
+
+## 📊 Deployment Overview
+**Release Version**: {Version Number}  
+**Deployment Date**: {Scheduled Date và Time}  
+**Deployment Type**: {Blue-Green/Canary/Rolling/Direct}  
+**Deployment Lead**: {Lead Engineer Name}  
+**Business Sponsor**: {Business Owner}
+
+## 🎯 Release Objectives
+### Primary Goals
+- {Business objective 1}
+- {Business objective 2}
+- {Business objective 3}
+
+### Success Criteria
+- [ ] **Functional**: All new features working as expected
+- [ ] **Performance**: Response times within {X}ms, throughput > {Y} req/sec
+- [ ] **Reliability**: Uptime > {Z}%, error rate < {W}%
+- [ ] **User Experience**: User satisfaction metrics maintained hoặc improved
+
+## 📋 Release Contents
+
+### New Features
+| Feature | Description | Impact | Risk Level | Rollback Strategy |
+|---------|-------------|--------|------------|-------------------|
+| {Feature 1} | {Description} | {High/Med/Low} | {High/Med/Low} | {Rollback approach} |
+| {Feature 2} | {Description} | {High/Med/Low} | {High/Med/Low} | {Rollback approach} |
+
+### Bug Fixes
+| Bug ID | Description | Severity | Components Affected |
+|--------|-------------|----------|-------------------|
+| {BUG-001} | {Bug description} | {Critical/High/Med/Low} | {Affected components} |
+
+### Infrastructure Changes
+| Change | Description | Impact | Validation Method |
+|--------|-------------|--------|-------------------|
+| {Infra Change 1} | {Description} | {Impact assessment} | {How to validate} |
+
+### Configuration Updates
+| Component | Configuration Change | Reason | Rollback Plan |
+|-----------|---------------------|--------|---------------|
+| {Component} | {Change details} | {Justification} | {Rollback steps} |
+
+## 🏗️ Technical Implementation
+
+### Pre-Deployment Requirements
+- [ ] **Code Review**: All code reviewed và approved
+- [ ] **Testing**: All tests passing trong staging environment
+- [ ] **Security Scan**: Security vulnerability scan completed
+- [ ] **Performance Testing**: Load testing completed với satisfactory results
+- [ ] **Database Migration**: Database scripts tested với rollback procedures
+- [ ] **Configuration Review**: All configuration changes reviewed
+
+### Deployment Architecture
+```
+Current Production Environment:
+├── Load Balancer: {Configuration}
+├── Application Servers: {Count và configuration}
+├── Database: {Type và configuration}
+├── Cache Layer: {Configuration}
+└── External Dependencies: {List với versions}
+
+Target Post-Deployment:
+├── Load Balancer: {Updated configuration}
+├── Application Servers: {New configuration}
+├── Database: {Updated schema/configuration}
+├── Cache Layer: {Updated configuration}
+└── External Dependencies: {Updated versions}
+```
+
+### Database Changes
+**Migration Scripts**:
+- `{migration_001.sql}`: {Description của schema changes}
+- `{migration_002.sql}`: {Description của data updates}
+
+**Data Migration Plan**:
+1. **Pre-migration validation**: {Validation steps}
+2. **Migration execution**: {Step-by-step process}
+3. **Post-migration validation**: {Verification steps}
+4. **Rollback procedure**: {Emergency rollback steps}
+
+### Third-Party Dependencies
+| Service | Current Version | Target Version | Impact | Validation |
+|---------|----------------|----------------|--------|------------|
+| {Service 1} | {Version} | {New Version} | {Impact} | {Test method} |
+| {Service 2} | {Version} | {New Version} | {Impact} | {Test method} |
+
+## ⚠️ Risk Assessment & Mitigation
+
+### Identified Risks
+| Risk | Probability | Impact | Mitigation Strategy | Owner |
+|------|-------------|--------|-------------------|--------|
+| {Risk 1} | {High/Med/Low} | {High/Med/Low} | {Mitigation approach} | {Name} |
+| {Risk 2} | {High/Med/Low} | {High/Med/Low} | {Mitigation approach} | {Name} |
+
+### Rollback Strategy
+**Rollback Triggers**:
+- Error rate > {X}% cho {Y} minutes
+- Response time > {X}ms cho {Y} minutes
+- Critical functionality failure
+- Security incident detection
+- Business decision to abort
+
+**Rollback Procedure**:
+1. **Immediate Actions** ({X} minutes):
+   - Stop deployment process
+   - Assess situation với stakeholders
+   - Execute emergency response if needed
+
+2. **Rollback Execution** ({Y} minutes):
+   - Revert application code to previous version
+   - Rollback database changes if applicable
+   - Update configuration to previous state
+   - Verify system functionality
+
+3. **Post-Rollback Validation** ({Z} minutes):
+   - Validate all systems functioning normally
+   - Confirm error rates return to baseline
+   - Communicate status to stakeholders
+   - Document lessons learned
+
+## 📅 Deployment Timeline
+
+### Pre-Deployment Phase
+**{Date} - 1 week before:**
+- [ ] Finalize deployment plan với stakeholder approval
+- [ ] Complete performance testing trong staging
+- [ ] Conduct security review với penetration testing
+- [ ] Prepare monitoring dashboards với alerting
+- [ ] Schedule maintenance window với stakeholder notification
+
+**{Date} - 1 day before:**
+- [ ] Final smoke tests trong staging environment
+- [ ] Confirm all team members available cho deployment
+- [ ] Pre-position rollback artifacts
+- [ ] Validate backup procedures
+- [ ] Send go-live reminder to stakeholders
+
+### Deployment Day Timeline
+**{Time} - Pre-deployment (30 minutes)**:
+- [ ] Team assembly với role confirmation
+- [ ] Final go/no-go decision meeting
+- [ ] Backup current production state
+- [ ] Enable enhanced monitoring
+- [ ] Prepare communication channels
+
+**{Time} - Deployment Window ({Duration})**:
+1. **Deploy Infrastructure Changes** (XX minutes)
+   - Execute infrastructure updates
+   - Validate infrastructure health
+   - Confirm network connectivity
+
+2. **Deploy Application** (XX minutes)
+   - Deploy application artifacts
+   - Execute database migrations
+   - Update configuration settings
+   - Start new application instances
+
+3. **Validate Deployment** (XX minutes)
+   - Execute smoke tests
+   - Validate critical user journeys
+   - Confirm monitoring data
+   - Check external integrations
+
+4. **Traffic Cutover** (XX minutes)
+   - Gradually shift traffic to new deployment
+   - Monitor system behavior
+   - Validate user experience
+   - Confirm performance metrics
+
+**{Time} - Post-deployment Monitoring ({Duration})**:
+- [ ] Monitor system stability cho {X} hours
+- [ ] Collect performance metrics với baseline comparison
+- [ ] Monitor user feedback với support channels
+- [ ] Document any issues với resolution status
+
+## 📊 Monitoring & Validation
+
+### Key Metrics to Monitor
+**System Health**:
+- CPU utilization: Target < {X}%
+- Memory usage: Target < {Y}%
+- Disk I/O: Target < {Z} IOPS
+- Network latency: Target < {W}ms
+
+**Application Performance**:
+- Response time: Target < {X}ms (95th percentile)
+- Throughput: Target > {Y} requests/second
+- Error rate: Target < {Z}%
+- Database query time: Target < {W}ms
+
+**Business Metrics**:
+- User login success rate: Target > {X}%
+- Transaction completion rate: Target > {Y}%
+- Feature adoption rate: Monitor trend
+- Customer satisfaction: Monitor feedback
+
+### Validation Checklist
+- [ ] **Smoke Tests**: All critical paths functional
+- [ ] **Performance**: Response times within targets
+- [ ] **Integration**: External services responding
+- [ ] **Security**: No security alerts triggered
+- [ ] **Monitoring**: All monitoring systems operational
+- [ ] **User Experience**: Representative user testing successful
+
+## 🔔 Communication Plan
+
+### Stakeholder Notification
+**Pre-deployment**:
+- Business stakeholders: {X} days notice với impact assessment
+- End users: {Y} days notice với downtime expectations
+- Support teams: {Z} days notice với change summary
+
+**During deployment**:
+- Real-time updates to operations team
+- Hourly status updates to business stakeholders
+- Immediate notification of any issues hoặc delays
+
+**Post-deployment**:
+- Deployment success confirmation within {X} hours
+- Performance summary report within {Y} hours
+- Lessons learned documentation within {Z} days
+
+### Emergency Communication
+- **Escalation Path**: {Primary contact} → {Secondary contact} → {Management}
+- **Communication Channels**: {Slack channel, email list, phone numbers}
+- **External Communication**: {Customer communication process}
+
+## ✅ Success Verification
+
+### Immediate Success Criteria (0-2 hours)
+- [ ] Deployment completed without errors
+- [ ] All smoke tests passing
+- [ ] System performance within acceptable ranges
+- [ ] No critical security alerts
+- [ ] User login và core functionality working
+
+### Short-term Success Criteria (2-24 hours)
+- [ ] System stability maintained với no degradation
+- [ ] Performance metrics meeting hoặc exceeding targets
+- [ ] User feedback positive hoặc neutral
+- [ ] No increase trong support ticket volume
+- [ ] Business metrics trending normally
+
+### Long-term Success Criteria (1-7 days)
+- [ ] New features being adopted by users
+- [ ] Performance improvements realized if expected
+- [ ] No regression bugs reported
+- [ ] Business objectives on track cho achievement
+- [ ] System capacity adequate cho projected growth
+
+## 📝 Post-Deployment Activities
+
+### Immediate Actions (24 hours)
+- [ ] Document deployment outcomes với lessons learned
+- [ ] Update monitoring baselines với new normal values
+- [ ] Archive deployment artifacts với version documentation
+- [ ] Conduct post-deployment retrospective với team
+- [ ] Prepare status report cho stakeholders
+
+### Follow-up Activities (1 week)
+- [ ] Monitor long-term performance trends
+- [ ] Collect user feedback với feature usage analytics
+- [ ] Assess business impact với ROI measurement
+- [ ] Update deployment procedures based on lessons learned
+- [ ] Plan next release với continuous improvement
+
+---
+
+**Deployment planned by**: {Team Names}  
+**Plan approved by**: {Stakeholder Approval}  
+**Emergency contact**: {24/7 contact information}  
+**Next review date**: {Date for plan review}
+```
+
+---
+
+## 🔒 Security Compliance Checklist Template
+
+### Purpose
+Comprehensive security validation template cho ensuring production systems meet security requirements, compliance standards, và best practices.
+
+### Security Compliance Structure
+
+```markdown
+# Security Compliance Checklist: {System/Application Name}
+
+## 📊 Compliance Overview
+**System**: {System Name}  
+**Compliance Frameworks**: {SOC 2, ISO 27001, GDPR, HIPAA, etc.}  
+**Assessment Date**: {Current Date}  
+**Security Lead**: {Security Engineer Name}  
+**Next Review Date**: {Scheduled Review Date}
+
+## 🛡️ AUTHENTICATION & AUTHORIZATION
+
+### Authentication Controls
+- [ ] **Multi-Factor Authentication**: MFA implemented cho all user accounts
+- [ ] **Password Policy**: Strong password requirements enforced
+- [ ] **Session Management**: Secure session handling với timeout policies
+- [ ] **Account Lockout**: Brute force protection implemented
+- [ ] **Single Sign-On**: SSO integration với centralized identity management
+- [ ] **API Authentication**: OAuth 2.0/JWT implementation cho API access
+- [ ] **Service Accounts**: Minimal privilege service accounts với rotation
+
+### Authorization Controls
+- [ ] **Role-Based Access Control**: RBAC implemented với principle of least privilege
+- [ ] **Resource-Level Permissions**: Granular permissions on sensitive resources
+- [ ] **Administrative Access**: Privileged access management với approval workflows
+- [ ] **API Authorization**: Proper authorization checks on all API endpoints
+- [ ] **Database Access**: Database user permissions limited to necessary operations
+- [ ] **File System Permissions**: Proper file system access controls
+- [ ] **Network Segmentation**: Network-level access controls implemented
+
+### Identity Management
+- [ ] **User Provisioning**: Automated user lifecycle management
+- [ ] **De-provisioning**: Timely access removal for departed users
+- [ ] **Access Reviews**: Regular access certification với privilege validation
+- [ ] **Privileged Users**: Enhanced controls cho administrative accounts
+- [ ] **Guest Access**: Temporary access procedures với time-limited permissions
+- [ ] **Audit Trails**: Comprehensive logging của authentication/authorization events
+
+## 🔐 DATA PROTECTION & ENCRYPTION
+
+### Data Classification & Handling
+- [ ] **Data Classification**: All data classified by sensitivity level
+- [ ] **Data Flow Mapping**: Complete data flow documentation
+- [ ] **Data Retention**: Retention policies implemented với automated purging
+- [ ] **Data Minimization**: Only necessary data collected và processed
+- [ ] **Data Anonymization**: PII anonymization procedures implemented
+- [ ] **Cross-Border Transfer**: International data transfer controls
+
+### Encryption Implementation
+- [ ] **Data at Rest**: Strong encryption cho all persistent data storage
+- [ ] **Data in Transit**: TLS 1.2+ cho all data transmission
+- [ ] **Database Encryption**: Database-level encryption enabled
+- [ ] **Backup Encryption**: All backups encrypted với secure key management
+- [ ] **Key Management**: Centralized key management với rotation policies
+- [ ] **Certificate Management**: SSL/TLS certificate lifecycle management
+- [ ] **Application-Level Encryption**: Sensitive fields encrypted trong application
+
+### Privacy & Compliance
+- [ ] **GDPR Compliance**: Right to be forgotten, data portability implemented
+- [ ] **Consent Management**: User consent tracking với withdrawal capabilities
+- [ ] **Privacy by Design**: Privacy considerations integrated trong development
+- [ ] **Data Processing Agreements**: Vendor data processing agreements in place
+- [ ] **Breach Notification**: Automated breach detection với notification procedures
+- [ ] **Privacy Impact Assessment**: PIA completed cho major system changes
+
+## 🛠️ APPLICATION SECURITY
+
+### Secure Development
+- [ ] **Security Code Review**: Automated và manual security code analysis
+- [ ] **Dependency Scanning**: Third-party dependency vulnerability scanning
+- [ ] **Static Analysis**: SAST tools integrated trong CI/CD pipeline
+- [ ] **Dynamic Analysis**: DAST testing on deployed applications
+- [ ] **Penetration Testing**: Regular penetration testing với remediation
+- [ ] **Security Training**: Developer security awareness training completed
+- [ ] **Threat Modeling**: Application threat modeling với risk assessment
+
+### Runtime Protection
+- [ ] **Input Validation**: Comprehensive input validation với sanitization
+- [ ] **Output Encoding**: Proper output encoding cho XSS prevention
+- [ ] **SQL Injection Protection**: Parameterized queries với ORM usage
+- [ ] **CSRF Protection**: Anti-CSRF tokens implemented
+- [ ] **Security Headers**: Proper HTTP security headers configured
+- [ ] **Rate Limiting**: API rate limiting với abuse prevention
+- [ ] **Error Handling**: Secure error handling with information disclosure prevention
+
+### API Security
+- [ ] **API Gateway**: Centralized API management với security policies
+- [ ] **API Documentation**: Complete API documentation với security requirements
+- [ ] **Request Validation**: Schema validation cho all API requests
+- [ ] **Response Filtering**: Sensitive data filtering trong API responses
+- [ ] **API Versioning**: Secure API versioning với backward compatibility
+- [ ] **Logging**: Comprehensive API request/response logging
+- [ ] **Monitoring**: Real-time API security monitoring với anomaly detection
+
+## 🏗️ INFRASTRUCTURE SECURITY
+
+### Network Security
+- [ ] **Firewall Configuration**: Properly configured firewalls với minimal exposure
+- [ ] **Network Segmentation**: DMZ và internal network separation
+- [ ] **VPN Access**: Secure remote access với VPN requirements
+- [ ] **DDoS Protection**: DDoS mitigation controls implemented
+- [ ] **Network Monitoring**: Network traffic analysis với intrusion detection
+- [ ] **Wireless Security**: Secure wireless access policies
+- [ ] **Physical Security**: Data center physical security controls
+
+### Cloud Security
+- [ ] **Cloud Configuration**: Secure cloud service configuration
+- [ ] **Resource Isolation**: Proper resource isolation trong multi-tenant environments
+- [ ] **Cloud Access Management**: Cloud IAM policies với least privilege
+- [ ] **Storage Security**: Secure cloud storage configuration
+- [ ] **Logging**: Centralized cloud audit logging enabled
+- [ ] **Backup Security**: Secure backup procedures với testing
+- [ ] **Disaster Recovery**: Tested disaster recovery procedures
+
+### Container & Orchestration Security
+- [ ] **Container Images**: Secure base images với vulnerability scanning
+- [ ] **Runtime Security**: Container runtime security policies
+- [ ] **Secrets Management**: Secure secret injection trong containers
+- [ ] **Network Policies**: Kubernetes network policies implemented
+- [ ] **RBAC**: Container orchestration RBAC configured
+- [ ] **Resource Limits**: Container resource limits configured
+- [ ] **Image Signing**: Container image signature verification
+
+## 📊 MONITORING & INCIDENT RESPONSE
+
+### Security Monitoring
+- [ ] **SIEM Integration**: Security Information và Event Management deployed
+- [ ] **Log Aggregation**: Centralized logging với security event correlation
+- [ ] **Threat Detection**: Behavioral analysis với anomaly detection
+- [ ] **Vulnerability Scanning**: Regular vulnerability assessment với remediation
+- [ ] **Security Metrics**: Key security indicators tracked với reporting
+- [ ] **Alerting**: Real-time security alerts với escalation procedures
+- [ ] **Threat Intelligence**: Threat intelligence feed integration
+
+### Incident Response
+- [ ] **Response Plan**: Documented incident response procedures
+- [ ] **Response Team**: Designated incident response team với contact information
+- [ ] **Communication Plan**: Stakeholder communication templates
+- [ ] **Forensics**: Incident investigation với digital forensics capabilities
+- [ ] **Evidence Preservation**: Procedures cho legal evidence handling
+- [ ] **Recovery Procedures**: Business continuity với service restoration
+- [ ] **Lessons Learned**: Post-incident analysis với improvement recommendations
+
+### Business Continuity
+- [ ] **Backup Procedures**: Regular backups với restoration testing
+- [ ] **Disaster Recovery**: DR site với RTO/RPO objectives
+- [ ] **Failover Testing**: Regular failover testing với documentation
+- [ ] **Communication Plan**: Crisis communication procedures
+- [ ] **Vendor Management**: Third-party continuity assessments
+- [ ] **Recovery Validation**: Recovery procedure validation testing
+
+## ✅ COMPLIANCE VALIDATION
+
+### Audit Requirements
+- [ ] **Audit Logs**: Comprehensive audit trail với tamper protection
+- [ ] **Log Retention**: Audit log retention policies implemented
+- [ ] **Access Logging**: All system access logged với user identification
+- [ ] **Change Logging**: System configuration changes logged
+- [ ] **Privilege Usage**: Administrative activity logging
+- [ ] **Data Access**: Sensitive data access logging
+- [ ] **Log Analysis**: Regular log analysis với anomaly investigation
+
+### Regulatory Compliance
+- [ ] **SOC 2**: SOC 2 Type II controls implemented và tested
+- [ ] **ISO 27001**: Information security management system implemented
+- [ ] **GDPR**: European data protection regulations compliance
+- [ ] **HIPAA**: Healthcare information privacy và security (if applicable)
+- [ ] **PCI DSS**: Payment card data security standards (if applicable)
+- [ ] **CCPA**: California Consumer Privacy Act compliance (if applicable)
+- [ ] **Industry Standards**: Relevant industry-specific compliance requirements
+
+### Documentation & Policies
+- [ ] **Security Policies**: Comprehensive information security policies
+- [ ] **Procedures**: Detailed security procedures với implementation guidance
+- [ ] **Standards**: Technical security standards với configuration baselines
+- [ ] **Training Records**: Security awareness training completion records
+- [ ] **Risk Assessments**: Regular security risk assessments
+- [ ] **Third-Party Assessments**: Vendor security assessments
+- [ ] **Compliance Evidence**: Documentation package cho audit requirements
+
+## 🔄 CONTINUOUS IMPROVEMENT
+
+### Security Assessment
+- [ ] **Vulnerability Management**: Regular vulnerability scanning với remediation tracking
+- [ ] **Security Testing**: Ongoing security testing integration
+- [ ] **Risk Assessment**: Periodic risk assessment với mitigation planning
+- [ ] **Control Effectiveness**: Security control effectiveness measurement
+- [ ] **Maturity Assessment**: Security program maturity evaluation
+- [ ] **Benchmark Comparison**: Industry security benchmark comparison
+
+### Process Enhancement
+- [ ] **Metrics Collection**: Security metrics collection với trend analysis
+- [ ] **Process Review**: Regular security process review với optimization
+- [ ] **Tool Evaluation**: Security tool effectiveness evaluation
+- [ ] **Training Updates**: Security training program updates
+- [ ] **Policy Review**: Regular policy review với updates
+- [ ] **Incident Analysis**: Security incident trend analysis
+
+---
+
+**Security assessment by**: {Security Team}  
+**Compliance validated by**: {Compliance Officer}  
+**Next assessment**: {Scheduled Date}  
+**Emergency contact**: {Security team contact}
+```
+
+---
+
+## 📊 System Monitoring Dashboard Template
+
+### Purpose
+Comprehensive monitoring dashboard configuration template cho tracking system health, performance, và business metrics trong production environment.
+
+### Monitoring Dashboard Structure
+
+```markdown
+# System Monitoring Dashboard Configuration
+
+## 📊 Dashboard Overview
+**System**: {Application/System Name}  
+**Environment**: {Production/Staging/Development}  
+**Dashboard Owner**: {SRE/DevOps Team}  
+**Update Frequency**: {Real-time/5min/15min/1hour}  
+**Retention Period**: {Data retention policy}
+
+## 🎯 KEY PERFORMANCE INDICATORS (KPIs)
+
+### Service Level Indicators (SLIs)
+**Availability SLI**:
+- Metric: `(successful_requests / total_requests) * 100`
+- Target: > 99.9% uptime
+- Measurement Window: 30-day rolling window
+- Data Source: Load balancer logs, health checks
+
+**Latency SLI**:
+- Metric: `95th percentile response time`
+- Target: < 200ms cho API requests, < 2s cho page loads
+- Measurement Window: 5-minute intervals
+- Data Source: Application performance monitoring
+
+**Error Rate SLI**:
+- Metric: `(error_responses / total_requests) * 100`
+- Target: < 0.1% error rate
+- Measurement Window: 5-minute intervals
+- Data Source: Application logs, HTTP status codes
+
+**Throughput SLI**:
+- Metric: `requests per second`
+- Target: Support {X} concurrent users, {Y} requests/second
+- Measurement Window: 1-minute intervals
+- Data Source: Load balancer metrics, application metrics
+
+### Service Level Objectives (SLOs)
+| SLO | Target | Measurement Period | Error Budget |
+|-----|--------|-------------------|--------------|
+| Availability | 99.9% | 30 days | 43.2 minutes |
+| Latency (95th percentile) | < 200ms | 7 days | 5% of requests |
+| Error Rate | < 0.1% | 24 hours | 0.1% error budget |
+| Recovery Time | < 15 minutes | Per incident | MTTR target |
+
+## 📈 INFRASTRUCTURE MONITORING
+
+### Server Health Metrics
+**CPU Utilization**:
+- Metric: `cpu_usage_percent`
+- Warning Threshold: > 70%
+- Critical Threshold: > 90%
+- Data Collection: Every 30 seconds
+- Visualization: Time series graph với host breakdown
+
+**Memory Usage**:
+- Metric: `memory_usage_percent`
+- Warning Threshold: > 80%
+- Critical Threshold: > 95%
+- Data Collection: Every 30 seconds
+- Visualization: Time series graph với available/used breakdown
+
+**Disk I/O**:
+- Metrics: `disk_read_iops`, `disk_write_iops`, `disk_queue_length`
+- Warning Threshold: > 80% utilization
+- Critical Threshold: > 95% utilization
+- Data Collection: Every 1 minute
+- Visualization: Multi-metric time series
+
+**Network Traffic**:
+- Metrics: `network_bytes_in`, `network_bytes_out`, `packet_loss_rate`
+- Monitoring: Bandwidth utilization, packet loss, connection counts
+- Data Collection: Every 30 seconds
+- Visualization: Network topology với traffic flow
+
+### Database Performance
+**Connection Pool**:
+- Metrics: `active_connections`, `idle_connections`, `max_connections`
+- Warning Threshold: > 80% pool utilization
+- Critical Threshold: > 95% pool utilization
+- Visualization: Stacked area chart
+
+**Query Performance**:
+- Metrics: `avg_query_time`, `slow_query_count`, `deadlock_count`
+- Warning Threshold: > 100ms average query time
+- Critical Threshold: > 500ms average query time
+- Visualization: Query performance heatmap
+
+**Database Storage**:
+- Metrics: `db_size_gb`, `table_sizes`, `index_usage`
+- Monitoring: Storage growth rate, fragmentation levels
+- Visualization: Storage utilization dashboard
+
+### Application Performance
+**Response Time Distribution**:
+- Metrics: `response_time_p50`, `response_time_p95`, `response_time_p99`
+- Target: P95 < 200ms, P99 < 500ms
+- Data Collection: Every request
+- Visualization: Percentile distribution charts
+
+**Error Tracking**:
+- Metrics: `4xx_errors`, `5xx_errors`, `exception_count`
+- Categorization: By error type, endpoint, user impact
+- Data Collection: Real-time error capture
+- Visualization: Error rate trends và error type breakdown
+
+**Business Metrics**:
+- Metrics: `active_users`, `transactions_per_minute`, `conversion_rate`
+- Tracking: User engagement, business KPIs
+- Data Collection: Application events
+- Visualization: Business dashboard với trend analysis
+
+## 🔔 ALERTING CONFIGURATION
+
+### Critical Alerts (Immediate Response)
+**System Down**:
+- Condition: `availability < 99%` trong 2 minutes
+- Notification: PagerDuty + SMS + Phone call
+- Escalation: On-call engineer → Team lead → Management
+- Response Time: < 5 minutes acknowledgment
+
+**High Error Rate**:
+- Condition: `error_rate > 1%` trong 5 minutes
+- Notification: PagerDuty + Slack
+- Escalation: On-call engineer → Development team
+- Response Time: < 10 minutes acknowledgment
+
+**Performance Degradation**:
+- Condition: `p95_response_time > 1000ms` trong 10 minutes
+- Notification: Slack + Email
+- Escalation: Performance team notification
+- Response Time: < 15 minutes acknowledgment
+
+### Warning Alerts (Business Hours Response)
+**Resource Utilization**:
+- Condition: `cpu_usage > 80%` hoặc `memory_usage > 85%`
+- Notification: Slack + Email
+- Response Time: < 30 minutes acknowledgment
+- Action: Capacity planning review
+
+**Slow Queries**:
+- Condition: `slow_query_count > 10` trong 15 minutes
+- Notification: Email to development team
+- Response Time: < 1 hour acknowledgment
+- Action: Query optimization review
+
+### Information Alerts (Daily Review)
+**Capacity Trends**:
+- Condition: Growth rate indicators
+- Notification: Daily email summary
+- Action: Weekly capacity planning review
+
+**Security Events**:
+- Condition: Failed login attempts, unusual access patterns
+- Notification: Security team email
+- Action: Security log review
+
+## 📊 DASHBOARD LAYOUT
+
+### Executive Summary View
+**High-Level KPIs** (Top Row):
+- Current availability percentage với 30-day trend
+- Average response time với target comparison
+- Current active users với daily growth
+- Error rate với monthly trend comparison
+
+**Service Health Overview** (Second Row):
+- Service status indicators (Green/Yellow/Red)
+- Current incident count với severity breakdown
+- Recent deployment status với rollback indicators
+- Business metric trends (revenue, conversions, engagement)
+
+### Operations Detail View
+**Infrastructure Health** (Top Section):
+- Server resource utilization heatmap
+- Database performance metrics dashboard
+- Network traffic analysis với bandwidth utilization
+- Storage capacity trends với growth projections
+
+**Application Performance** (Middle Section):
+- Response time distribution charts
+- Error rate breakdown by service/endpoint
+- Transaction volume với throughput analysis
+- User session analysis với geographic distribution
+
+**Alert Management** (Bottom Section):
+- Active alerts với severity và acknowledgment status
+- Recent incident timeline với resolution status
+- On-call schedule với contact information
+- Maintenance window calendar với upcoming changes
+
+### Developer Detail View
+**Application Metrics** (Focus Areas):
+- API endpoint performance với detailed breakdown
+- Database query performance với slow query analysis
+- Code deployment metrics với success rates
+- Feature flag status với usage analytics
+
+**Error Analysis** (Deep Dive):
+- Error stack traces với frequency analysis
+- User impact assessment với affected sessions
+- Error correlation với recent deployments
+- Performance regression analysis
+
+## 🔍 CUSTOM MONITORING QUERIES
+
+### Availability Calculation
+```sql
+-- 30-day availability calculation
+SELECT 
+  (SUM(CASE WHEN status_code < 500 THEN 1 ELSE 0 END) * 100.0 / COUNT(*)) as availability_percent
+FROM request_logs 
+WHERE timestamp >= NOW() - INTERVAL 30 DAY
+```
+
+### Error Budget Consumption
+```sql
+-- Error budget burn rate calculation
+SELECT 
+  service_name,
+  (SUM(CASE WHEN status_code >= 500 THEN 1 ELSE 0 END) * 100.0 / COUNT(*)) as current_error_rate,
+  0.1 as error_budget_percent,
+  ((SUM(CASE WHEN status_code >= 500 THEN 1 ELSE 0 END) * 100.0 / COUNT(*)) / 0.1) as budget_consumption_rate
+FROM request_logs 
+WHERE timestamp >= NOW() - INTERVAL 24 HOUR
+GROUP BY service_name
+```
+
+### Performance Trend Analysis
+```sql
+-- Response time trend comparison
+SELECT 
+  DATE(timestamp) as date,
+  PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY response_time_ms) as p95_response_time,
+  AVG(response_time_ms) as avg_response_time
+FROM request_logs 
+WHERE timestamp >= NOW() - INTERVAL 7 DAY
+GROUP BY DATE(timestamp)
+ORDER BY date
+```
+
+## 📱 MOBILE & NOTIFICATION SETUP
+
+### Mobile Dashboard Access
+- **Grafana Mobile**: Optimized dashboard cho mobile viewing
+- **Key Metrics Only**: Simplified view với critical indicators
+- **Offline Capability**: Cached data cho network connectivity issues
+- **Touch Gestures**: Zoom, pan, drill-down capabilities
+
+### Notification Channels
+**PagerDuty Integration**:
+- Critical alerts với automatic escalation
+- On-call rotation management
+- Incident response coordination
+- Post-incident reporting
+
+**Slack Integration**:
+- Real-time alert notifications
+- Team communication channels
+- Bot commands cho quick actions
+- Alert acknowledgment via Slack
+
+**Email Notifications**:
+- Daily/weekly summary reports
+- Trend analysis reports
+- Capacity planning notifications
+- Security event summaries
+
+## 🔄 DASHBOARD MAINTENANCE
+
+### Regular Updates
+- **Weekly**: Review alert thresholds với false positive analysis
+- **Monthly**: Update capacity planning projections
+- **Quarterly**: Dashboard layout optimization based on user feedback
+- **Annually**: Complete monitoring strategy review
+
+### Data Retention Policies
+- **Real-time metrics**: 7 days high resolution
+- **Hourly aggregations**: 30 days retention
+- **Daily summaries**: 1 year retention
+- **Monthly reports**: 3 years retention
+
+---
+
+**Dashboard configured by**: {SRE Team}  
+**Last updated**: {Date}  
+**Review schedule**: {Monthly/Quarterly}  
+**Emergency contact**: {On-call information}
+```
+
+---
+
+**Operations templates ready cho comprehensive production management! 🚀✨**
