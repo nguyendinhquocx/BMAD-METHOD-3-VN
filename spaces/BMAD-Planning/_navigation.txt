@@ -1,0 +1,126 @@
+# BMAD Planning Space Navigation
+
+## 📍 Current Location
+**Space**: BMAD-Planning  
+**Phase**: Planning & Analysis  
+**Purpose**: Transform ideas into comprehensive, validated product requirements
+
+---
+
+## 🧭 BMAD Navigation Links
+
+### 🔗 Other BMAD Spaces
+- 🏠 **BMAD-Main**: [Navigation Hub] - Return for overview và guidance
+- 🏗️ **BMAD-Architecture**: [Architecture Space] - Next phase: System design  
+- 💻 **BMAD-Development**: [Development Space] - Later phase: Stories & implementation
+- ⚙️ **BMAD-Operations**: [Operations Space] - Final phase: DevOps & deployment
+
+---
+
+## 📋 Current Phase: Planning & Analysis
+
+### 🎯 Phase Objectives
+- Transform initial ideas thành clear problem definition
+- Conduct market research và competitive analysis
+- Develop comprehensive Product Requirements Document (PRD)
+- Define MVP scope với clear boundaries
+- Create epic breakdown cho development planning
+
+### 👥 Available Agents in This Space
+- 🧠 **Analyst (Mary)**: Brainstorming expert, Research specialist
+- 📊 **Product Manager (John)**: PRD creation, Requirements engineering
+
+---
+
+## 📂 Files Available in This Space
+
+### Core Files
+- **personas-planning.txt**: Analyst và PM personas với specialized capabilities
+- **templates-planning.txt**: Project brief, PRD, research prompt templates
+- **checklists-planning.txt**: PM checklist, change management checklist  
+- **tasks-planning.txt**: Brainstorming, research, PRD development tasks
+- **planning-workflows.txt**: Detailed workflows cho different project types
+- **_navigation.txt**: This file - navigation guide
+
+---
+
+## 🚀 How to Get Started in Planning Space
+
+### Step 1: Identify Your Situation
+```
+❓ What describes your current state?
+├── New idea/concept → Start với Analyst Brainstorming
+├── Have some research → Begin với PM for PRD development  
+├── Need market validation → Use Analyst Deep Research
+├── Existing product enhancement → Use Enhancement workflow
+└── Major change needed → Use Change Management process
+```
+
+### Step 2: Choose Your Agent
+- **For Creative Exploration**: Choose Analyst (Mary) for brainstorming
+- **For Structured Requirements**: Choose PM (John) for PRD development
+- **For Research Needs**: Choose Analyst (Mary) for research planning
+
+### Step 3: Follow the Process
+1. **Discovery**: Understand problem và opportunity
+2. **Research**: Validate assumptions và gather insights  
+3. **Requirements**: Transform insights thành structured PRD
+4. **Validation**: Ensure quality và stakeholder alignment
+
+---
+
+## ➡️ Ready to Move Forward?
+
+### 📋 Current Phase Success Criteria
+- [ ] Problem clearly defined và validated
+- [ ] User needs thoroughly understood
+- [ ] Market opportunity assessed
+- [ ] PRD completed và validated
+- [ ] MVP scope defined với clear boundaries
+- [ ] Epic structure provides development roadmap
+
+### 🏗️ Next Phase: Architecture Design  
+**When Planning Complete**: Chuyển sang BMAD-Architecture space với:
+- Validated PRD document
+- User personas và journey maps  
+- Technical constraints documentation
+- Epic breakdown với priorities
+- Market context và competitive analysis
+
+---
+
+## 🆘 Need Help?
+
+### 📖 Available Resources
+- **templates-planning.txt**: All templates cho planning artifacts
+- **tasks-planning.txt**: Detailed task instructions cho agents
+- **checklists-planning.txt**: Quality validation checklists
+- **planning-workflows.txt**: Complete workflow guidance
+
+### 🏠 Return to Main Hub
+If you need overall guidance hoặc want to understand how Planning fits into bigger picture, return to **BMAD-Main space**.
+
+### 🤝 Agent Assistance  
+- **Analyst (Mary)**: Best for creative exploration, brainstorming, research
+- **PM (John)**: Best for structured requirements, PRD development, scoping
+
+---
+
+## 🎯 Quick Start Commands
+
+### For New Projects:
+1. "I have a new idea and need to brainstorm" → **Analyst Brainstorming**
+2. "I need market research for my concept" → **Analyst Deep Research**  
+3. "I'm ready to create requirements document" → **PM PRD Development**
+
+### For Enhancements:
+1. "I want to add features to existing product" → **Enhancement Workflow**
+2. "I need to pivot my current approach" → **Change Management**
+
+### For Validation:
+1. "Is my PRD complete?" → **PM Checklist Validation**
+2. "Ready for next phase?" → **Phase Completion Review**
+
+---
+
+**Happy Planning! Transform your vision into actionable requirements! 📋✨**

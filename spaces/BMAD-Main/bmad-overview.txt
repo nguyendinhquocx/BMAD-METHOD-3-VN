@@ -1,0 +1,178 @@
+# BMAD Method - Tổng Quan Phương Pháp
+
+## Build, Measure, Analyze, Decide
+### Phương pháp phát triển phần mềm với AI Agents
+
+---
+
+## 🎯 Giới thiệu BMAD
+
+**BMAD Method** là một framework có cấu trúc để phát triển phần mềm, sử dụng các AI Agents chuyên biệt cho từng giai đoạn. Từ ý tưởng ban đầu đến sản phẩm hoàn thiện, BMAD đảm bảo chất lượng và tính nhất quán thông qua quy trình chuẩn hóa.
+
+### Đặc điểm chính:
+- ✅ **Phân chia vai trò rõ ràng**: Mỗi AI Agent có chuyên môn riêng
+- ✅ **Quy trình có cấu trúc**: Từng bước có input/output cụ thể
+- ✅ **Kiểm soát chất lượng**: Checklist và validation ở mỗi giai đoạn  
+- ✅ **Tích hợp Claude Code**: Tự động hóa implementation
+
+---
+
+## 🏗️ Kiến Trúc Hệ Thống
+
+### Hierarchical Spaces Architecture
+```
+BMAD-Main (Bạn đang ở đây)
+    ├── 📋 BMAD-Planning (Lập kế hoạch)
+    ├── 🏗️ BMAD-Architecture (Thiết kế)  
+    ├── 💻 BMAD-Development (Phát triển)
+    └── ⚙️ BMAD-Operations (Vận hành)
+```
+
+### Tại sao chia thành nhiều Spaces?
+- **Giới hạn dung lượng**: GitHub Copilot Space có limit 100%
+- **Focus context**: Mỗi space chỉ chứa thông tin relevant cho giai đoạn
+- **Performance**: Smaller context = faster response
+- **Scalability**: Có thể thêm spaces mới cho các domain cụ thể
+
+---
+
+## 🔄 Quy Trình BMAD Tổng Thể
+
+### 1️⃣ Planning Phase (📋 BMAD-Planning)
+**Từ ý tưởng → Requirements hoàn chỉnh**
+
+**Agents tham gia:**
+- **Analyst (Mary)**: Brainstorming, research, insights
+- **Product Manager (John)**: PRD creation, requirements
+
+**Output chính:**
+- ✅ PRD.md (Product Requirements Document)
+- ✅ Epics overview
+- ✅ MVP scope definition
+- ✅ User personas & journey
+
+### 2️⃣ Architecture Phase (🏗️ BMAD-Architecture)  
+**Từ requirements → Technical design**
+
+**Agents tham gia:**
+- **Architect (Fred)**: System architecture, tech stack
+- **Design Architect (Jane)**: Frontend architecture, UI/UX
+- **Platform Engineer (Alex)**: Infrastructure, DevOps design
+
+**Output chính:**
+- ✅ System architecture document
+- ✅ Frontend architecture & UI specs
+- ✅ Infrastructure architecture
+- ✅ API specifications & data models
+
+### 3️⃣ Development Phase (💻 BMAD-Development)
+**Từ design → Development-ready stories**
+
+**Agents tham gia:**
+- **Product Owner (Sarah)**: Epic breakdown, validation
+- **Scrum Master (Bob)**: Story creation, dev preparation
+
+**Output chính:**
+- ✅ Detailed epics với stories
+- ✅ Development-ready tasks
+- ✅ Definition of Done criteria
+- ✅ Testing strategy
+
+### 4️⃣ Implementation Phase (Claude Code)
+**Từ stories → Working software**
+
+**Tools:**
+- **Claude Code**: Automated development
+- **AI Developer Agents**: Specialized implementation
+
+**Output chính:**  
+- ✅ Working code implementation
+- ✅ Tests passing
+- ✅ Documentation updated
+- ✅ Production-ready software
+
+### 5️⃣ Operations Phase (⚙️ BMAD-Operations)
+**Từ code → Production deployment**
+
+**Agents tham gia:**
+- **Platform Engineer (Alex)**: Deployment, monitoring
+- **DevOps workflows**: CI/CD, infrastructure
+
+**Output chính:**
+- ✅ Production deployment
+- ✅ Monitoring & alerting  
+- ✅ Operational runbooks
+- ✅ Continuous improvement
+
+---
+
+## 🎯 Khi Nào Sử Dụng Space Nào?
+
+### 🚀 Bạn mới bắt đầu với ý tưởng?
+➡️ **Chuyển sang 📋 BMAD-Planning**
+- Brainstorm với Analyst
+- Phát triển PRD với PM
+- Define MVP scope
+
+### 📋 Bạn đã có PRD hoàn chỉnh?  
+➡️ **Chuyển sang 🏗️ BMAD-Architecture**
+- Thiết kế system architecture
+- Plan frontend & UI/UX
+- Design infrastructure
+
+### 🏗️ Bạn đã có Architecture documents?
+➡️ **Chuyển sang 💻 BMAD-Development** 
+- Breakdown epics & stories
+- Prepare development tasks
+- Setup Claude Code implementation
+
+### 💻 Bạn đã có working code?
+➡️ **Chuyển sang ⚙️ BMAD-Operations**
+- Deploy to production
+- Setup monitoring
+- Establish DevOps workflows
+
+---
+
+## 💡 Best Practices
+
+### ✅ Do's:
+- **Luôn bắt đầu từ BMAD-Main** cho orientation
+- **Follow quy trình tuần tự** Planning → Architecture → Development → Operations  
+- **Sử dụng checklists** để validate quality ở mỗi giai đoạn
+- **Maintain cross-references** giữa các spaces
+- **Document decisions** và rationale
+
+### ❌ Don'ts:
+- **Đừng skip giai đoạn** - mỗi phase build trên foundation của phase trước
+- **Đừng làm việc isolated** - keep context và references
+- **Đừng ignore quality gates** - checklists tồn tại vì lý do
+- **Đừng assume context** - always provide adequate background
+
+---
+
+## 🔗 Navigation Quick Links
+
+### Space Navigation:
+- 🏠 **BMAD-Main**: Bạn đang ở đây - Điều phối & overview
+- 📋 **BMAD-Planning**: [Link to Planning Space] - Brainstorming & PRD
+- 🏗️ **BMAD-Architecture**: [Link to Architecture Space] - Technical design  
+- 💻 **BMAD-Development**: [Link to Development Space] - Stories & implementation
+- ⚙️ **BMAD-Operations**: [Link to Operations Space] - DevOps & production
+
+### Detailed Guides:
+- 📖 **Hướng dẫn chi tiết**: `HUONG-DAN-BMAD-CHI-TIET.md`
+- 🔧 **Setup Guide**: `workflow-guide.txt` 
+- 🗺️ **Navigation Guide**: `space-navigator.txt`
+
+---
+
+## 🚀 Bắt Đầu Ngay!
+
+### Để bắt đầu dự án mới:
+1. **Mô tả dự án** của bạn cho BMAD Orchestrator
+2. **Nhận khuyến nghị** về space và workflow phù hợp
+3. **Chuyển sang space chuyên biệt** để bắt đầu làm việc
+4. **Follow the BMAD journey** từ ý tưởng đến sản phẩm!
+
+**Ready to build something amazing? Let's BMAD it! 🎉**

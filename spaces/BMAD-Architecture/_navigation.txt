@@ -1,0 +1,221 @@
+# BMAD Architecture Space Navigation
+
+## 📍 Current Location
+**Space**: BMAD-Architecture  
+**Phase**: Architecture Design & Technical Planning  
+**Purpose**: Transform validated PRD thành comprehensive technical architecture cho implementation
+
+---
+
+## 🧭 BMAD Navigation Links
+
+### 🔗 Other BMAD Spaces
+- 🏠 **BMAD-Main**: [Navigation Hub] - Return for overall guidance và methodology overview
+- 📋 **BMAD-Planning**: [Previous Phase] - Access planning artifacts, PRD, research data
+- 💻 **BMAD-Development**: [Next Phase] - Ready cho implementation planning và story development
+- ⚙️ **BMAD-Operations**: [Final Phase] - Later phase: DevOps, monitoring, maintenance
+
+---
+
+## 🏗️ Current Phase: Architecture Design
+
+### 🎯 Phase Objectives
+- Transform PRD requirements thành detailed technical architecture
+- Finalize technology stack với specific versions
+- Create comprehensive system, frontend, và infrastructure architectures
+- Provide clear implementation guidance cho AI developer agents
+- Validate architecture quality với comprehensive checklists
+- Prepare detailed handoff materials cho development phase
+
+### 👥 Available Specialists in This Space
+- 🔧 **Architect (Fred)**: System architecture, technology selection, technical leadership
+- 🎨 **Design Architect (Jane)**: Frontend architecture, UI/UX specifications, component design
+- ☁️ **Platform Engineer (Alex)**: Infrastructure architecture, DevOps planning, cloud design
+
+---
+
+## 📂 Files Available in This Space
+
+### Core Architecture Files
+- **personas-architecture.txt**: Detailed personas cho Fred, Jane, Alex với specialized expertise
+- **templates-architecture.txt**: System Architecture, Frontend Architecture, Infrastructure Architecture templates
+- **checklists-architecture.txt**: Comprehensive validation checklists cho all architecture components
+- **tasks-architecture.txt**: Specialized tasks cho architecture design phase
+- **architecture-workflows.txt**: Detailed workflows cho different architecture scenarios
+- **_navigation.txt**: This file - navigation guide cho Architecture space
+
+---
+
+## 🚀 How to Get Started in Architecture Space
+
+### Step 1: Assess Your Input Materials
+```
+✅ Prerequisites from Planning Phase:
+├── Complete validated PRD document
+├── User personas và journey maps  
+├── Market research và competitive analysis
+├── Technical constraints documentation
+├── Epic breakdown với feature priorities
+└── Success metrics và acceptance criteria
+```
+
+### Step 2: Choose Your Architecture Approach
+```
+🏗️ Choose based on project complexity:
+├── Standard Architecture (4 weeks) → Most common approach
+├── Fast-Track Architecture (2 weeks) → Simple apps với known patterns
+├── Research-Heavy Architecture (6 weeks) → Complex/novel technical challenges
+├── Legacy Integration (4-5 weeks) → Significant legacy system integration
+└── Custom Approach → Tailored to specific project needs
+```
+
+### Step 3: Engage Architecture Specialists
+- **System Architecture Focus**: Start với Architect (Fred) cho overall technical design
+- **Frontend/UX Focus**: Engage Design Architect (Jane) cho UI/UX implementation
+- **Infrastructure Focus**: Work với Platform Engineer (Alex) cho cloud architecture
+- **Comprehensive Approach**: Coordinate all three architects cho integrated solution
+
+---
+
+## 📋 Architecture Development Process
+
+### 🔄 Standard 4-Week Architecture Workflow
+
+#### Week 1: Architecture Foundation
+- Requirements deep dive và system decomposition
+- Technology research initiation
+- Initial UI/UX architecture planning
+- Infrastructure requirements analysis
+
+#### Week 2: Technology Selection & Core Design
+- Finalize technology stack với rationale
+- Complete system architecture design
+- Begin infrastructure planning
+- Coordinate integration approaches
+
+#### Week 3: Detailed Architecture Development
+- Complete frontend architecture document
+- Finish infrastructure architecture design
+- Architecture integration planning
+- Cross-functional validation
+
+#### Week 4: Validation & Handoff
+- Execute comprehensive validation checklists
+- Finalize documentation
+- Prepare development handoff materials
+- Complete phase transition
+
+---
+
+## 📊 Architecture Quality Gates
+
+### 🎯 Critical Success Criteria
+- [ ] **Requirements Coverage**: 100% của PRD requirements addressed
+- [ ] **Technology Finalization**: All technology choices made với specific versions
+- [ ] **Implementation Readiness**: Clear guidance provided cho AI developer agents
+- [ ] **Security Compliance**: All security requirements addressed
+- [ ] **Performance Validation**: Architecture meets performance targets
+- [ ] **Integration Planning**: All system integration points designed
+
+### 🔍 Validation Checkpoints
+- **System Architecture**: Fred's Architect Solution Validation Checklist
+- **Frontend Architecture**: Jane's Frontend Architecture Validation Checklist
+- **Infrastructure Architecture**: Alex's Infrastructure Validation Checklist
+- **Overall Integration**: Cross-functional architecture review
+
+---
+
+## ➡️ Ready to Move Forward?
+
+### 📋 Architecture Phase Success Indicators
+- [ ] Complete system architecture document với technical specifications
+- [ ] Finalized technology stack với specific versions và rationale
+- [ ] Frontend architecture với UI/UX implementation approach
+- [ ] Infrastructure architecture với cloud design và security controls
+- [ ] Comprehensive validation reports cho all architecture components
+- [ ] Clear implementation guidance cho development teams
+
+### 💻 Next Phase: Development Planning
+**When Architecture Complete**: Chuyển sang BMAD-Development space với:
+- Complete technical architecture documentation suite
+- Validated technology stack với implementation guidance
+- Component specifications và implementation patterns
+- Infrastructure design với deployment strategies
+- Quality validation reports
+- AI agent optimization documentation
+
+---
+
+## 🔧 Available Architecture Tasks
+
+### For System Architecture (Fred):
+1. **Tạo Kiến Trúc**: Complete system architecture design từ PRD
+2. **Tạo Deep Research Prompt**: Research prompts cho technical feasibility
+3. **Technology Stack Selection**: Comprehensive technology evaluation
+4. **Architecture Validation**: Quality validation với comprehensive checklist
+
+### For Frontend Architecture (Jane):
+1. **Tạo Frontend Architecture**: Complete frontend architecture design
+2. **Tạo AI Frontend Prompt**: AI-optimized prompts cho frontend development
+3. **Tạo UX/UI Spec**: Detailed user experience specifications
+4. **Component Library Design**: Comprehensive component system design
+
+### For Infrastructure Architecture (Alex):
+1. **Tạo Infrastructure Architecture**: Complete cloud infrastructure design
+2. **Implement Infrastructure Changes**: Execute infrastructure modifications
+3. **Review Infrastructure**: Comprehensive infrastructure assessment
+4. **Validate Infrastructure**: Quality validation với infrastructure checklist
+
+### For Cross-Functional Coordination:
+1. **Architecture Integration Review**: Coordinate between all architecture streams
+2. **Technology Alignment Validation**: Ensure consistency across architectures
+3. **Performance Requirements Alignment**: Coordinate performance targets
+4. **Security Architecture Integration**: Coordinate security controls
+
+---
+
+## 🆘 Need Help?
+
+### 📖 Available Resources
+- **templates-architecture.txt**: Complete templates cho all architecture documents
+- **tasks-architecture.txt**: Detailed task instructions cho each specialist
+- **checklists-architecture.txt**: Comprehensive quality validation checklists
+- **architecture-workflows.txt**: Complete workflow guidance cho different scenarios
+
+### 🏠 Return to Main Hub
+If you need overall guidance hoặc want to understand how Architecture fits into complete BMAD methodology, return to **BMAD-Main space**.
+
+### 📋 Previous Phase Resources
+Access **BMAD-Planning space** để review PRD, research data, user personas, hoặc other planning artifacts.
+
+### 🤝 Specialist Assistance
+- **Fred (Architect)**: Best cho overall system design, technology decisions, technical leadership
+- **Jane (Design Architect)**: Best cho frontend architecture, UI/UX specifications, component design
+- **Alex (Platform Engineer)**: Best cho infrastructure design, cloud architecture, DevOps planning
+
+---
+
+## 🎯 Quick Start Commands
+
+### For New Architecture Projects:
+1. "I have a validated PRD and need complete architecture" → **Standard Architecture Workflow**
+2. "Simple app với known patterns, need fast architecture" → **Fast-Track Architecture Workflow**
+3. "Complex technical challenges, need extensive research" → **Research-Heavy Architecture Workflow**
+
+### For Specific Architecture Needs:
+1. "Need system architecture design" → **Fred - Tạo Kiến Trúc**
+2. "Need frontend architecture plan" → **Jane - Tạo Frontend Architecture**
+3. "Need infrastructure design" → **Alex - Tạo Infrastructure Architecture**
+
+### For Architecture Validation:
+1. "Is my system architecture complete?" → **Fred - Architecture Validation**
+2. "Review frontend architecture quality" → **Jane - Frontend Architecture Validation**
+3. "Validate infrastructure design" → **Alex - Validate Infrastructure**
+
+### For Integration & Coordination:
+1. "Coordinate all architecture streams" → **Architecture Integration Review**
+2. "Ready for development handoff?" → **Phase Completion Review**
+
+---
+
+**Transform your PRD into bulletproof technical architecture! Ready để build excellent software! 🏗️✨**

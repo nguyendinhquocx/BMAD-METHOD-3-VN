@@ -1,0 +1,541 @@
+# BMAD Planning Tasks - Nhiệm vụ Chuyên biệt cho Giai đoạn Lập kế hoạch
+
+---
+
+## 🧠 Brainstorming Task - Analyst Core Task
+
+### Mục đích
+Tạo điều kiện cho creative ideation sessions để phát triển và refined concept từ ý tưởng ban đầu.
+
+### Task Execution Framework
+
+#### 1. Pre-Brainstorming Setup
+```markdown
+**Session Preparation Checklist:**
+- [ ] Gather initial user context và requirements
+- [ ] Define session goals và desired outcomes
+- [ ] Set time boundaries và expectations
+- [ ] Establish ground rules cho brainstorming
+- [ ] Prepare facilitation tools và techniques
+```
+
+#### 2. Session Structure
+
+##### Phase 1: Problem Framing (10-15 minutes)
+- **Objective**: Ensure shared understanding của challenge
+- **Activities**: 
+  - Restate user's initial description
+  - Identify core problems vs symptoms
+  - Clarify context và constraints
+  - Align on what success looks like
+
+##### Phase 2: Divergent Ideation (30-40 minutes)  
+- **Objective**: Generate maximum number of diverse ideas
+- **Techniques Available**:
+  - 🌟 **"What if..." scenarios**: Explore possibilities without constraints
+  - 🔄 **Analogical thinking**: "Like X but for Y" approaches  
+  - 🔀 **Reverse thinking**: "What if we did opposite?"
+  - 🧱 **First principles**: Break down to fundamental truths
+  - 🎯 **SCAMPER method**: Substitute, Combine, Adapt, Modify, Put to other use, Eliminate, Reverse
+  - ✨ **"Yes, and..." building**: Build on previous ideas
+  - 🎲 **Random stimulus**: Use unrelated concepts to spark ideas
+
+##### Phase 3: Idea Development (20-30 minutes)
+- **Objective**: Develop most promising concepts
+- **Activities**:
+  - Group related ideas into themes
+  - Identify high-potential concepts
+  - Explore implementation possibilities
+  - Consider user value và feasibility
+
+##### Phase 4: Insight Synthesis (10-15 minutes)
+- **Objective**: Capture key insights for next steps
+- **Deliverables**:
+  - Top 3-5 concept areas
+  - Key insights về user needs
+  - Potential implementation approaches
+  - Questions for further research
+
+#### 3. Facilitation Guidelines
+
+##### Do's:
+- ✅ **Encourage wild ideas**: No judgment during ideation
+- ✅ **Build on others**: "Yes, and..." mentality
+- ✅ **Stay focused**: Keep discussions on topic
+- ✅ **Quantity over quality**: More ideas = better outcomes initially
+- ✅ **Visual thinking**: Use metaphors, analogies, scenarios
+- ✅ **Energy management**: Take breaks, vary activities
+
+##### Don'ts:
+- ❌ **Judge ideas prematurely**: Save evaluation for later
+- ❌ **Get stuck on details**: Keep thinking high-level
+- ❌ **Dominate conversation**: Ensure everyone contributes
+- ❌ **Rush process**: Allow time for ideas to develop
+- ❌ **Ignore constraints**: Balance creativity với reality
+
+#### 4. Output Templates
+
+##### Brainstorming Session Summary
+```markdown
+# Brainstorming Session: {Topic}
+
+## Session Info
+- **Date**: {Date}
+- **Duration**: {Duration}
+- **Participants**: {Participants}
+- **Facilitator**: Mary (Analyst)
+
+## Key Insights Generated
+### Insight 1: {Insight Name}
+- **Description**: {What was discovered}
+- **Implications**: {Why this matters}
+- **Evidence**: {Supporting observations}
+
+### Insight 2: {Insight Name}
+{Repeat structure}
+
+## Top Concept Areas
+### Concept 1: {Concept Name}
+- **Description**: {Brief explanation}
+- **Potential Value**: {User/business value}
+- **Feasibility**: {High/Medium/Low với rationale}
+- **Next Steps**: {What to explore further}
+
+### Concept 2: {Concept Name}
+{Repeat structure}
+
+## Research Questions Identified
+- {Question 1 for further investigation}
+- {Question 2 for further investigation}
+- {Question 3 for further investigation}
+
+## Recommended Next Steps
+- {Immediate action 1}
+- {Immediate action 2}
+- {Future consideration 1}
+```
+
+---
+
+## 🔍 Deep Research Prompt Creation Task - Analyst Specialized Task
+
+### Mục đích
+Tạo comprehensive, structured research prompts cho specialized research agents hoặc detailed investigation.
+
+### Task Execution Framework
+
+#### 1. Research Objectives Definition
+```markdown
+**Research Planning Checklist:**
+- [ ] Primary research goal clearly defined
+- [ ] Specific questions to answer identified  
+- [ ] Decision support needs understood
+- [ ] Timeline và resource constraints known
+- [ ] Success criteria established
+```
+
+#### 2. Research Scope Framework
+
+##### Information Architecture
+```markdown
+**Research Focus Areas Template:**
+
+### Area 1: {Focus Area Name}
+**Primary Questions:**
+- {Specific question 1}
+- {Follow-up question}
+- {Validation question}
+
+**Information Types Needed:**
+- {Quantitative data requirements}
+- {Qualitative insights needed}
+- {Specific metrics/statistics}
+
+**Sources to Target:**
+- {Primary source types}
+- {Secondary source types}
+- {Expert/authority sources}
+
+### Area 2: {Focus Area Name}
+{Repeat structure}
+```
+
+##### Research Methodology Specification
+```markdown
+**Methodology Framework:**
+- **Approach**: {Quantitative/Qualitative/Mixed methods}
+- **Analysis Framework**: {SWOT, Porter's 5 Forces, Competitive analysis, etc.}
+- **Validation Methods**: {Cross-verification approach}
+- **Quality Standards**: {Source authority, recency, relevance requirements}
+```
+
+#### 3. Prompt Generation Process
+
+##### Step 1: Context Gathering
+- Review brainstorming session outputs
+- Identify knowledge gaps
+- Prioritize research questions by importance
+- Assess available resources và constraints
+
+##### Step 2: Research Architecture Design
+- Structure research into logical focus areas
+- Define specific questions for each area
+- Identify preferred information sources
+- Set quality và validation standards
+
+##### Step 3: Output Specification
+- Define desired deliverable format
+- Specify analysis requirements
+- Set evidence documentation standards
+- Establish timeline và milestones
+
+##### Step 4: Prompt Assembly
+- Combine all elements into comprehensive research brief
+- Include sufficient context for standalone execution
+- Provide clear success criteria
+- Add constraints và limitations
+
+#### 4. Quality Validation
+
+##### Prompt Quality Checklist
+- [ ] **Clarity**: Research objectives clearly stated
+- [ ] **Completeness**: All necessary information provided
+- [ ] **Actionability**: Specific questions và tasks defined
+- [ ] **Feasibility**: Reasonable scope given constraints
+- [ ] **Value**: Results will inform important decisions
+
+##### Research Scope Validation
+- [ ] **Focus**: Questions directly support decision needs
+- [ ] **Balance**: Appropriate mix của breadth và depth
+- [ ] **Prioritization**: Most important questions identified
+- [ ] **Dependencies**: Logical research sequence defined
+- [ ] **Deliverables**: Output format suitable for next steps
+
+---
+
+## 📊 PRD Development Task - PM Core Task
+
+### Mục đích
+Transform research insights và user needs thành comprehensive Product Requirements Document.
+
+### Task Execution Framework
+
+#### 1. PRD Planning Phase
+```markdown
+**PRD Preparation Checklist:**
+- [ ] Research findings reviewed và synthesized
+- [ ] User personas và needs clearly understood
+- [ ] Business goals và success metrics defined
+- [ ] Technical constraints identified
+- [ ] Stakeholder input gathered
+```
+
+#### 2. PRD Development Process
+
+##### Phase 1: Foundation Setting (20% effort)
+- **Problem Definition**: Clear, compelling problem statement
+- **User Analysis**: Detailed user personas và journey mapping
+- **Market Context**: Competitive landscape và opportunity sizing
+- **Success Metrics**: Measurable goals tied to business value
+
+##### Phase 2: Requirements Engineering (40% effort)
+- **Functional Requirements**: User stories với acceptance criteria
+- **Non-Functional Requirements**: Performance, security, scalability needs
+- **UI/UX Requirements**: User experience principles và constraints
+- **Integration Requirements**: External systems và data flows
+
+##### Phase 3: MVP Definition (25% effort)  
+- **Core Feature Set**: Essential features for MVP success
+- **Scope Boundaries**: Explicit inclusions và exclusions
+- **Epic Breakdown**: High-level development structure
+- **Validation Approach**: How to test MVP success
+
+##### Phase 4: Implementation Guidance (15% effort)
+- **Technical Constraints**: Platform, technology preferences
+- **Resource Requirements**: Team, timeline, budget considerations
+- **Risk Assessment**: Technical, business, adoption risks
+- **Success Criteria**: Definition of project success
+
+#### 3. PRD Sections Deep Dive
+
+##### Executive Summary Guidelines
+- **Length**: 2-3 paragraphs maximum
+- **Content**: Problem, solution, impact, success metrics
+- **Audience**: Executives và senior stakeholders
+- **Tone**: Compelling, business-focused, results-oriented
+
+##### User Stories Framework
+```markdown
+**Story Template:**
+As a {user type}
+I want {capability}
+So that {benefit/outcome}
+
+**Acceptance Criteria:**
+- {Testable criterion 1}
+- {Testable criterion 2}
+- {Testable criterion 3}
+
+**Priority**: {Critical/High/Medium/Low}
+**Epic**: {Associated epic}
+**Dependencies**: {Other stories this depends on}
+```
+
+##### Non-Functional Requirements Categories
+- **Performance**: Response times, throughput, scalability
+- **Security**: Authentication, authorization, data protection
+- **Usability**: User experience standards, accessibility
+- **Reliability**: Availability, fault tolerance, recovery
+- **Maintainability**: Code quality, documentation standards
+
+#### 4. Quality Assurance Process
+
+##### PRD Review Framework
+- **Completeness Check**: All template sections populated
+- **Consistency Validation**: No contradictions between sections
+- **Clarity Assessment**: Language clear for all audiences
+- **Feasibility Review**: Requirements achievable within constraints
+- **Alignment Verification**: Supports stated business goals
+
+##### Stakeholder Validation Process
+- **Internal Review**: Team feedback on technical feasibility
+- **Business Review**: Stakeholder alignment on scope và priorities
+- **User Validation**: User persona accuracy và journey completeness
+- **Final Approval**: Formal sign-off from decision makers
+
+---
+
+## ⚡ Advanced Elicitation Task - Enhancement Tool
+
+### Mục đích
+Cung cấp structured reflection và brainstorming options để enhance quality của any content hoặc analysis.
+
+### Available Actions (0-9)
+
+#### 0. Expand or Contract for Audience
+**When to use**: Content needs adjustment cho specific audience hoặc detail level
+**Process**: 
+- Ask user: expand (more detail) hoặc contract (simplify)
+- Identify target audience if applicable
+- Adjust content accordingly from current role perspective
+
+#### 1. Explain Reasoning (Chain of Thought)
+**When to use**: Need transparency in decision-making process
+**Process**: Walk through step-by-step thinking process that led to current recommendations
+
+#### 2. Critique and Refine
+**When to use**: Content needs quality improvement
+**Process**: Identify deficiencies, inconsistencies, improvement areas từ current role perspective và propose enhanced version
+
+#### 3. Analyze Logical Flow and Dependencies
+**When to use**: Need to verify structural coherence
+**Process**: Examine content structure cho logical progression, internal consistency, và necessary dependencies
+
+#### 4. Assess Alignment with Overall Goals  
+**When to use**: Need to ensure content supports project objectives
+**Process**: Evaluate how current content contributes to stated goals từ current role perspective
+
+#### 5. Identify Potential Risks and Unforeseen Issues
+**When to use**: Need proactive risk management
+**Process**: Brainstorm potential risks, edge cases, unintended consequences based on role expertise
+
+#### 6. Challenge from Critical Perspective
+**When to use**: Need devil's advocate analysis
+**Process**: Apply critical perspective, either from current role hoặc specified alternative viewpoint
+
+#### 7. Explore Diverse Alternatives (Tree of Thought)
+**When to use**: Need to consider different approaches
+**Process**: Brainstorm diverse approaches, then present 2 detailed alternatives with pros/cons
+
+#### 8. Hindsight is 20/20 Reflection
+**When to use**: Need to anticipate potential future regrets
+**Process**: Imagine project retrospective và identify "what if we had known/done X" scenarios
+
+#### 9. Proceed / No Further Actions
+**When to use**: Content is satisfactory, ready to move forward
+**Process**: Acknowledge completion và prepare for next phase
+
+### Usage Protocol
+1. **Present Action List**: Show numbered options 0-9
+2. **Wait for Selection**: User chooses action number
+3. **Execute Action**: Follow specific action protocol
+4. **Return to Menu**: Ask if they want another action hoặc option 9
+5. **Continue Until Done**: Repeat until user selects option 9
+
+---
+
+## 🔄 Course Correction Task - Change Management
+
+### Mục đích
+Navigate major changes, pivots, hoặc significant issues discovered during planning process.
+
+### Task Execution Framework
+
+#### 1. Change Trigger Analysis
+```markdown
+**Change Assessment Checklist:**
+- [ ] Triggering event clearly identified
+- [ ] Root cause analysis completed
+- [ ] Impact scope assessed
+- [ ] Stakeholders notified
+- [ ] Decision timeline established
+```
+
+#### 2. Impact Assessment Process
+
+##### Current State Analysis
+- **Completed Work**: What's been delivered and validated
+- **In-Progress Work**: What's currently being developed
+- **Planned Work**: What's scheduled but not started
+- **Resource Investment**: Time, effort, cost invested to date
+
+##### Change Impact Evaluation
+- **Requirements Impact**: Changes needed to PRD
+- **Architecture Impact**: Technical design implications
+- **Timeline Impact**: Schedule adjustments required
+- **Resource Impact**: Team, budget, skill implications
+
+#### 3. Path Forward Options
+
+##### Option 1: Minor Adjustment
+- **Scope**: Limited changes to current approach
+- **Effort**: Minimal rework required
+- **Risk**: Low disruption to timeline
+- **When Appropriate**: Change is contained và incremental
+
+##### Option 2: Major Pivot
+- **Scope**: Significant changes to direction
+- **Effort**: Substantial rework required  
+- **Risk**: Timeline và resource impact
+- **When Appropriate**: Fundamental assumptions changed
+
+##### Option 3: Scope Reduction
+- **Scope**: Remove features/requirements to stay on track
+- **Effort**: Eliminate planned work
+- **Risk**: Reduced MVP value
+- **When Appropriate**: Timeline hoặc resource constraints
+
+##### Option 4: Resource Augmentation
+- **Scope**: Add resources to handle additional complexity
+- **Effort**: Maintain current scope với more support
+- **Risk**: Cost increase, coordination complexity
+- **When Appropriate**: Budget available, timeline critical
+
+#### 4. Decision Framework
+
+##### Decision Criteria
+- **User Impact**: Effect on user value và experience
+- **Business Impact**: Effect on business goals và ROI
+- **Technical Impact**: Effect on architecture và implementation
+- **Resource Impact**: Effect on timeline, budget, team
+
+##### Stakeholder Analysis
+- **Decision Makers**: Who needs to approve change
+- **Implementers**: Who will execute the change
+- **End Users**: Who will be affected by change
+- **Sponsors**: Who is funding the effort
+
+##### Risk Assessment
+- **Implementation Risk**: Can the change be executed successfully
+- **Timeline Risk**: Will deadlines be missed
+- **Quality Risk**: Will quality standards be compromised
+- **Adoption Risk**: Will users accept the change
+
+---
+
+## 📋 Planning Phase Completion Task - Quality Gate
+
+### Mục đích
+Ensure all planning deliverables meet quality standards before transitioning to Architecture phase.
+
+### Completion Criteria
+
+#### Analyst Deliverables Validation
+- [ ] **Project Brief**: Comprehensive với clear problem definition
+- [ ] **Research**: Market insights và competitive analysis complete
+- [ ] **User Analysis**: Personas validated với real user input
+- [ ] **Concept Development**: Top ideas evaluated và prioritized
+
+#### PM Deliverables Validation  
+- [ ] **PRD Completeness**: All sections populated với adequate detail
+- [ ] **MVP Definition**: Scope clearly bounded với rationale
+- [ ] **Epic Structure**: Development path logical và feasible
+- [ ] **Requirements Quality**: Testable, unambiguous, user-focused
+- [ ] **Risk Assessment**: Major risks identified với mitigation plans
+
+#### Cross-Functional Validation
+- [ ] **Stakeholder Alignment**: Key stakeholders reviewed và approved
+- [ ] **Technical Feasibility**: No obvious technical blockers
+- [ ] **Resource Reality**: Scope achievable với available resources
+- [ ] **Timeline Reasonableness**: Delivery expectations realistic
+
+#### Handoff Preparation
+- [ ] **Architecture Package**: All documents needed for architecture design
+- [ ] **Decision Documentation**: Key decisions recorded với rationale
+- [ ] **Outstanding Questions**: Issues flagged for architecture team
+- [ ] **Success Criteria**: Clear definition of architecture success
+
+### Quality Gates
+
+#### Gate 1: Content Completeness
+**Criteria**: All required sections populated với meaningful content
+**Validator**: PM với Analyst review
+**Remediation**: Complete missing sections trước proceeding
+
+#### Gate 2: Internal Consistency  
+**Criteria**: No contradictions between different documents
+**Validator**: Cross-document review
+**Remediation**: Resolve conflicts và update all affected documents
+
+#### Gate 3: Stakeholder Alignment
+**Criteria**: Key stakeholders agree với direction và scope
+**Validator**: Formal stakeholder review meeting
+**Remediation**: Address concerns và update documents as needed
+
+#### Gate 4: Feasibility Validation
+**Criteria**: Proposed solution appears technically và resource feasible
+**Validator**: Technical review với available expertise
+**Remediation**: Adjust scope hoặc approach based on feasibility assessment
+
+### Handoff Protocol
+
+#### Architecture Handoff Package
+```markdown
+**Required Deliverables:**
+- [ ] PRD.md (validated with PM checklist)
+- [ ] Project Brief (with market insights)
+- [ ] User Personas và Journey Maps
+- [ ] Epic Breakdown với priorities
+- [ ] Technical Constraints Documentation
+- [ ] Risk Assessment với mitigation strategies
+
+**Handoff Meeting Agenda:**
+1. **Context Setting** (10 min): Project background và goals
+2. **Requirements Overview** (20 min): PRD walkthrough  
+3. **User Analysis** (15 min): Personas và journey maps
+4. **Technical Discussion** (20 min): Constraints và preferences
+5. **Questions & Clarifications** (15 min): Architecture team Q&A
+6. **Next Steps** (10 min): Timeline, deliverables, communication plan
+```
+
+#### Success Metrics for Architecture Phase
+- **Timeline**: Architecture documents delivered on schedule
+- **Quality**: Documents pass architecture validation checklists
+- **Completeness**: All technical decisions documented với rationale
+- **Alignment**: Architecture supports all PRD requirements
+- **Feasibility**: Implementation approach confirmed as viable
+
+---
+
+## 🚀 Planning Tasks Excellence!
+
+Các tasks này cung cấp structured approach cho:
+
+- 🧠 **Creative Ideation**: Structured brainstorming với proven techniques
+- 🔍 **Research Excellence**: Comprehensive research prompt creation
+- 📊 **Requirements Engineering**: Systematic PRD development
+- ⚡ **Quality Enhancement**: Advanced elicitation for content improvement
+- 🔄 **Change Management**: Systematic handling của major changes
+- 📋 **Quality Assurance**: Rigorous validation trước phase transition
+
+**Use these tasks to ensure consistent, high-quality planning outcomes! 🎯✨**

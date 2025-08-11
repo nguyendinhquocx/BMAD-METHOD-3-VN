@@ -1,0 +1,861 @@
+# BMAD Development Templates - Template Phát triển Toàn diện
+
+---
+
+## 📋 User Story Development Template
+
+### Purpose
+Comprehensive template cho creating detailed user stories với complete acceptance criteria, technical specifications, và testing requirements. Optimized cho AI agent implementation.
+
+### Template Structure
+
+```markdown
+# User Story: {Story Title}
+
+## 📊 Story Overview
+**Epic**: {Parent Epic Name}  
+**Story ID**: {Unique Identifier}  
+**Priority**: {High/Medium/Low}  
+**Estimate**: {Story Points}  
+**Sprint**: {Target Sprint Number}
+
+## 👤 User Story Statement
+**As a** {user type/persona}  
+**I want** {functionality/feature}  
+**So that** {business value/benefit}
+
+## 🎯 Acceptance Criteria
+### Primary Acceptance Criteria
+- [ ] **Given** {initial context}, **When** {action taken}, **Then** {expected outcome}
+- [ ] **Given** {context 2}, **When** {action 2}, **Then** {expected outcome 2}
+- [ ] **Given** {context 3}, **When** {action 3}, **Then** {expected outcome 3}
+
+### Edge Case Scenarios
+- [ ] **Given** {edge case context}, **When** {edge case action}, **Then** {edge case outcome}
+- [ ] **Given** {error scenario}, **When** {error trigger}, **Then** {error handling}
+
+### Non-Functional Criteria
+- [ ] **Performance**: {specific performance requirements}
+- [ ] **Security**: {security requirements và validation}
+- [ ] **Accessibility**: {WCAG compliance requirements}
+- [ ] **Browser Support**: {supported browsers và versions}
+
+## 🏗️ Technical Implementation
+
+### Frontend Implementation
+**Components Required**:
+- `{ComponentName}`: {Component purpose và key props}
+- `{ComponentName2}`: {Component purpose và key props}
+
+**State Management**:
+- **Global State**: {required global state changes}
+- **Local State**: {component-level state requirements}
+- **API Integration**: {API endpoints và data flow}
+
+**Styling Requirements**:
+- **Responsive Behavior**: {breakpoint specifications}
+- **Design System**: {design tokens và components used}
+- **Animations**: {transition và animation requirements}
+
+### Backend Implementation
+**API Endpoints**:
+- `GET /api/{resource}`: {endpoint purpose, request/response format}
+- `POST /api/{resource}`: {endpoint purpose, request/response format}
+- `PUT /api/{resource}/{id}`: {endpoint purpose, request/response format}
+- `DELETE /api/{resource}/{id}`: {endpoint purpose, request/response format}
+
+**Database Changes**:
+- **New Tables**: {table structure và relationships}
+- **Schema Updates**: {existing table modifications}
+- **Data Migrations**: {required data transformations}
+
+**Business Logic**:
+- **Service Layer**: {business rules và validation logic}
+- **Integration Points**: {external service integrations}
+- **Background Jobs**: {async processing requirements}
+
+### Infrastructure Requirements
+**Environment Variables**:
+- `{ENV_VAR_NAME}`: {purpose và example value}
+
+**External Dependencies**:
+- **New Dependencies**: {required packages với versions}
+- **Service Integrations**: {third-party services}
+
+**Deployment Considerations**:
+- **Feature Flags**: {feature toggle requirements}
+- **Configuration Changes**: {deployment configuration updates}
+
+## 🧪 Testing Requirements
+
+### Unit Testing
+- **Frontend Tests**: {component testing requirements}
+  - Component behavior testing
+  - State management testing
+  - User interaction testing
+- **Backend Tests**: {service testing requirements}
+  - Business logic validation
+  - API endpoint testing
+  - Database interaction testing
+
+### Integration Testing
+- **API Integration**: {end-to-end API testing}
+- **Database Integration**: {data persistence testing}
+- **External Service Integration**: {third-party service testing}
+
+### End-to-End Testing
+- **User Journey**: {complete user flow testing}
+- **Cross-Browser**: {browser compatibility testing}
+- **Responsive Testing**: {device compatibility testing}
+
+### Performance Testing
+- **Load Testing**: {performance benchmarks}
+- **Stress Testing**: {system limits testing}
+- **User Experience**: {UX performance metrics}
+
+## 🔒 Security Considerations
+- **Input Validation**: {data validation requirements}
+- **Authentication**: {auth requirements và flows}
+- **Authorization**: {permission checking requirements}
+- **Data Protection**: {sensitive data handling}
+- **OWASP Compliance**: {security vulnerability prevention}
+
+## 📱 Accessibility Requirements
+- **WCAG 2.1 AA Compliance**: {specific accessibility features}
+- **Keyboard Navigation**: {keyboard interaction support}
+- **Screen Reader Support**: {ARIA labels và descriptions}
+- **Color Contrast**: {contrast ratio requirements}
+- **Focus Management**: {focus indicator requirements}
+
+## 🎨 Design Specifications
+- **Figma/Design Files**: {link to design specifications}
+- **Design Tokens**: {specific design system elements used}
+- **Interactive States**: {hover, active, disabled states}
+- **Responsive Breakpoints**: {mobile, tablet, desktop specifications}
+- **Animation Specifications**: {transition timings và easing}
+
+## 📊 Definition of Done
+- [ ] Code implemented according to acceptance criteria
+- [ ] Unit tests written với minimum {X}% coverage
+- [ ] Integration tests passing
+- [ ] Code reviewed và approved
+- [ ] Security review completed
+- [ ] Accessibility review completed
+- [ ] Performance benchmarks met
+- [ ] Documentation updated
+- [ ] Feature deployed to staging environment
+- [ ] QA testing completed
+- [ ] Product Owner acceptance received
+
+## 🚀 Deployment Notes
+- **Feature Flags**: {feature toggle strategy}
+- **Database Migrations**: {migration scripts và rollback procedures}
+- **Configuration Updates**: {environment-specific configurations}
+- **Monitoring**: {metrics và alerts to establish}
+- **Rollback Plan**: {rollback procedure if issues arise}
+
+## 📈 Success Metrics
+- **User Engagement**: {specific metrics to track}
+- **Performance Metrics**: {performance benchmarks}
+- **Business Metrics**: {business value measurements}
+- **Technical Metrics**: {code quality và system health metrics}
+
+## 🔗 Related Stories
+- **Depends On**: {prerequisite stories}
+- **Blocks**: {stories blocked by this one}
+- **Related**: {related stories for context}
+
+## 📝 Notes & Assumptions
+- {Any additional context, assumptions, hoặc constraints}
+- {Links to research, spikes, hoặc investigations}
+- {Communication với stakeholders}
+
+---
+
+**Story created by**: {Author Name}  
+**Date**: {Creation Date}  
+**Last updated**: {Last Update Date}  
+**Status**: {Backlog/In Progress/Code Review/Testing/Done}
+```
+
+---
+
+## 🏃‍♂️ Sprint Planning Template
+
+### Purpose
+Comprehensive template cho planning development sprints với capacity management, story selection, risk assessment, và success criteria.
+
+### Sprint Planning Structure
+
+```markdown
+# Sprint {Number} Planning
+
+## 📊 Sprint Overview
+**Sprint Goal**: {High-level objective cho sprint}  
+**Sprint Duration**: {Start Date} - {End Date} ({X} working days)  
+**Scrum Master**: {Name}  
+**Product Owner**: {Name}  
+**Development Team**: {Team Member Names}
+
+## 🎯 Sprint Goal & Objectives
+### Primary Sprint Goal
+{Clear, concise statement của what sprint will achieve}
+
+### Success Criteria
+- [ ] {Measurable outcome 1}
+- [ ] {Measurable outcome 2}  
+- [ ] {Measurable outcome 3}
+
+### Key Results Expected
+- **User Value**: {specific user benefits to be delivered}
+- **Technical Progress**: {technical capabilities to be built}
+- **Business Value**: {business metrics to be improved}
+
+## 👥 Team Capacity & Availability
+### Team Member Availability
+| Team Member | Role | Available Days | Capacity % | Planned Capacity |
+|-------------|------|----------------|------------|------------------|
+| {Name} | {Role} | {X} days | {Y}% | {Z} points |
+| {Name} | {Role} | {X} days | {Y}% | {Z} points |
+| {Name} | {Role} | {X} days | {Y}% | {Z} points |
+
+**Total Team Capacity**: {X} story points  
+**Committed Capacity**: {Y} story points  
+**Buffer for Unknowns**: {Z} story points
+
+### Capacity Considerations
+- **Holidays/PTO**: {team member absences}
+- **Meetings/Ceremonies**: {estimated time for scrum events}
+- **Bug Fixes/Support**: {estimated time for unplanned work}
+- **Technical Debt**: {time allocated for code improvement}
+
+## 📋 Story Selection & Prioritization
+
+### Sprint Backlog
+| Story ID | Story Title | Priority | Estimate | Assignee | Dependencies |
+|----------|-------------|----------|----------|----------|--------------|
+| {ID} | {Title} | {P0/P1/P2} | {Points} | {Name} | {Dependencies} |
+| {ID} | {Title} | {P0/P1/P2} | {Points} | {Name} | {Dependencies} |
+| {ID} | {Title} | {P0/P1/P2} | {Points} | {Name} | {Dependencies} |
+
+### Story Breakdown & Task Planning
+#### {Story Title} - {Story Points}
+**Acceptance Criteria Review**: ✅ Reviewed và understood  
+**Technical Approach**: {High-level technical solution}  
+**Implementation Tasks**:
+- [ ] {Frontend implementation task}
+- [ ] {Backend implementation task}  
+- [ ] {Testing task}
+- [ ] {Documentation task}
+
+**Dependencies**: {Any prerequisites hoặc blockers}  
+**Risk Level**: {High/Medium/Low}  
+**Assigned To**: {Team Member}
+
+## ⚠️ Risk Assessment & Mitigation
+
+### Identified Risks
+| Risk | Impact | Probability | Mitigation Strategy | Owner |
+|------|--------|-------------|-------------------|--------|
+| {Risk description} | {High/Med/Low} | {High/Med/Low} | {Mitigation approach} | {Name} |
+| {Risk description} | {High/Med/Low} | {High/Med/Low} | {Mitigation approach} | {Name} |
+
+### Technical Risks
+- **New Technology**: {risks with unfamiliar technology}
+- **Integration Complexity**: {risks with system integration}
+- **Performance Concerns**: {risks with performance requirements}
+- **Third-party Dependencies**: {risks with external services}
+
+### Business Risks  
+- **Scope Creep**: {risk mitigation cho changing requirements}
+- **Stakeholder Availability**: {risk với stakeholder engagement}
+- **Market Changes**: {risk với changing business environment}
+
+## 🔄 Sprint Execution Plan
+
+### Daily Standup Schedule
+- **Time**: {Daily standup time}
+- **Duration**: 15 minutes maximum
+- **Format**: {In-person/Virtual meeting details}
+- **Focus**: Progress, impediments, daily commitments
+
+### Code Review Process
+- **Review Requirements**: All code reviewed by at least {X} team members
+- **Review Checklist**: {Link to code review checklist}
+- **Approval Process**: {Approval requirements before merge}
+- **Quality Gates**: {Automated testing requirements}
+
+### Testing Strategy
+- **Unit Testing**: Minimum {X}% code coverage required
+- **Integration Testing**: {Integration testing requirements}
+- **Manual Testing**: {QA testing process và timeline}
+- **User Acceptance**: {UAT process với Product Owner}
+
+### Definition of Done
+- [ ] Code implemented according to acceptance criteria
+- [ ] Unit tests written và passing
+- [ ] Integration tests passing
+- [ ] Code reviewed và approved
+- [ ] Security review completed (if applicable)
+- [ ] Performance benchmarks met
+- [ ] Documentation updated
+- [ ] Deployed to staging environment
+- [ ] QA testing completed
+- [ ] Product Owner acceptance received
+
+## 📊 Sprint Metrics & Tracking
+
+### Velocity Tracking
+- **Previous Sprint Velocity**: {X} story points
+- **Average Velocity (last 3 sprints)**: {Y} story points  
+- **Committed Points This Sprint**: {Z} story points
+- **Stretch Goal Points**: {A} additional points
+
+### Progress Tracking Method
+- **Daily Burndown**: Track remaining work daily
+- **Story Status Updates**: Track story progress throughout sprint
+- **Impediment Log**: Document và track impediment resolution
+- **Team Happiness**: Monitor team satisfaction và engagement
+
+### Success Measurements
+- **Sprint Goal Achievement**: Binary success/failure measure
+- **Story Completion Rate**: Percentage của committed stories completed
+- **Quality Metrics**: Bug count, code coverage, performance metrics
+- **Team Velocity**: Points completed vs. committed
+
+## 🎯 Sprint Review Preparation
+
+### Demo Planning
+- **Demo Date**: {Sprint review date và time}
+- **Demo Audience**: {Stakeholders who will attend}
+- **Demo Script**: {Order của features to demonstrate}
+- **Demo Environment**: {Environment setup cho demonstration}
+
+### Retrospective Planning
+- **Retrospective Date**: {Sprint retrospective date}
+- **Retrospective Format**: {Format/technique to be used}
+- **Focus Areas**: {Specific areas to examine}
+- **Improvement Goals**: {Process improvement objectives}
+
+## 📋 Sprint Commitments
+
+### Team Commitment
+"We, as the development team, commit to delivering the following sprint goal và stories to the best của our ability, given current understanding và capacity."
+
+**Sprint Goal Commitment**: {Restate sprint goal}  
+**Story Commitments**: {List committed story IDs}  
+**Quality Commitment**: All work meets Definition của Done  
+**Communication Commitment**: Daily transparency về progress và impediments
+
+### Stakeholder Expectations
+- **Product Owner**: {PO expectations và commitments}
+- **Business Stakeholders**: {Business stakeholder expectations}
+- **End Users**: {User impact expectations}
+
+---
+
+**Sprint planned by**: {Names}  
+**Planning session date**: {Date}  
+**Next review date**: {Date for sprint review}  
+**Approved by**: {Product Owner signature/approval}
+```
+
+---
+
+## 🔧 Development Environment Setup Template
+
+### Purpose
+Complete guide cho setting up consistent development environment across team members, optimized cho productivity và code quality.
+
+### Development Environment Structure
+
+```markdown
+# Development Environment Setup Guide
+
+## 🖥️ System Requirements
+
+### Hardware Requirements
+**Minimum Requirements**:
+- RAM: {X}GB minimum, {Y}GB recommended
+- Storage: {X}GB available space
+- CPU: {specifications}
+- Network: Broadband internet connection
+
+**Recommended Setup**:
+- RAM: {Y}GB cho optimal performance
+- Storage: SSD với {Y}GB available space
+- CPU: {enhanced specifications}
+- Additional: Dual monitors cho productivity
+
+### Operating System Support
+- **Windows**: Windows 10/11 (64-bit)
+- **macOS**: macOS 10.15+ (Catalina hoặc later)
+- **Linux**: Ubuntu 20.04+, Debian 10+, CentOS 8+
+
+## 🛠️ Required Software Installation
+
+### Core Development Tools
+
+#### 1. Version Control
+```bash
+# Install Git
+# Windows: Download từ https://git-scm.com/
+# macOS: brew install git
+# Linux: sudo apt install git
+
+# Verify installation
+git --version
+
+# Configure Git
+git config --global user.name "Your Name"
+git config --global user.email "your.email@company.com"
+git config --global init.defaultBranch main
+```
+
+#### 2. Code Editor/IDE
+**Primary Option**: VS Code
+```bash
+# Download VS Code từ https://code.visualstudio.com/
+
+# Required Extensions:
+- {Language} Extension Pack
+- GitLens
+- Prettier - Code formatter
+- ESLint (cho JavaScript/TypeScript)
+- Live Share
+- REST Client
+```
+
+**Alternative Options**: {Other supported IDEs}
+
+#### 3. Runtime Environment
+```bash
+# Node.js và npm (cho frontend/JavaScript projects)
+# Download từ https://nodejs.org/ (LTS version)
+# Verify: node --version && npm --version
+
+# Python (nếu applicable)
+# Download từ https://python.org/ (version {X.Y})
+# Verify: python --version
+
+# Java (nếu applicable)  
+# Download OpenJDK {version} từ https://adoptopenjdk.net/
+# Verify: java -version
+```
+
+#### 4. Database Tools
+```bash
+# PostgreSQL (nếu applicable)
+# Download từ https://postgresql.org/download/
+# Configure: {database configuration instructions}
+
+# MongoDB (nếu applicable)  
+# Download từ https://mongodb.com/try/download/community
+# Configure: {mongodb configuration instructions}
+
+# Database GUI Tool: {recommended tool}
+```
+
+#### 5. Docker & Containerization
+```bash
+# Docker Desktop
+# Download từ https://docker.com/products/docker-desktop
+# Verify: docker --version && docker-compose --version
+
+# Basic Docker commands to test:
+docker run hello-world
+```
+
+## 📁 Project Setup
+
+### 1. Repository Clone
+```bash
+# Clone main repository
+git clone {repository-url}
+cd {project-directory}
+
+# Setup remote branches
+git fetch origin
+git checkout -b develop origin/develop
+```
+
+### 2. Environment Configuration
+```bash
+# Copy environment template
+cp .env.example .env.local
+
+# Required environment variables:
+# {List và describe each required environment variable}
+DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+API_KEY={your-api-key}
+SECRET_KEY={your-secret-key}
+```
+
+### 3. Dependency Installation
+```bash
+# Install project dependencies
+npm install
+# hoặc yarn install
+# hoặc pip install -r requirements.txt
+
+# Verify installation
+npm run --help
+# Check available scripts
+```
+
+### 4. Database Setup
+```bash
+# Create database
+createdb {database-name}
+
+# Run migrations
+npm run migrate
+# hoặc python manage.py migrate
+
+# Seed sample data
+npm run seed
+# hoặc python manage.py loaddata fixtures/sample_data.json
+```
+
+### 5. Development Server
+```bash
+# Start development server
+npm run dev
+# hoặc python manage.py runserver
+
+# Verify server running:
+# Open browser to http://localhost:{port}
+# Check API health: curl http://localhost:{port}/health
+```
+
+## 🧪 Testing Environment
+
+### Test Framework Setup
+```bash
+# Run test suite
+npm test
+# hoặc pytest
+
+# Run specific test categories
+npm run test:unit
+npm run test:integration
+npm run test:e2e
+
+# Generate coverage report
+npm run test:coverage
+```
+
+### Test Database Configuration
+```bash
+# Create test database
+createdb {test-database-name}
+
+# Set test environment variables
+export NODE_ENV=test
+export DATABASE_URL=postgresql://user:password@localhost:5432/test_db
+```
+
+## 🔧 Development Tools Configuration
+
+### Code Quality Tools
+```bash
+# ESLint configuration (JavaScript/TypeScript)
+npx eslint --init
+
+# Prettier configuration
+echo '{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2
+}' > .prettierrc
+
+# Pre-commit hooks
+npx husky install
+npx husky add .husky/pre-commit "npm run lint && npm run test"
+```
+
+### VS Code Configuration
+```json
+// .vscode/settings.json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.autoFixOnSave": true,
+  "files.associations": {
+    "*.json": "jsonc"
+  }
+}
+```
+
+### Browser Developer Tools
+- Install browser extensions cho debugging
+- Configure React/Vue Developer Tools
+- Setup network debugging tools
+
+## 🐳 Docker Development (Optional)
+
+### Docker Setup
+```bash
+# Build development image
+docker-compose build
+
+# Start development services  
+docker-compose up -d
+
+# View logs
+docker-compose logs -f {service-name}
+
+# Connect to running container
+docker-compose exec {service-name} bash
+```
+
+### Docker Configuration
+```yaml
+# docker-compose.yml example
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "{port}:{port}"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - /app/node_modules
+  
+  database:
+    image: postgres:{version}
+    environment:
+      POSTGRES_DB: {db-name}
+      POSTGRES_USER: {db-user}
+      POSTGRES_PASSWORD: {db-password}
+    ports:
+      - "5432:5432"
+```
+
+## 📚 Documentation & Resources
+
+### Project Documentation
+- **Architecture Overview**: {link to architecture docs}
+- **API Documentation**: {link to API docs}
+- **Component Library**: {link to component docs}
+- **Database Schema**: {link to schema docs}
+
+### Team Resources
+- **Slack Channels**: {relevant slack channels}
+- **Team Wiki**: {link to team wiki}
+- **Design System**: {link to design system}
+- **Deployment Guide**: {link to deployment docs}
+
+### Learning Resources
+- **Technology Stack Tutorials**: {links to tutorials}
+- **Best Practices Guide**: {link to coding standards}
+- **Troubleshooting Guide**: {link to common issues}
+
+## ✅ Environment Verification Checklist
+
+### Development Environment
+- [ ] Git installed và configured
+- [ ] Code editor setup với required extensions
+- [ ] Runtime environment installed và verified
+- [ ] Project repository cloned successfully
+- [ ] Environment variables configured
+- [ ] Dependencies installed without errors
+- [ ] Database created và migrations run
+- [ ] Development server starts successfully
+- [ ] Can access application trong browser
+- [ ] API endpoints responding correctly
+
+### Testing Environment  
+- [ ] Test suite runs successfully
+- [ ] All unit tests passing
+- [ ] Integration tests configured
+- [ ] Test database setup correctly
+- [ ] Coverage reports generated
+- [ ] End-to-end tests configured (if applicable)
+
+### Code Quality Tools
+- [ ] Linting tools configured
+- [ ] Code formatting working
+- [ ] Pre-commit hooks installed
+- [ ] Editor configured for team standards
+- [ ] Debugging tools setup
+
+### Team Integration
+- [ ] Access to project repositories
+- [ ] Access to shared resources
+- [ ] Team communication channels joined  
+- [ ] Development workflow understood
+- [ ] Code review process understood
+
+## 🆘 Troubleshooting Common Issues
+
+### Installation Issues
+**Issue**: {Common installation problem}
+**Solution**: {Step-by-step solution}
+
+**Issue**: {Another common problem}  
+**Solution**: {Step-by-step solution}
+
+### Configuration Issues
+**Issue**: Environment variables not loading
+**Solution**: 
+1. Check .env file location
+2. Verify variable names
+3. Restart development server
+
+### Performance Issues
+**Issue**: Slow development server
+**Solution**: 
+1. Check system resources
+2. Optimize build configuration
+3. Consider Docker alternatives
+
+### Getting Help
+- **Team Support**: {contact information}
+- **Documentation**: {links to help resources}  
+- **Issue Tracking**: {where to report problems}
+
+---
+
+**Environment setup by**: {Author}  
+**Last updated**: {Date}  
+**Version**: {Version number}  
+**Next review**: {Review date}
+```
+
+---
+
+## 🚀 Code Implementation Templates
+
+### Purpose
+Standardized templates cho implementing common code patterns, ensuring consistency và maintainability across development team.
+
+### Frontend Component Template
+
+```typescript
+// {ComponentName}.tsx
+import React, { useState, useEffect } from 'react';
+import { {RequiredTypes} } from '../types';
+import { {RequiredServices} } from '../services';
+import styles from './{ComponentName}.module.css';
+
+interface {ComponentName}Props {
+  // Define prop types
+  {propName}: {propType};
+  className?: string;
+  children?: React.ReactNode;
+}
+
+/**
+ * {ComponentName} component
+ * 
+ * Purpose: {Component purpose và functionality description}
+ * 
+ * @param props - Component props
+ * @returns JSX element
+ */
+export const {ComponentName}: React.FC<{ComponentName}Props> = ({
+  {propName},
+  className = '',
+  children,
+  ...restProps
+}) => {
+  // State management
+  const [state, setState] = useState<{StateType}>({initialState});
+  
+  // Effects
+  useEffect(() => {
+    // Component initialization logic
+  }, []);
+
+  // Event handlers
+  const handleEvent = (event: {EventType}) => {
+    // Event handling logic
+  };
+
+  // Render
+  return (
+    <div 
+      className={`${styles.container} ${className}`}
+      {...restProps}
+    >
+      {/* Component JSX */}
+      {children}
+    </div>
+  );
+};
+
+export default {ComponentName};
+```
+
+### Backend API Route Template
+
+```typescript
+// routes/{resourceName}.ts
+import { Router } from 'express';
+import { {ServiceName} } from '../services';
+import { validate } from '../middleware/validation';
+import { authenticate } from '../middleware/auth';
+import { {RequestType, ResponseType} } from '../types';
+
+const router = Router();
+
+/**
+ * GET /{resource}
+ * Purpose: {Endpoint purpose}
+ */
+router.get('/', authenticate, async (req, res) => {
+  try {
+    const result = await {ServiceName}.getAll({
+      // Query parameters processing
+    });
+    
+    res.json({
+      success: true,
+      data: result,
+      meta: {
+        // Metadata
+      }
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+/**
+ * POST /{resource}  
+ * Purpose: {Endpoint purpose}
+ */
+router.post('/', 
+  authenticate, 
+  validate({ValidationSchema}), 
+  async (req, res) => {
+    try {
+      const result = await {ServiceName}.create(req.body);
+      
+      res.status(201).json({
+        success: true,
+        data: result
+      });
+    } catch (error) {
+      res.status(400).json({
+        success: false,
+        error: error.message
+      });
+    }
+  }
+);
+
+export default router;
+```
+
+---
+
+**Templates ready cho consistent, high-quality development! 🚀✨**

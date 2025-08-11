@@ -1,0 +1,628 @@
+# BMAD Planning Templates - Templates cho Giai đoạn Lập kế hoạch
+
+---
+
+## 📋 Project Brief Template
+
+### Mục đích
+Template này được Analyst sử dụng để tạo structured project brief sau brainstorming sessions, làm foundation cho PM phát triển PRD.
+
+### Template Structure
+
+```markdown
+# {Project Name} - Project Brief
+
+## Executive Summary
+{1-2 paragraph overview of the project, its purpose, and expected impact}
+
+## Problem Statement  
+### Core Problem
+{Clear articulation of the primary problem being solved}
+
+### Problem Context
+- **Who experiences this problem?** {Target user groups}
+- **How significant is the problem?** {Impact assessment}
+- **Why does this problem matter?** {Business/user value}
+- **What makes this problem worth solving now?** {Timing/urgency factors}
+
+## Market & Competitive Landscape
+### Market Opportunity
+{Size, growth potential, target segments}
+
+### Competitive Analysis  
+{Key competitors, their strengths/weaknesses, differentiation opportunities}
+
+### Market Trends
+{Relevant trends that support or challenge this solution}
+
+## Solution Concept
+### Proposed Solution
+{High-level description of the proposed solution approach}
+
+### Key Value Propositions
+- {Value prop 1}
+- {Value prop 2}  
+- {Value prop 3}
+
+### Unique Differentiators
+{What makes this solution unique compared to existing alternatives}
+
+## Target Users
+### Primary User Persona
+- **Who:** {User description}
+- **What:** {Their key needs/goals}
+- **Why:** {Motivation for using this solution}
+- **When:** {Usage context/timing}
+- **Where:** {Usage environment}
+
+### Secondary User Personas
+{If applicable, describe additional user types}
+
+## Solution Scope & Approach
+### Core Features (MVP Candidates)
+{List of essential features that address the core problem}
+
+### Future Enhancement Opportunities  
+{Features that could be added post-MVP}
+
+### Technical Considerations
+{High-level technical constraints, preferences, or requirements}
+
+## Success Vision
+### Short-term Goals (MVP)
+{What constitutes success for the initial version}
+
+### Long-term Vision  
+{Where this could grow over time}
+
+### Key Success Metrics
+{How will we measure success}
+
+## Next Steps
+### Immediate Actions Required
+{What needs to happen next to move this forward}
+
+### Key Questions to Resolve
+{Outstanding questions that need answers}
+
+### Recommended Timeline
+{High-level timeline estimates}
+
+---
+**Prepared by:** {Analyst Name}  
+**Date:** {Date}  
+**Status:** {Draft/Review/Final}
+```
+
+---
+
+## 📊 PRD Template (Product Requirements Document)
+
+### Mục đích
+Comprehensive template để PM tạo detailed Product Requirements Document từ project brief và additional research.
+
+### Template Structure
+
+```markdown
+# {Project Name} - Product Requirements Document (PRD)
+
+## Document Information
+- **Version:** 1.0
+- **Last Updated:** {Date}
+- **Author:** {PM Name}
+- **Status:** {Draft/Review/Approved}
+- **Approvers:** {List of required approvers}
+
+## Table of Contents
+{Auto-generated or manual TOC}
+
+## 1. Executive Summary
+### Project Overview
+{2-3 paragraph summary covering problem, solution, impact}
+
+### Key Objectives
+{Primary goals this product aims to achieve}
+
+### Success Metrics
+{Measurable outcomes that define success}
+
+## 2. Problem Statement & Market Context
+### Problem Definition
+{Clear, specific description of the problem being solved}
+
+### Target Market
+{Market size, segments, opportunity assessment}
+
+### Competitive Landscape
+{Key competitors, market gaps, differentiation strategy}
+
+## 3. User Analysis
+### Primary User Personas
+#### Persona 1: {Name}
+- **Demographics:** {Age, role, experience level}
+- **Goals & Motivations:** {What they want to achieve}
+- **Pain Points:** {Current frustrations/challenges}
+- **Behaviors:** {How they currently solve this problem}
+- **Success Criteria:** {What success looks like for them}
+
+#### Persona 2: {Name}
+{Repeat structure for additional personas}
+
+### User Journey Maps
+{Key user flows and touchpoints with the product}
+
+## 4. Product Vision & Strategy
+### Product Vision Statement  
+{Inspiring 1-2 sentence vision of the product's future}
+
+### Product Strategy
+{How this product fits into broader company/market strategy}
+
+### Value Propositions
+{Clear articulation of value delivered to users}
+
+## 5. Functional Requirements
+### 5.1 Core Features (MVP)
+#### Feature 1: {Feature Name}
+- **Description:** {What this feature does}
+- **User Story:** As a {user type}, I want {capability} so that {benefit}
+- **Acceptance Criteria:**
+  - {Testable criteria 1}
+  - {Testable criteria 2}
+  - {Testable criteria 3}
+- **Priority:** {Critical/High/Medium/Low}
+
+#### Feature 2: {Feature Name}
+{Repeat structure for each core feature}
+
+### 5.2 User Interface Requirements
+- **Key UI Components:** {Essential UI elements}
+- **User Experience Principles:** {UX guidelines to follow}
+- **Accessibility Requirements:** {WCAG compliance level, specific needs}
+- **Responsive Design:** {Device/screen size support}
+
+### 5.3 Integration Requirements
+- **External Systems:** {APIs, services, data sources to integrate}
+- **Data Exchange:** {What data flows in/out}
+- **Authentication:** {How users authenticate}
+- **Third-party Services:** {External dependencies}
+
+## 6. Non-Functional Requirements
+### 6.1 Performance Requirements
+- **Response Time:** {Max acceptable response times}
+- **Throughput:** {Expected transaction/request volumes}
+- **Scalability:** {Growth expectations and scaling needs}
+- **Resource Usage:** {Memory, CPU, storage constraints}
+
+### 6.2 Security Requirements
+- **Data Protection:** {Encryption, privacy requirements}
+- **Access Control:** {Authentication/authorization needs}
+- **Compliance:** {Regulatory requirements - GDPR, SOC2, etc.}
+- **Audit Requirements:** {Logging, monitoring, audit trails}
+
+### 6.3 Reliability & Availability
+- **Uptime Requirements:** {SLA expectations}
+- **Backup & Recovery:** {Data backup and disaster recovery needs}
+- **Error Handling:** {How system should handle failures}
+- **Monitoring:** {Health checks, alerting requirements}
+
+### 6.4 Usability Requirements
+- **User Experience Standards:** {Design principles to follow}
+- **Learning Curve:** {Time to proficiency expectations}
+- **Help & Documentation:** {Support material requirements}
+- **Internationalization:** {Multi-language/locale support}
+
+## 7. Technical Constraints & Preferences
+### 7.1 Technology Preferences
+- **Preferred Platforms:** {Web, mobile, desktop preferences}
+- **Technology Stack Preferences:** {Languages, frameworks, databases}
+- **Cloud/Infrastructure Preferences:** {AWS, Azure, GCP, on-premise}
+- **Integration Standards:** {REST, GraphQL, messaging patterns}
+
+### 7.2 Existing System Constraints
+- **Legacy System Integration:** {Systems that must be preserved/integrated}
+- **Data Migration:** {Existing data that needs to be migrated}
+- **Current Infrastructure:** {Existing infrastructure to leverage}
+- **Team Expertise:** {Current team skills and preferences}
+
+### 7.3 Regulatory & Compliance Constraints
+- **Industry Regulations:** {Sector-specific compliance requirements}
+- **Data Governance:** {Data handling and retention policies}
+- **Security Standards:** {Required security certifications}
+- **Audit Requirements:** {Compliance reporting needs}
+
+## 8. MVP Definition & Scope
+### 8.1 MVP Scope
+#### Included in MVP:
+- {Core feature 1 with specific scope}
+- {Core feature 2 with specific scope}
+- {Essential integration 1}
+- {Basic UI/UX implementation}
+
+#### Explicitly Excluded from MVP:
+- {Advanced feature 1 - moved to v2}
+- {Nice-to-have integration 2}
+- {Complex UI enhancements}
+
+### 8.2 MVP Success Criteria
+- {Measurable success metric 1}
+- {User adoption target}
+- {Performance benchmark}
+- {Quality threshold}
+
+### 8.3 Post-MVP Roadmap
+#### Version 2 Features:
+- {Enhanced feature set}
+- {Additional integrations}
+- {Advanced UI/UX}
+
+#### Future Considerations:
+- {Long-term vision items}
+- {Potential pivot opportunities}
+
+## 9. Epic Breakdown
+### Epic 1: {Epic Name}
+- **Goal:** {What this epic achieves}
+- **User Value:** {Why this epic matters to users}
+- **Scope:** {High-level scope and boundaries}
+- **Stories:** {List of user stories in this epic}
+- **Acceptance Criteria:** {Epic-level success criteria}
+- **Dependencies:** {What must be completed before this epic}
+
+### Epic 2: {Epic Name}
+{Repeat structure for each epic}
+
+## 10. Risks & Mitigation Strategies
+### Technical Risks
+| Risk | Probability | Impact | Mitigation Strategy |
+|------|-------------|---------|-------------------|
+| {Risk description} | {High/Med/Low} | {High/Med/Low} | {How to address} |
+
+### Business Risks
+| Risk | Probability | Impact | Mitigation Strategy |
+|------|-------------|---------|-------------------|
+| {Risk description} | {High/Med/Low} | {High/Med/Low} | {How to address} |
+
+### User Adoption Risks
+| Risk | Probability | Impact | Mitigation Strategy |
+|------|-------------|---------|-------------------|
+| {Risk description} | {High/Med/Low} | {High/Med/Low} | {How to address} |
+
+## 11. Resource Requirements & Timeline
+### 11.1 Team Requirements
+- **Development:** {Developer skillsets and time allocation}
+- **Design:** {UI/UX design requirements}
+- **Product Management:** {PM involvement and responsibilities}
+- **QA/Testing:** {Testing resource requirements}
+- **DevOps/Infrastructure:** {Infrastructure and deployment needs}
+
+### 11.2 Timeline Estimates
+- **MVP Development:** {Estimated duration}
+- **Testing & QA:** {Testing phase duration}
+- **Deployment:** {Go-live timeline}
+- **Post-Launch Support:** {Initial support period}
+
+### 11.3 Budget Considerations
+- **Development Costs:** {Internal team costs}
+- **External Services:** {Third-party service costs}
+- **Infrastructure:** {Hosting and infrastructure costs}
+- **Tools & Licenses:** {Development and operational tool costs}
+
+## 12. Success Metrics & KPIs
+### 12.1 User Metrics
+- **Adoption:** {User signup, activation rates}
+- **Engagement:** {Usage frequency, session duration}
+- **Retention:** {User retention rates over time}
+- **Satisfaction:** {User satisfaction scores, NPS}
+
+### 12.2 Business Metrics
+- **Revenue Impact:** {Revenue generation or savings}
+- **Operational Efficiency:** {Process improvement metrics}
+- **Cost Reduction:** {Cost savings achieved}
+- **Market Share:** {Competitive position improvements}
+
+### 12.3 Technical Metrics  
+- **Performance:** {Response times, throughput}
+- **Reliability:** {Uptime, error rates}
+- **Security:** {Security incident metrics}
+- **Quality:** {Bug rates, support tickets}
+
+## 13. Assumptions & Dependencies
+### Assumptions
+- {Key assumption 1}
+- {Key assumption 2}
+- {Key assumption 3}
+
+### External Dependencies
+- {Third-party service availability}
+- {External team deliverables}
+- {Regulatory approvals}
+
+### Internal Dependencies
+- {Internal system availability}
+- {Team resource allocation}
+- {Budget approvals}
+
+## 14. Appendices
+### A. User Research Summary
+{Key findings from user research}
+
+### B. Competitive Analysis Details
+{Detailed competitor comparison}
+
+### C. Technical Spike Results
+{Findings from technical investigations}
+
+### D. Stakeholder Feedback
+{Summary of stakeholder input}
+
+---
+
+**Document History**
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0 | {Date} | Initial version | {PM Name} |
+| 1.1 | {Date} | {Change description} | {Author} |
+```
+
+---
+
+## 🔍 Deep Research Prompt Template
+
+### Mục đích
+Template để Analyst tạo structured research prompts cho specialized research agents hoặc deep research sessions.
+
+### Template Structure
+
+```markdown
+# Deep Research Prompt: {Research Topic}
+
+## Research Objectives
+### Primary Goal
+{Clear statement of what this research aims to achieve}
+
+### Specific Questions to Answer
+1. {Specific research question 1}
+2. {Specific research question 2}
+3. {Specific research question 3}
+
+### Decision Support
+{What decisions will this research inform?}
+
+## Research Scope & Focus Areas
+### Area 1: {Research Focus Area}
+#### Key Questions:
+- {Specific question under this area}
+- {Follow-up question}
+- {Validation question}
+
+#### Information Needed:
+- {Type of data/information required}
+- {Specific metrics or statistics}
+- {Qualitative insights needed}
+
+### Area 2: {Research Focus Area}
+{Repeat structure for additional focus areas}
+
+## Preferred Information Sources
+### Primary Sources
+- {Specific databases, reports, or publications}
+- {Industry authorities or expert sources}
+- {Government or regulatory sources}
+
+### Secondary Sources
+- {Academic papers or research studies}
+- {Industry publications and blogs}
+- {Competitor information sources}
+
+### Source Quality Criteria
+- {Recency requirements - e.g., published within last 2 years}
+- {Authority requirements - e.g., peer-reviewed, authoritative sources}
+- {Relevance criteria}
+
+## Research Methodology
+### Approach
+{Preferred research methodology - quantitative, qualitative, mixed methods}
+
+### Analysis Framework
+{Specific frameworks to apply - e.g., SWOT, Porter's Five Forces, etc.}
+
+### Validation Requirements
+{How findings should be cross-verified}
+
+## Expected Deliverables
+### Output Format
+{Desired format for research results - report, presentation, database, etc.}
+
+### Report Structure
+{Preferred structure for research report}
+- Executive Summary
+- Key Findings by Focus Area
+- Supporting Evidence
+- Analysis and Insights
+- Recommendations
+- References
+
+### Evidence Requirements
+{Level of detail and documentation needed}
+- {Citation standards}
+- {Data visualization preferences}
+- {Supporting documentation needs}
+
+## Constraints & Limitations
+### Time Constraints
+{Research timeline and milestones}
+
+### Resource Constraints
+{Available tools, budget, access limitations}
+
+### Scope Limitations
+{What should NOT be included in research}
+
+## Success Criteria
+### Research Quality Standards
+- {Comprehensiveness requirements}
+- {Accuracy and reliability standards}
+- {Actionability of insights}
+
+### Completeness Indicators
+- {How to know when research is sufficient}
+- {Quality checkpoints}
+
+## Context for Research Team
+### Project Background
+{Brief context about why this research is needed}
+
+### Stakeholder Information
+{Who will use this research and how}
+
+### Timeline Urgency
+{Priority level and deadline information}
+
+---
+
+**Research Prompt Created by:** {Analyst Name}
+**Date:** {Date}
+**For Project:** {Project Name}
+**Research Team/Agent:** {Target researcher}
+```
+
+---
+
+## 📝 Meeting & Session Templates
+
+### Brainstorming Session Template
+
+```markdown
+# Brainstorming Session: {Topic}
+
+## Session Information
+- **Date:** {Date}
+- **Facilitator:** Mary (Analyst)
+- **Participants:** {Participant list}
+- **Duration:** {Estimated time}
+- **Session Goal:** {What we want to achieve}
+
+## Pre-Session Setup
+### Context Setting
+- **Current Situation:** {Brief description}
+- **Challenge/Opportunity:** {What we're exploring}
+- **Constraints:** {Any known limitations}
+
+### Ground Rules
+- No judgment during idea generation
+- Build on others' ideas ("Yes, and...")
+- Quantity over quality initially
+- Stay focused on the topic
+- All ideas get captured
+
+## Session Agenda
+### 1. Problem Framing (10 minutes)
+- Restate the challenge clearly
+- Ensure shared understanding
+
+### 2. Divergent Thinking (30 minutes)
+- Individual idea generation (5 minutes)
+- Round-robin sharing (15 minutes)
+- Building on ideas (10 minutes)
+
+### 3. Idea Expansion (20 minutes)
+- "What if..." scenarios
+- Analogical thinking exercises
+- Assumption challenging
+
+### 4. Initial Convergence (15 minutes)
+- Group similar ideas
+- Identify most promising concepts
+- Note questions for further exploration
+
+### 5. Next Steps (5 minutes)
+- Summarize key insights
+- Identify research needs
+- Plan follow-up actions
+
+## Idea Capture Template
+### Idea: {Idea Name}
+- **Description:** {Brief explanation}
+- **Potential Value:** {Why this could be valuable}
+- **Challenges:** {Potential obstacles}
+- **Next Steps:** {What to explore further}
+
+## Post-Session Deliverables
+- Consolidated idea list
+- Prioritized concept areas
+- Research questions identified
+- Recommended next steps
+```
+
+---
+
+## 🎯 Planning Phase Completion Checklist
+
+### Mục đích
+Checklist để ensure Planning phase hoàn thành đầy đủ trước khi chuyển sang Architecture phase.
+
+### Checklist Items
+
+```markdown
+# Planning Phase Completion Checklist
+
+## 📋 Analyst Deliverables
+- [ ] **Project Brief completed** with all required sections
+- [ ] **Problem statement** clearly defined and validated
+- [ ] **Market research** completed (or deep research prompt created)
+- [ ] **Competitive analysis** provides adequate insights
+- [ ] **User personas** identified and described
+- [ ] **Key insights** documented and actionable
+
+## 📊 PM Deliverables  
+- [ ] **PRD completed** using template structure
+- [ ] **All PRD sections** populated with adequate detail
+- [ ] **MVP scope** clearly defined and bounded
+- [ ] **Epic breakdown** provides clear development structure
+- [ ] **Non-functional requirements** specified
+- [ ] **Technical constraints** documented
+- [ ] **Success metrics** defined and measurable
+- [ ] **Risk assessment** completed with mitigation strategies
+
+## ✅ Quality Validation
+- [ ] **PRD passes PM Checklist** validation
+- [ ] **Stakeholder review** completed and feedback incorporated
+- [ ] **User personas** validated with actual user input (if possible)
+- [ ] **MVP scope** achievable within resource constraints
+- [ ] **Technical constraints** feasible and well-understood
+
+## 🔄 Handoff Preparation
+- [ ] **Architecture handoff package** prepared
+- [ ] **Key decisions documented** with rationale
+- [ ] **Outstanding questions** identified for Architecture team
+- [ ] **Timeline expectations** communicated
+- [ ] **Success criteria** clear for next phase
+
+## 📁 Documentation Organization
+- [ ] **All files** properly named and organized
+- [ ] **Version control** updated with latest changes
+- [ ] **Cross-references** between documents validated
+- [ ] **Templates** properly completed
+- [ ] **Appendices** include all supporting materials
+
+---
+
+**Completion Date:** {Date}
+**Reviewed by:** {Name}
+**Approved for Architecture Phase:** ✅/❌
+**Next Steps:** {Handoff instructions to Architecture team}
+```
+
+---
+
+## 🚀 Ready for Planning Excellence!
+
+Các templates này cung cấp structured approach cho:
+
+- 🧠 **Analyst (Mary)**: Project briefs, research prompts, brainstorming facilitation
+- 📊 **PM (John)**: Comprehensive PRD development, requirement validation
+- 🔄 **Process Management**: Session facilitation, completion validation
+
+**Use these templates to ensure consistent, high-quality planning outputs! 📋✨**

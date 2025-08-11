@@ -1,0 +1,573 @@
+# BMAD Architecture Checklists - Kiểm Soát Chất Lượng Giai Đoạn Thiết kế Kiến trúc
+
+---
+
+## 🏗️ Architect Solution Validation Checklist
+
+### Mục đích
+Comprehensive framework để Architect validate technical design và architecture trước development execution. Architect phải systematic work through từng item, ensuring architecture is robust, scalable, secure, và aligned với product requirements.
+
+## 1. REQUIREMENTS ALIGNMENT
+
+### 1.1 Functional Requirements Coverage
+- [ ] **Architecture supports all functional requirements** trong PRD
+- [ ] **Technical approaches** cho tất cả epics và stories đã addressed
+- [ ] **Edge cases và performance scenarios** được considered
+- [ ] **All required integrations** được accounted for
+- [ ] **User journeys** được supported bởi technical architecture
+
+### 1.2 Non-Functional Requirements Alignment
+- [ ] **Performance requirements** addressed với specific solutions
+- [ ] **Scalability considerations** documented với approach
+- [ ] **Security requirements** có corresponding technical controls
+- [ ] **Reliability và resilience approaches** defined
+- [ ] **Compliance requirements** có technical implementations
+
+### 1.3 Technical Constraints Adherence
+- [ ] **All technical constraints** từ PRD đã satisfied
+- [ ] **Platform/language requirements** followed
+- [ ] **Infrastructure constraints** accommodated
+- [ ] **Third-party service constraints** addressed
+- [ ] **Organizational technical standards** followed
+
+## 2. ARCHITECTURE FUNDAMENTALS
+
+### 2.1 Architecture Clarity
+- [ ] **Architecture documented** với clear diagrams
+- [ ] **Major components** và responsibilities defined
+- [ ] **Component interactions** và dependencies mapped
+- [ ] **Data flows** clearly illustrated
+- [ ] **Technology choices** cho mỗi component specified
+
+### 2.2 Separation of Concerns
+- [ ] **Clear boundaries** giữa UI, business logic, và data layers
+- [ ] **Responsibilities cleanly divided** giữa components
+- [ ] **Interfaces between components** well-defined
+- [ ] **Components adhere** to single responsibility principle
+- [ ] **Cross-cutting concerns** (logging, auth, etc.) properly addressed
+
+### 2.3 Design Patterns & Best Practices
+- [ ] **Appropriate design patterns** employed
+- [ ] **Industry best practices** followed
+- [ ] **Anti-patterns** avoided
+- [ ] **Consistent architectural style** throughout
+- [ ] **Pattern usage** documented và explained
+
+### 2.4 Modularity & Maintainability
+- [ ] **System divided** into cohesive, loosely-coupled modules
+- [ ] **Components can be developed** và tested independently
+- [ ] **Changes can be localized** to specific components
+- [ ] **Code organization promotes** discoverability
+- [ ] **Architecture specifically designed** cho AI agent implementation
+
+## 3. TECHNICAL STACK & DECISIONS
+
+### 3.1 Technology Selection
+- [ ] **Selected technologies meet** all requirements
+- [ ] **Technology versions** specifically defined (not ranges)
+- [ ] **Technology choices justified** với clear rationale
+- [ ] **Alternatives considered** documented với pros/cons
+- [ ] **Selected stack components** work well together
+
+### 3.2 Frontend Architecture
+- [ ] **UI framework và libraries** specifically selected
+- [ ] **State management approach** defined
+- [ ] **Component structure** và organization specified
+- [ ] **Responsive/adaptive design approach** outlined
+- [ ] **Build và bundling strategy** determined
+
+### 3.3 Backend Architecture
+- [ ] **API design và standards** defined
+- [ ] **Service organization** và boundaries clear
+- [ ] **Authentication và authorization approach** specified
+- [ ] **Error handling strategy** outlined
+- [ ] **Backend scaling approach** defined
+
+### 3.4 Data Architecture
+- [ ] **Data models** fully defined
+- [ ] **Database technologies selected** với justification
+- [ ] **Data access patterns** documented
+- [ ] **Data migration/seeding approach** specified
+- [ ] **Data backup và recovery strategies** outlined
+
+## 4. RESILIENCE & OPERATIONAL READINESS
+
+### 4.1 Error Handling & Resilience
+- [ ] **Error handling strategy** comprehensive
+- [ ] **Retry policies** defined where appropriate
+- [ ] **Circuit breakers hoặc fallbacks** specified cho critical services
+- [ ] **Graceful degradation approaches** defined
+- [ ] **System can recover** từ partial failures
+
+### 4.2 Monitoring & Observability
+- [ ] **Logging strategy** defined
+- [ ] **Monitoring approach** specified
+- [ ] **Key metrics** cho system health identified
+- [ ] **Alerting thresholds** và strategies outlined
+- [ ] **Debugging và troubleshooting capabilities** built in
+
+### 4.3 Performance & Scaling
+- [ ] **Performance bottlenecks** identified và addressed
+- [ ] **Caching strategy** defined where appropriate
+- [ ] **Load balancing approach** specified
+- [ ] **Horizontal và vertical scaling strategies** outlined
+- [ ] **Resource sizing recommendations** provided
+
+### 4.4 Deployment & DevOps
+- [ ] **Deployment strategy** defined
+- [ ] **CI/CD pipeline approach** outlined
+- [ ] **Environment strategy** (dev, staging, prod) specified
+- [ ] **Infrastructure as Code approach** defined
+- [ ] **Rollback và recovery procedures** outlined
+
+## 5. SECURITY & COMPLIANCE
+
+### 5.1 Authentication & Authorization
+- [ ] **Authentication mechanism** clearly defined
+- [ ] **Authorization model** specified
+- [ ] **Role-based access control** outlined nếu required
+- [ ] **Session management approach** defined
+- [ ] **Credential management** addressed
+
+### 5.2 Data Security
+- [ ] **Data encryption approach** (at rest và in transit) specified
+- [ ] **Sensitive data handling procedures** defined
+- [ ] **Data retention và purging policies** outlined
+- [ ] **Backup encryption** addressed nếu required
+- [ ] **Data access audit trails** specified nếu required
+
+### 5.3 API & Service Security
+- [ ] **API security controls** defined
+- [ ] **Rate limiting và throttling approaches** specified
+- [ ] **Input validation strategy** outlined
+- [ ] **CSRF/XSS prevention measures** addressed
+- [ ] **Secure communication protocols** specified
+
+### 5.4 Infrastructure Security
+- [ ] **Network security design** outlined
+- [ ] **Firewall và security group configurations** specified
+- [ ] **Service isolation approach** defined
+- [ ] **Least privilege principle** applied
+- [ ] **Security monitoring strategy** outlined
+
+## 6. IMPLEMENTATION GUIDANCE
+
+### 6.1 Coding Standards & Practices
+- [ ] **Coding standards** defined
+- [ ] **Documentation requirements** specified
+- [ ] **Testing expectations** outlined
+- [ ] **Code organization principles** defined
+- [ ] **Naming conventions** specified
+
+### 6.2 Testing Strategy
+- [ ] **Unit testing approach** defined
+- [ ] **Integration testing strategy** outlined
+- [ ] **E2E testing approach** specified
+- [ ] **Performance testing requirements** outlined
+- [ ] **Security testing approach** defined
+
+### 6.3 Development Environment
+- [ ] **Local development environment setup** documented
+- [ ] **Required tools** và configurations specified
+- [ ] **Development workflows** outlined
+- [ ] **Source control practices** defined
+- [ ] **Dependency management approach** specified
+
+### 6.4 Technical Documentation
+- [ ] **API documentation standards** defined
+- [ ] **Architecture documentation requirements** specified
+- [ ] **Code documentation expectations** outlined
+- [ ] **System diagrams** và visualizations included
+- [ ] **Decision records** cho key choices included
+
+## 7. DEPENDENCY & INTEGRATION MANAGEMENT
+
+### 7.1 External Dependencies
+- [ ] **All external dependencies** identified
+- [ ] **Versioning strategy** cho dependencies defined
+- [ ] **Fallback approaches** cho critical dependencies specified
+- [ ] **Licensing implications** addressed
+- [ ] **Update và patching strategy** outlined
+
+### 7.2 Internal Dependencies
+- [ ] **Component dependencies** clearly mapped
+- [ ] **Build order dependencies** addressed
+- [ ] **Shared services** và utilities identified
+- [ ] **Circular dependencies** eliminated
+- [ ] **Versioning strategy** cho internal components defined
+
+### 7.3 Third-Party Integrations
+- [ ] **All third-party integrations** identified
+- [ ] **Integration approaches** defined
+- [ ] **Authentication với third parties** addressed
+- [ ] **Error handling** cho integration failures specified
+- [ ] **Rate limits và quotas** considered
+
+## 8. AI AGENT IMPLEMENTATION SUITABILITY
+
+### 8.1 Modularity for AI Agents
+- [ ] **Components sized appropriately** cho AI agent implementation
+- [ ] **Dependencies between components** minimized
+- [ ] **Clear interfaces** giữa components defined
+- [ ] **Components have singular** well-defined responsibilities
+- [ ] **File và code organization** optimized cho AI agent understanding
+
+### 8.2 Clarity & Predictability
+- [ ] **Patterns consistent** và predictable
+- [ ] **Complex logic broken down** thành simpler steps
+- [ ] **Architecture avoids** overly clever hoặc obscure approaches
+- [ ] **Examples provided** cho unfamiliar patterns
+- [ ] **Component responsibilities** explicit và clear
+
+### 8.3 Implementation Guidance
+- [ ] **Detailed implementation guidance** provided
+- [ ] **Code structure templates** defined
+- [ ] **Specific implementation patterns** documented
+- [ ] **Common pitfalls identified** với solutions
+- [ ] **References to similar implementations** provided when helpful
+
+### 8.4 Error Prevention & Handling
+- [ ] **Design reduces opportunities** cho implementation errors
+- [ ] **Validation và error checking approaches** defined
+- [ ] **Self-healing mechanisms** incorporated where possible
+- [ ] **Testing patterns** clearly defined
+- [ ] **Debugging guidance** provided
+
+---
+
+## 🎨 Frontend Architecture Validation Checklist
+
+### Mục đích
+Comprehensive checklist để Design Architect validate frontend architecture document sau khi complete "Frontend Architecture Mode" và populate frontend architecture template.
+
+## I. INTRODUCTION & OVERVIEW
+
+### I.1 Document Completeness
+- [ ] **Project Name** correctly filled throughout Introduction
+- [ ] **Link to Main Architecture Document** present và correct
+- [ ] **Link to UI/UX Specification** present và correct
+- [ ] **Link to Design Files** (Figma, Sketch) present và correct
+- [ ] **Deployed Storybook/Component Showcase** included nếu applicable
+
+## II. FRONTEND PHILOSOPHY & PATTERNS
+
+### II.1 Technology Alignment
+- [ ] **Framework & Core Libraries** clearly stated và aligned với main architecture
+- [ ] **Component Architecture** (Atomic Design, Presentational/Container) clearly described
+- [ ] **State Management Strategy** clearly described at high level
+- [ ] **Data Flow** (Unidirectional) clearly explained
+- [ ] **Styling Approach** clearly defined
+- [ ] **Key Design Patterns** listed và explained
+
+### II.2 Architecture Consistency
+- [ ] **Alignment với "Definitive Tech Stack Selections"** trong main architecture document
+- [ ] **System architecture implications** (monorepo/polyrepo, backend services) considered
+
+## III. FRONTEND DIRECTORY STRUCTURE
+
+### III.1 Structure Clarity
+- [ ] **ASCII diagram** representing frontend folder structure provided
+- [ ] **Diagram clear** accurate, reflective của chosen framework/patterns
+- [ ] **Organization conventions** cho components, pages, services highlighted
+- [ ] **Rationale notes** cho structure clear và present
+
+## IV. COMPONENT BREAKDOWN & IMPLEMENTATION
+
+### IV.1 Component Organization
+- [ ] **Naming conventions** cho components described
+- [ ] **Filesystem organization** clearly explained
+
+### IV.2 Component Specification Template
+- [ ] **Template complete** và well-defined với:
+  - [ ] Fields cho Purpose, Source File(s), Visual Reference
+  - [ ] Table structure cho Props (Name, Type, Required, Default, Description)
+  - [ ] Table structure cho Internal State
+  - [ ] Section cho Key UI Elements/Structure
+  - [ ] Section cho Events Handled/Emitted
+  - [ ] Section cho Actions Triggered
+  - [ ] Section cho Styling Notes
+  - [ ] Section cho Accessibility Notes
+- [ ] **Clear statement** về template usage cho feature-specific components
+
+### IV.3 Foundational Components
+- [ ] **Foundational/shared components** follow template specification nếu specified
+- [ ] **Rationale** cho specifying components upfront clear
+
+## V. STATE MANAGEMENT IN-DEPTH
+
+### V.1 State Management Documentation
+- [ ] **State Management Solution** reiterated với rationale
+- [ ] **Store Structure/Slices conventions** clearly defined
+- [ ] **Core Slice Example** provided với:
+  - [ ] Clear purpose
+  - [ ] Defined State Shape (TypeScript interface)
+  - [ ] Key Reducers/Actions listed
+- [ ] **Feature Slice Template** provided
+- [ ] **Key Selectors conventions** noted
+- [ ] **Core Action/Thunk examples** provided
+- [ ] **Feature Action/Thunk Template** provided
+
+## VI. API INTEGRATION LAYER
+
+### VI.1 API Integration Documentation
+- [ ] **HTTP Client Setup** detailed (base URL, headers, interceptors)
+- [ ] **Service Definitions conventions** explained
+- [ ] **Service examples** provided với purpose và functions
+- [ ] **Global Error Handling** described
+- [ ] **Specific Error Handling** guidance provided
+- [ ] **Retry Logic** detailed và configured
+
+## VII. ROUTING STRATEGY
+
+### VII.1 Routing Documentation
+- [ ] **Routing Library** stated
+- [ ] **Route Definitions table** provided với:
+  - [ ] Path Pattern, Component/Page, Protection status, Notes
+  - [ ] All key application routes listed
+- [ ] **Authentication Guard mechanism** described
+- [ ] **Authorization Guard mechanism** described nếu applicable
+
+## VIII. BUILD, BUNDLING & DEPLOYMENT
+
+### VIII.1 Build Configuration
+- [ ] **Key Build Scripts** listed với purpose explained
+- [ ] **Environment Variables handling** described cho different environments
+- [ ] **Code Splitting strategy** detailed
+- [ ] **Tree Shaking** confirmed
+- [ ] **Lazy Loading strategy** outlined
+- [ ] **Minification & Compression** mentioned
+- [ ] **Target Deployment Platform** specified
+- [ ] **Deployment Trigger** described với CI/CD reference
+- [ ] **Asset Caching Strategy** outlined
+
+## IX. FRONTEND TESTING STRATEGY
+
+### IX.1 Testing Documentation
+- [ ] **Link to Main Testing Strategy** correct
+- [ ] **Component Testing** documented với Scope, Tools, Focus, Location
+- [ ] **UI Integration/Flow Testing** documented
+- [ ] **End-to-End UI Testing** documented với Tools, Scope, Test Data Management
+
+## X. ACCESSIBILITY (AX) IMPLEMENTATION
+
+### X.1 Accessibility Standards
+- [ ] **Semantic HTML** emphasis
+- [ ] **ARIA Implementation** guidelines provided
+- [ ] **Keyboard Navigation** requirements stated
+- [ ] **Focus Management** addressed
+- [ ] **Testing Tools** cho AX listed
+- [ ] **Alignment với UI/UX Specification** AX requirements
+
+## XI. PERFORMANCE CONSIDERATIONS
+
+### XI.1 Performance Optimization
+- [ ] **Image Optimization** discussed
+- [ ] **Code Splitting & Lazy Loading** reiterated
+- [ ] **Minimizing Re-renders** techniques mentioned
+- [ ] **Debouncing/Throttling** considered
+- [ ] **Virtualization** mentioned nếu applicable
+- [ ] **Client-Side Caching Strategies** discussed
+- [ ] **Performance Monitoring Tools** listed
+
+## XII. CHANGE LOG
+
+### XII.1 Documentation Management
+- [ ] **Change Log table** present và initialized
+- [ ] **Process** cho updating change log established
+
+---
+
+## ☁️ Infrastructure Validation Checklist
+
+### Mục đích
+Comprehensive framework để validate infrastructure changes trước deployment to production. Platform Engineer phải systematic work through mỗi item, ensuring infrastructure is secure, compliant, resilient, và properly implemented.
+
+## 1. SECURITY & COMPLIANCE
+
+### 1.1 Access Management
+- [ ] **RBAC principles applied** với least privilege access
+- [ ] **Service accounts** có minimal required permissions
+- [ ] **Secrets management solution** properly implemented
+- [ ] **IAM policies và roles** documented và reviewed
+- [ ] **Access audit mechanisms** configured
+
+### 1.2 Data Protection
+- [ ] **Data at rest encryption** enabled cho all applicable services
+- [ ] **Data in transit encryption** (TLS 1.2+) enforced
+- [ ] **Sensitive data identified** và protected appropriately
+- [ ] **Backup encryption** configured where required
+- [ ] **Data access audit trails** implemented where required
+
+### 1.3 Network Security
+- [ ] **Network security groups** configured với minimal required access
+- [ ] **Private endpoints used** cho PaaS services where available
+- [ ] **Public-facing services protected** với WAF policies
+- [ ] **Network traffic flows** documented và secured
+- [ ] **Network segmentation** properly implemented
+
+### 1.4 Compliance Requirements
+- [ ] **Regulatory compliance requirements** verified và met
+- [ ] **Security scanning integrated** into pipeline
+- [ ] **Compliance evidence collection** automated where possible
+- [ ] **Privacy requirements** addressed trong infrastructure design
+- [ ] **Security monitoring** và alerting enabled
+
+## 2. INFRASTRUCTURE AS CODE
+
+### 2.1 IaC Implementation
+- [ ] **All resources defined** trong IaC (Terraform/Bicep/ARM)
+- [ ] **IaC code follows** organizational standards và best practices
+- [ ] **No manual configuration changes** permitted
+- [ ] **Dependencies explicitly defined** và documented
+- [ ] **Modules và resource naming** follow conventions
+
+### 2.2 IaC Quality & Management
+- [ ] **IaC code reviewed** bởi at least one other engineer
+- [ ] **State files securely stored** và backed up
+- [ ] **Version control best practices** followed
+- [ ] **IaC changes tested** trong non-production environment
+- [ ] **Documentation cho IaC** updated
+
+### 2.3 Resource Organization
+- [ ] **Resources organized** trong appropriate resource groups
+- [ ] **Tags applied consistently** per tagging strategy
+- [ ] **Resource locks applied** where appropriate
+- [ ] **Naming conventions** followed consistently
+- [ ] **Resource dependencies** explicitly managed
+
+## 3. RESILIENCE & AVAILABILITY
+
+### 3.1 High Availability
+- [ ] **Resources deployed** across appropriate availability zones
+- [ ] **SLAs** cho each component documented và verified
+- [ ] **Load balancing** configured properly
+- [ ] **Failover mechanisms** tested và verified
+- [ ] **Single points of failure** identified và mitigated
+
+### 3.2 Fault Tolerance
+- [ ] **Auto-scaling configured** where appropriate
+- [ ] **Health checks implemented** cho all services
+- [ ] **Circuit breakers implemented** where necessary
+- [ ] **Retry policies configured** cho transient failures
+- [ ] **Graceful degradation mechanisms** implemented
+
+### 3.3 Recovery Metrics & Testing
+- [ ] **Recovery time objectives (RTOs)** verified
+- [ ] **Recovery point objectives (RPOs)** verified
+- [ ] **Resilience testing** completed và documented
+- [ ] **Chaos engineering principles** applied where appropriate
+- [ ] **Recovery procedures** documented và tested
+
+## 4. MONITORING & OBSERVABILITY
+
+### 4.1 Monitoring Implementation
+- [ ] **Monitoring coverage** cho all critical components
+- [ ] **Appropriate metrics** collected và dashboarded
+- [ ] **Log aggregation** implemented
+- [ ] **Distributed tracing** implemented nếu applicable
+- [ ] **User experience/synthetics monitoring** configured
+
+### 4.2 Alerting & Response
+- [ ] **Alerts configured** cho critical thresholds
+- [ ] **Alert routing** và escalation paths defined
+- [ ] **Service health integration** configured
+- [ ] **On-call procedures** documented
+- [ ] **Incident response playbooks** created
+
+### 4.3 Operational Visibility
+- [ ] **Custom queries/dashboards** created cho key scenarios
+- [ ] **Resource utilization tracking** configured
+- [ ] **Cost monitoring** implemented
+- [ ] **Performance baselines** established
+- [ ] **Operational runbooks** available cho common issues
+
+## 5. PERFORMANCE & OPTIMIZATION
+
+### 5.1 Performance Testing
+- [ ] **Performance testing completed** và baseline established
+- [ ] **Resource sizing appropriate** cho workload
+- [ ] **Performance bottlenecks** identified và addressed
+- [ ] **Latency requirements** verified
+- [ ] **Throughput requirements** verified
+
+### 5.2 Resource Optimization
+- [ ] **Cost optimization opportunities** identified
+- [ ] **Auto-scaling rules** validated
+- [ ] **Resource reservation used** where appropriate
+- [ ] **Storage tier selection** optimized
+- [ ] **Idle/unused resources** identified cho cleanup
+
+### 5.3 Efficiency Mechanisms
+- [ ] **Caching strategy implemented** where appropriate
+- [ ] **CDN/edge caching configured** cho content
+- [ ] **Network latency** optimized
+- [ ] **Database performance** tuned
+- [ ] **Compute resource efficiency** validated
+
+---
+
+## ✅ Architecture Phase Validation Summary
+
+### Category Status Assessment
+
+| Category | Status | Critical Issues | Resolution Plan |
+|----------|--------|----------------|----------------|
+| **Requirements Alignment** | PASS/FAIL/PARTIAL | | |
+| **Architecture Fundamentals** | PASS/FAIL/PARTIAL | | |
+| **Technical Stack & Decisions** | PASS/FAIL/PARTIAL | | |
+| **Resilience & Operational Readiness** | PASS/FAIL/PARTIAL | | |
+| **Security & Compliance** | PASS/FAIL/PARTIAL | | |
+| **Implementation Guidance** | PASS/FAIL/PARTIAL | | |
+| **AI Agent Suitability** | PASS/FAIL/PARTIAL | | |
+| **Frontend Architecture** | PASS/FAIL/PARTIAL | | |
+| **Infrastructure Architecture** | PASS/FAIL/PARTIAL | | |
+
+### Critical Deficiencies
+**List all critical issues cần address trước handoff to Development:**
+- {Critical issue 1}
+- {Critical issue 2}
+- {Critical issue 3}
+
+### Recommendations
+**Specific recommendations for addressing deficiencies:**
+- {Recommendation 1}
+- {Recommendation 2}
+- {Recommendation 3}
+
+### Final Decision
+
+#### ✅ READY FOR DEVELOPMENT
+**Criteria Met:**
+- [ ] All architecture documents comprehensive và properly structured
+- [ ] Technology stack finalized và justified
+- [ ] Implementation guidance clear cho AI agents
+- [ ] All critical deficiencies resolved
+- [ ] Cross-functional alignment achieved
+
+#### ❌ NEEDS REFINEMENT
+**Reason:**
+- {Specific areas requiring additional work}
+- {Timeline for refinement}
+- {Required resources for completion}
+
+---
+
+**Validation Completed by:** {Name}  
+**Date:** {Date}  
+**Next Phase:** Development Planning  
+**Handoff Scheduled:** {Date}
+
+---
+
+## 🚀 Architecture Quality Excellence!
+
+Các checklists này đảm bảo:
+
+- 🏗️ **System Architecture Excellence**: Comprehensive validation của technical design
+- 🎨 **Frontend Architecture Quality**: Detailed validation của UI/UX implementation approach
+- ☁️ **Infrastructure Excellence**: Thorough validation của cloud infrastructure design
+- ✅ **Quality Gates**: Rigorous validation trước moving to Development
+- 🤖 **AI Agent Readiness**: Ensure architecture optimized cho AI implementation
+- 🔒 **Security Assurance**: Comprehensive security validation
+
+**Use these checklists to ensure bulletproof architecture! 🛡️✨**

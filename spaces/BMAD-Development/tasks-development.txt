@@ -1,0 +1,1489 @@
+# BMAD Development Tasks - Nhiệm vụ Phát triển & Triển khai Chuyên sâu
+
+---
+
+## 💻 Senior Developer (Mike) - Development Implementation Tasks
+
+### 1. 🏗️ Implement Feature Stories (Implement Feature Stories)
+
+**Objective**: Transform user stories từ product backlog thành high-quality, tested, production-ready code that meets all acceptance criteria và technical standards.
+
+#### Input Requirements
+- **User Stories**: Complete user stories với acceptance criteria từ product backlog
+- **Architecture Documents**: System, frontend, infrastructure architecture specifications
+- **Design Specifications**: UI/UX designs, component specifications, interaction patterns
+- **Technical Constraints**: Performance, security, accessibility requirements
+- **Definition of Done**: Quality standards và completion criteria
+
+#### Task Execution Steps
+
+##### Phase 1: Story Analysis & Technical Planning
+1. **Analyze story requirements comprehensively**:
+   - Review acceptance criteria với Product Owner cho clarity
+   - Identify technical implementation approach based on architecture
+   - Break down story thành technical tasks với estimates
+   - Identify dependencies với other stories hoặc systems
+   - Plan testing approach cho all acceptance criteria
+
+2. **Create implementation plan**:
+   - Design component/service architecture cho story implementation
+   - Plan database schema changes nếu required
+   - Identify API endpoints need to be created/modified
+   - Plan integration với existing system components
+   - Consider performance và security implications
+
+##### Phase 2: Development Environment Preparation
+1. **Prepare development environment**:
+   - Create feature branch từ main development branch
+   - Set up local development environment với story requirements
+   - Configure testing environment với necessary test data
+   - Set up debugging tools cho efficient development
+   - Ensure all dependencies và tools are available
+
+2. **Create development scaffolding**:
+   - Create basic file structure theo architecture patterns
+   - Set up component templates với proper TypeScript types
+   - Configure routing và navigation cho new features
+   - Set up state management structures nếu required
+   - Implement basic error handling framework
+
+##### Phase 3: Core Implementation
+1. **Implement backend functionality**:
+   - Create database models với appropriate relationships
+   - Implement business logic services với validation
+   - Create API endpoints với proper error handling
+   - Implement authentication và authorization controls
+   - Add logging và monitoring instrumentation
+
+2. **Implement frontend functionality**:
+   - Create UI components theo design specifications
+   - Implement state management cho feature functionality
+   - Integrate API calls với proper error handling
+   - Implement responsive design cho all screen sizes
+   - Add accessibility features để meet WCAG standards
+
+3. **Implement integration points**:
+   - Connect frontend components to backend APIs
+   - Implement real-time functionality nếu required
+   - Integrate với third-party services nếu applicable
+   - Handle data transformation và validation
+   - Implement caching strategies cho performance
+
+##### Phase 4: Testing Implementation
+1. **Unit testing**:
+   - Write comprehensive unit tests cho business logic
+   - Test component behavior với various inputs
+   - Mock external dependencies appropriately
+   - Achieve minimum code coverage thresholds
+   - Test error handling scenarios thoroughly
+
+2. **Integration testing**:
+   - Test API endpoints với various scenarios
+   - Test database integration với proper data setup
+   - Test frontend/backend integration flows
+   - Test authentication và authorization flows
+   - Test performance under expected load
+
+3. **End-to-end testing**:
+   - Create automated tests cho complete user journeys
+   - Test cross-browser compatibility
+   - Test responsive behavior on different devices
+   - Test accessibility với screen readers và keyboard navigation
+   - Validate against acceptance criteria systematically
+
+##### Phase 5: Quality Assurance & Optimization
+1. **Code quality review**:
+   - Review code cho adherence to coding standards
+   - Optimize performance bottlenecks identified during testing
+   - Ensure security best practices implemented
+   - Refactor code cho maintainability improvements
+   - Add appropriate documentation và comments
+
+2. **User experience optimization**:
+   - Test user workflows cho intuitive behavior
+   - Optimize loading performance với caching/lazy loading
+   - Implement smooth transitions và animations
+   - Ensure error messages are user-friendly
+   - Validate responsive design works seamlessly
+
+#### Output Deliverable
+Complete feature implementation với:
+- Working feature code that meets all acceptance criteria
+- Comprehensive test suite với passing tests
+- Updated documentation reflecting new functionality
+- Code reviewed và approved by peers
+- Performance benchmarks met
+- Security validation completed
+- Ready cho deployment to staging environment
+
+#### Success Criteria
+- [ ] All acceptance criteria verified và working
+- [ ] Code quality standards met với peer review approval
+- [ ] Test coverage minimum threshold achieved
+- [ ] Performance requirements satisfied
+- [ ] Security requirements validated
+- [ ] Documentation updated và comprehensive
+
+---
+
+### 2. 🏛️ Create Code Architecture (Create Code Architecture)
+
+**Objective**: Design detailed code structure, implementation patterns, và development guidelines that enable efficient, maintainable development across entire project.
+
+#### Input Requirements
+- **System Architecture Document**: High-level technical architecture decisions
+- **Technology Stack**: Finalized technology choices với versions
+- **Team Composition**: Developer skills, experience levels, team size
+- **Project Requirements**: Scalability, maintainability, performance needs
+- **Development Timeline**: Project schedule và delivery expectations
+
+#### Task Execution Steps
+
+##### Phase 1: Code Structure Design
+1. **Define project structure**:
+   - Create comprehensive directory organization cho frontend/backend
+   - Define module boundaries với clear responsibilities
+   - Plan component hierarchy với reusability patterns
+   - Design service layer architecture cho business logic
+   - Plan data access patterns với repository/ORM structures
+
+2. **Create coding standards**:
+   - Define naming conventions cho files, functions, variables
+   - Establish code formatting standards với prettier/linting rules
+   - Create component development patterns và templates
+   - Define error handling patterns và logging standards
+   - Establish testing patterns với comprehensive examples
+
+##### Phase 2: Development Patterns & Templates
+1. **Create implementation templates**:
+   - Component templates với props, state, lifecycle patterns
+   - API route templates với validation, error handling, responses
+   - Service layer templates với business logic patterns
+   - Database model templates với relationships và validation
+   - Testing templates cho different types của tests
+
+2. **Define development workflows**:
+   - Git branching strategy với feature development process
+   - Code review process với quality gates
+   - Testing workflow từ development to deployment
+   - Deployment process với environment management
+   - Documentation requirements cho code contributions
+
+##### Phase 3: Quality Assurance Framework
+1. **Establish quality gates**:
+   - Define code review checklist với mandatory items
+   - Set up automated linting với build process integration
+   - Configure test coverage requirements với enforcement
+   - Set up performance monitoring với benchmarks
+   - Create security validation process cho code changes
+
+2. **Create development tools setup**:
+   - Configure IDE settings với team standards
+   - Set up debugging configurations cho efficient troubleshooting
+   - Create build scripts với optimization settings
+   - Configure hot-reload development environment
+   - Set up database seeding scripts cho development
+
+#### Output Deliverable
+Complete code architecture document với:
+- Comprehensive project structure với rationale
+- Detailed coding standards với examples
+- Implementation templates cho common patterns
+- Development workflow documentation
+- Quality assurance framework với enforcement tools
+- Team onboarding guide cho consistent development
+
+#### Success Criteria
+- [ ] Code structure enables efficient development
+- [ ] Standards comprehensive enough cho team consistency
+- [ ] Templates reduce development time và improve quality
+- [ ] Quality gates prevent technical debt accumulation
+- [ ] Documentation enables fast team member onboarding
+
+---
+
+### 3. ⚙️ Setup Development Environment (Setup Development Environment)
+
+**Objective**: Create comprehensive, reproducible development environment setup that enables all team members to contribute effectively từ day one.
+
+#### Input Requirements
+- **Technology Stack Requirements**: All technologies, versions, dependencies
+- **Team Development Machines**: Operating systems, hardware capabilities
+- **Project Infrastructure**: Database, external services, API keys
+- **Development Tools**: IDEs, browsers, testing tools requirements
+- **Security Requirements**: VPN, access controls, credential management
+
+#### Task Execution Steps
+
+##### Phase 1: Environment Requirements Analysis
+1. **Analyze development needs**:
+   - Document all required software với minimum versions
+   - Identify development workflow tools needed
+   - Plan database setup requirements với sample data
+   - Identify external service dependencies
+   - Document security requirements cho development access
+
+2. **Create environment specifications**:
+   - Define minimum system requirements cho development machines
+   - Specify required software versions với compatibility matrix
+   - Plan development vs staging vs production environment differences
+   - Design environment variable management strategy
+   - Plan secrets management cho development environments
+
+##### Phase 2: Development Setup Automation
+1. **Create setup automation scripts**:
+   - Write installation scripts cho different operating systems
+   - Create database setup scripts với migrations và seeding
+   - Automate dependency installation với package managers
+   - Create configuration file templates với environment-specific values
+   - Set up development server startup scripts
+
+2. **Create Docker development environment** (nếu applicable):
+   - Design docker-compose configuration cho all services
+   - Create development Dockerfile với all necessary tools
+   - Set up volume mapping cho efficient development workflow
+   - Configure networking cho service communication
+   - Create container orchestration scripts
+
+##### Phase 3: Testing & Documentation
+1. **Test environment setup process**:
+   - Validate setup scripts on different operating systems
+   - Test database setup với realistic data volumes
+   - Verify all development tools work correctly
+   - Test hot-reload và development workflows
+   - Validate deployment process từ development environment
+
+2. **Create comprehensive documentation**:
+   - Write step-by-step setup guide với troubleshooting
+   - Document common issues với solutions
+   - Create video walkthrough cho complex setup steps
+   - Document environment-specific configurations
+   - Create quick reference guide cho daily development tasks
+
+#### Output Deliverable
+Complete development environment package với:
+- Automated setup scripts cho all supported platforms
+- Comprehensive setup documentation với troubleshooting guide
+- Docker development environment nếu applicable
+- Sample data và configuration files
+- IDE configuration files với team standards
+- Quick start guide cho new developers
+
+#### Success Criteria
+- [ ] New developers can set up environment trong < 2 hours
+- [ ] All team members have consistent development environment
+- [ ] Setup process reliable across different machines/OS
+- [ ] Development workflow efficient với hot-reload working
+- [ ] Documentation comprehensive và up-to-date
+
+---
+
+### 4. 🔍 Code Review & Quality Assurance (Code Review & Quality Assurance)
+
+**Objective**: Conduct comprehensive code review process that ensures code quality, knowledge sharing, và continuous improvement throughout development cycle.
+
+#### Input Requirements
+- **Code Changes**: Pull requests với feature implementations
+- **Code Review Standards**: Established quality criteria và checklists
+- **Architecture Compliance**: Adherence to established patterns
+- **Testing Requirements**: Code coverage và test quality standards
+- **Performance Benchmarks**: Performance requirements và measurement criteria
+
+#### Task Execution Steps
+
+##### Phase 1: Pre-Review Preparation
+1. **Prepare code review environment**:
+   - Set up code review tools với proper access controls
+   - Configure automated checks cho code quality, security, performance
+   - Set up test execution trong review environment
+   - Configure deployment preview environment cho functional testing
+   - Set up metrics collection cho code review effectiveness
+
+2. **Create review process workflow**:
+   - Define review assignment strategy cho optimal coverage
+   - Set up review timeline expectations với SLA commitments
+   - Create escalation process cho blocked reviews
+   - Plan knowledge sharing opportunities through reviews
+   - Set up review metrics tracking cho continuous improvement
+
+##### Phase 2: Systematic Code Review Process
+1. **Functional review**:
+   - Verify acceptance criteria met với comprehensive testing
+   - Test user journeys để ensure complete functionality
+   - Validate error handling với edge case scenarios
+   - Check integration points với existing system components
+   - Verify security controls implemented correctly
+
+2. **Technical quality review**:
+   - Review code architecture adherence với established patterns
+   - Check code readability, maintainability, performance
+   - Validate testing coverage với meaningful test scenarios
+   - Review documentation completeness và accuracy
+   - Check dependency management với security considerations
+
+3. **Code standards compliance review**:
+   - Verify coding style consistency với team standards
+   - Check naming conventions, commenting, formatting
+   - Validate error handling patterns với logging requirements
+   - Review API design consistency với established patterns
+   - Check database queries cho efficiency và security
+
+##### Phase 3: Review Feedback & Improvement
+1. **Provide constructive feedback**:
+   - Give specific, actionable feedback với improvement suggestions
+   - Explain rationale behind recommended changes
+   - Provide resources cho learning opportunities
+   - Recognize excellent code practices với positive reinforcement
+   - Balance critique với encouragement cho continuous improvement
+
+2. **Track và follow up on review outcomes**:
+   - Monitor review resolution times với bottleneck identification
+   - Track code quality improvements over time
+   - Measure review effectiveness với defect reduction metrics
+   - Collect team feedback on review process improvement
+   - Update review standards based on lessons learned
+
+#### Output Deliverable
+Comprehensive code review process với:
+- Systematic review checklist với quality criteria
+- Code review workflow documentation
+- Automated quality checking integration
+- Review metrics dashboard với improvement tracking
+- Team knowledge sharing outcomes
+- Code quality improvement recommendations
+
+#### Success Criteria
+- [ ] All code changes reviewed thoroughly trước merge
+- [ ] Review process efficient với reasonable turnaround time
+- [ ] Code quality consistently improving over time
+- [ ] Team knowledge sharing evident through reviews
+- [ ] Review process sustainable với team satisfaction
+
+---
+
+### 5. ⚡ Performance Optimization (Performance Optimization)
+
+**Objective**: Analyze, optimize, và maintain application performance to meet user experience expectations và business requirements.
+
+#### Input Requirements
+- **Performance Requirements**: Specific performance targets từ architecture phase
+- **Current Performance Baseline**: Existing application performance metrics
+- **User Analytics**: Real usage patterns với performance pain points
+- **System Architecture**: Technical constraints và optimization opportunities
+- **Resource Constraints**: Budget, infrastructure limitations affecting optimization
+
+#### Task Execution Steps
+
+##### Phase 1: Performance Analysis & Profiling
+1. **Comprehensive performance audit**:
+   - Profile application performance trong development, staging, production environments
+   - Identify performance bottlenecks trong frontend, backend, database layers
+   - Analyze network request patterns với optimization opportunities
+   - Review third-party service integration performance impact
+   - Document current performance metrics với trend analysis
+
+2. **User experience performance analysis**:
+   - Measure Core Web Vitals (LCP, FID, CLS) với improvement targets
+   - Analyze page load times across different user scenarios
+   - Test performance trên various devices với network conditions
+   - Identify user journey friction points related to performance
+   - Benchmark against competitive applications
+
+##### Phase 2: Optimization Implementation
+1. **Frontend performance optimization**:
+   - Implement code splitting với lazy loading cho improved initial load times
+   - Optimize bundle sizes với tree shaking và unused code removal
+   - Implement efficient caching strategies cho static assets
+   - Optimize images với compression, modern formats, responsive serving
+   - Minimize và optimize CSS/JavaScript với build pipeline improvements
+
+2. **Backend performance optimization**:
+   - Optimize database queries với indexing strategies
+   - Implement effective caching layers (Redis, CDN, application-level)
+   - Optimize API response times với query optimization
+   - Implement connection pooling cho database efficiency
+   - Add background job processing cho non-blocking operations
+
+3. **Infrastructure performance optimization**:
+   - Configure CDN cho optimal content delivery
+   - Implement load balancing cho traffic distribution
+   - Optimize server configurations cho application requirements
+   - Set up auto-scaling policies cho demand fluctuations
+   - Configure monitoring với performance alerting
+
+##### Phase 3: Performance Validation & Monitoring
+1. **Performance testing validation**:
+   - Conduct load testing với realistic user scenarios
+   - Test performance under stress conditions với bottleneck identification
+   - Validate performance improvements với before/after comparisons
+   - Test performance across different browsers với devices
+   - Verify performance under various network conditions
+
+2. **Ongoing performance monitoring**:
+   - Set up real-time performance monitoring với alerting
+   - Create performance dashboards cho ongoing visibility
+   - Implement automated performance regression testing
+   - Set up user experience monitoring với Core Web Vitals tracking
+   - Plan regular performance review cycles với improvement initiatives
+
+#### Output Deliverable
+Complete performance optimization package với:
+- Performance analysis report với identified bottlenecks
+- Implemented optimizations với measured improvements
+- Performance monitoring dashboard với ongoing tracking
+- Performance testing suite cho regression prevention
+- Performance best practices documentation cho team
+- Performance budget guidelines cho future development
+
+#### Success Criteria
+- [ ] Performance targets met hoặc exceeded across all metrics
+- [ ] User experience improved với measurable satisfaction increase
+- [ ] Performance monitoring provides proactive issue detection
+- [ ] Team equipped với performance optimization knowledge
+- [ ] Performance improvements sustainable với ongoing monitoring
+
+---
+
+### 6. 🐛 Bug Investigation & Resolution (Bug Investigation & Resolution)
+
+**Objective**: Systematically investigate, resolve, và prevent bugs throughout development cycle, ensuring high-quality user experience và system reliability.
+
+#### Input Requirements
+- **Bug Reports**: Detailed bug reports từ users, QA, hoặc monitoring systems
+- **System Architecture**: Understanding của system components và interactions
+- **Application Logs**: Access to comprehensive logging từ all system layers
+- **Debugging Tools**: Profilers, debuggers, monitoring tools available
+- **Testing Environment**: Ability to reproduce bugs trong controlled environment
+
+#### Task Execution Steps
+
+##### Phase 1: Bug Triage & Analysis
+1. **Bug report analysis**:
+   - Analyze bug reports cho severity, impact, frequency assessment
+   - Prioritize bugs based on user impact với business importance
+   - Categorize bugs by system component với root cause hypotheses
+   - Identify patterns trong bug reports cho systemic issues
+   - Assign bugs to appropriate team members based on expertise
+
+2. **Reproducibility investigation**:
+   - Create detailed reproduction steps với environment specifications
+   - Test bug reproduction across different browsers, devices, environments
+   - Identify minimum conditions required cho bug manifestation
+   - Document reproduction steps với screenshots/videos where helpful
+   - Verify bug still exists trong latest code versions
+
+##### Phase 2: Root Cause Analysis
+1. **Deep debugging investigation**:
+   - Use debugging tools để trace execution paths với state inspection
+   - Analyze application logs cho error patterns với stack traces
+   - Review relevant code sections cho logic errors
+   - Investigate database queries cho data consistency issues
+   - Check integration points cho external service failures
+
+2. **System impact analysis**:
+   - Assess broader system impact của identified root cause
+   - Check cho related bugs với similar symptoms
+   - Identify potential data corruption hoặc security implications
+   - Analyze performance impact của bug conditions
+   - Document all findings với technical details
+
+##### Phase 3: Resolution Implementation
+1. **Fix development và testing**:
+   - Develop targeted fix addressing root cause comprehensively
+   - Create unit tests covering bug scenario với edge cases
+   - Test fix thoroughly trong various environments với conditions
+   - Verify fix doesn't introduce new regressions
+   - Update integration tests cho bug prevention
+
+2. **Resolution validation**:
+   - Conduct comprehensive testing của fix trong staging environment
+   - Validate fix resolves original bug report symptoms
+   - Test related functionality cho unintended side effects
+   - Performance test fix cho any performance implications
+   - Get stakeholder approval cho fix deployment
+
+##### Phase 4: Prevention & Learning
+1. **Prevention measures implementation**:
+   - Add monitoring/alerting cho early detection của similar issues
+   - Implement additional validation checks cho data integrity
+   - Update coding standards cho preventing similar bugs
+   - Enhance test coverage cho areas prone to bugs
+   - Document lessons learned với team sharing
+
+2. **Process improvement**:
+   - Analyze bug patterns cho process improvement opportunities
+   - Update development practices cho bug prevention
+   - Improve testing strategies based on bug analysis
+   - Enhance monitoring coverage cho proactive detection
+   - Update documentation với common bug scenarios
+
+#### Output Deliverable
+Complete bug resolution package với:
+- Detailed root cause analysis documentation
+- Implemented fix với comprehensive testing
+- Updated test coverage cho bug prevention
+- Improved monitoring/alerting setup
+- Process improvements cho bug prevention
+- Team knowledge sharing session documentation
+
+#### Success Criteria
+- [ ] Bug fully resolved với no regressions introduced
+- [ ] Root cause thoroughly understood và documented
+- [ ] Prevention measures implemented cho similar issues
+- [ ] Team knowledge updated với lessons learned
+- [ ] Testing improved cho better bug detection
+
+---
+
+## 📊 Product Owner (Sarah) - Product Management Tasks
+
+### 1. 📋 Create Development Stories (Create Development Stories)
+
+**Objective**: Transform architecture specifications và user requirements thành detailed, actionable user stories với comprehensive acceptance criteria optimized cho development implementation.
+
+#### Input Requirements
+- **Architecture Documents**: Complete system, frontend, infrastructure architecture
+- **User Research**: Personas, user journeys, pain points analysis
+- **Business Requirements**: Feature specifications, business rules, success criteria
+- **Technical Constraints**: Architecture limitations, technology capabilities
+- **Design Specifications**: UI/UX designs, interaction patterns, accessibility requirements
+
+#### Task Execution Steps
+
+##### Phase 1: Epic Breakdown & Story Mapping
+1. **Epic decomposition analysis**:
+   - Break down major features thành manageable epics
+   - Map epics to user value delivery milestones
+   - Identify dependencies giữa epics với sequencing plan
+   - Prioritize epics based on business value với technical feasibility
+   - Create epic acceptance criteria với business value metrics
+
+2. **Story mapping workshop facilitation**:
+   - Facilitate collaborative story mapping sessions với development team
+   - Map user journeys to development stories systematically
+   - Identify minimal viable feature sets cho early value delivery
+   - Plan story sequences cho logical development progression
+   - Validate story priorities với stakeholders consistently
+
+##### Phase 2: Detailed Story Development
+1. **User story creation**:
+   - Write clear user stories following INVEST criteria (Independent, Negotiable, Valuable, Estimable, Small, Testable)
+   - Define specific user persona cho each story context
+   - Articulate clear business value trong each story statement
+   - Link stories to broader epic goals với traceability
+   - Plan story sizing cho 1-3 day development cycles
+
+2. **Acceptance criteria definition**:
+   - Create comprehensive acceptance criteria using Given-When-Then format
+   - Cover happy path scenarios với edge cases thoroughly
+   - Include non-functional requirements (performance, security, accessibility)
+   - Specify integration requirements với external systems
+   - Define data validation rules với business logic specifications
+
+3. **Story enrichment**:
+   - Add design specifications với mockups/wireframes
+   - Include API specifications với data requirements
+   - Specify testing scenarios với expected outcomes  
+   - Add security considerations với compliance requirements
+   - Include analytics/tracking requirements cho success measurement
+
+##### Phase 3: Story Validation & Refinement
+1. **Technical feasibility validation**:
+   - Review stories với development team cho technical feasibility
+   - Identify technical dependencies với resolution approaches
+   - Validate story estimates với team capacity planning
+   - Refine stories based on technical constraints và opportunities
+   - Ensure stories align với architectural decisions
+
+2. **Business value validation**:
+   - Validate stories deliver intended business value
+   - Confirm acceptance criteria align với business objectives
+   - Review stories với business stakeholders cho approval
+   - Ensure story priorities align với business strategy
+   - Validate success metrics are measurable với actionable
+
+#### Output Deliverable
+Complete development story backlog với:
+- Epic breakdown với business value mapping
+- Detailed user stories following INVEST principles
+- Comprehensive acceptance criteria with Given-When-Then format
+- Story prioritization với business value justification
+- Technical specifications với design attachments
+- Dependency mapping với development sequencing plan
+
+#### Success Criteria
+- [ ] Stories are clear, actionable, và testable
+- [ ] Acceptance criteria comprehensive và unambiguous
+- [ ] Business value articulated cho each story
+- [ ] Stories sized appropriately cho development sprints
+- [ ] Dependencies identified với mitigation plans
+
+---
+
+### 2. 📅 Plan Development Sprints (Plan Development Sprints)
+
+**Objective**: Create comprehensive sprint plans that optimize team productivity, deliver maximum business value, và maintain sustainable development pace.
+
+#### Input Requirements
+- **Product Backlog**: Prioritized user stories với effort estimates
+- **Team Capacity**: Developer availability, skills, historical velocity
+- **Business Priorities**: Stakeholder expectations, release deadlines
+- **Technical Constraints**: Dependencies, architecture requirements
+- **Definition of Done**: Quality standards cho story completion
+
+#### Task Execution Steps
+
+##### Phase 1: Sprint Goal Definition
+1. **Business objective alignment**:
+   - Define clear sprint goal linked to business objectives
+   - Identify key business outcomes expected từ sprint
+   - Align sprint goal với product strategy và roadmap
+   - Validate sprint goal với stakeholders cho commitment
+   - Create success criteria cho sprint goal achievement
+
+2. **Value delivery planning**:
+   - Select stories that contribute to sprint goal achievement
+   - Plan incremental value delivery throughout sprint
+   - Identify opportunities cho early stakeholder feedback
+   - Plan demo scenario cho sprint review presentation
+   - Design user validation approach cho implemented features
+
+##### Phase 2: Capacity Planning & Story Selection
+1. **Team capacity analysis**:
+   - Analyze team member availability với planned time off
+   - Account for team ceremonies, meetings, administrative time
+   - Consider skill distribution cho story assignment optimization
+   - Plan capacity buffer cho unknown work và impediments
+   - Factor in team's historical velocity với trend analysis
+
+2. **Story selection và prioritization**:
+   - Select highest priority stories fitting team capacity
+   - Balance quick wins với complex, high-value features
+   - Consider story dependencies với optimal sequencing
+   - Plan stretch goals cho additional capacity
+   - Validate story selection với development team cho feasibility
+
+##### Phase 3: Sprint Execution Planning
+1. **Sprint backlog preparation**:
+   - Break down selected stories thành development tasks
+   - Identify task dependencies với critical path analysis
+   - Plan task distribution among team members
+   - Prepare story acceptance testing scenarios
+   - Set up tracking mechanisms cho sprint progress monitoring
+
+2. **Risk mitigation planning**:
+   - Identify potential sprint risks với mitigation strategies
+   - Plan contingency approaches cho high-risk stories
+   - Prepare scope adjustment strategies cho capacity challenges
+   - Plan stakeholder communication cho potential scope changes
+   - Set up early warning indicators cho sprint goal risk
+
+#### Output Deliverable
+Comprehensive sprint plan với:
+- Clear sprint goal với success criteria
+- Selected user stories với detailed acceptance criteria
+- Sprint backlog với task breakdown và estimates
+- Team capacity plan với member assignments
+- Risk assessment với mitigation strategies
+- Sprint communication plan với stakeholder updates
+
+#### Success Criteria
+- [ ] Sprint goal achievable với available team capacity
+- [ ] Stories selected deliver maximum business value
+- [ ] Sprint plan realistic với appropriate risk mitigation
+- [ ] Team committed to sprint goal và scope
+- [ ] Stakeholder expectations aligned với sprint plan
+
+---
+
+### 3. 📈 Manage Product Backlog (Manage Product Backlog)
+
+**Objective**: Maintain well-organized, prioritized product backlog that enables continuous value delivery với clear development roadmap.
+
+#### Input Requirements
+- **Business Strategy**: Product vision, strategic objectives, market priorities
+- **Stakeholder Feedback**: User feedback, business requirements, change requests
+- **Development Insights**: Technical constraints, architecture evolution, team learnings
+- **Market Intelligence**: Competitive analysis, market trends, user research
+- **Performance Data**: Feature usage analytics, business metrics, user satisfaction data
+
+#### Task Execution Steps
+
+##### Phase 1: Backlog Grooming & Maintenance
+1. **Story lifecycle management**:
+   - Regularly review backlog cho relevance với current strategy
+   - Remove obsolete stories không longer providing value
+   - Update story priorities based on changing business needs
+   - Refine story details với improved understanding
+   - Maintain backlog size at manageable level (2-3 sprints ready)
+
+2. **Priority optimization**:
+   - Apply priority frameworks (MoSCoW, RICE, Value vs Effort)
+   - Balance business value với technical feasibility
+   - Consider user impact của different features
+   - Account cho technical debt trong priority decisions
+   - Validate priorities với stakeholders regularly
+
+##### Phase 2: Stakeholder Alignment & Communication
+1. **Stakeholder requirement gathering**:
+   - Conduct regular stakeholder interviews cho requirement clarification
+   - Facilitate workshops cho complex feature definition
+   - Collect và analyze user feedback cho backlog insights
+   - Coordinate với business analysts cho detailed requirements
+   - Document stakeholder decisions với rationale
+
+2. **Backlog communication**:
+   - Maintain transparent backlog visibility cho stakeholders
+   - Provide regular backlog updates với priority explanations
+   - Communicate roadmap implications của backlog changes
+   - Explain technical trade-offs affecting priority decisions
+   - Facilitate backlog review sessions với key stakeholders
+
+##### Phase 3: Continuous Improvement
+1. **Backlog metrics analysis**:
+   - Track backlog health metrics (size, age, priority distribution)
+   - Analyze story completion rates với cycle time trends
+   - Monitor backlog churn rates với stability indicators
+   - Measure business value delivery từ completed stories
+   - Track stakeholder satisfaction với backlog management
+
+2. **Process optimization**:
+   - Improve story writing practices based on team feedback
+   - Optimize backlog refinement process cho efficiency
+   - Enhance prioritization criteria với better outcomes
+   - Streamline stakeholder communication processes
+   - Update backlog management tools cho better workflow
+
+#### Output Deliverable
+Well-maintained product backlog với:
+- Prioritized user stories với clear acceptance criteria
+- Regular backlog refinement schedule với stakeholder input
+- Backlog health metrics với improvement tracking
+- Stakeholder communication plan với feedback integration
+- Backlog management process documentation
+- Product roadmap visibility aligned với backlog priorities
+
+#### Success Criteria
+- [ ] Backlog accurately reflects business priorities
+- [ ] Development team has 2-3 sprints của ready stories
+- [ ] Stakeholder requirements clearly captured và prioritized
+- [ ] Backlog manageable size với appropriate detail level
+- [ ] Business value delivered consistently từ backlog execution
+
+---
+
+### 4. 🤝 Coordinate Stakeholders (Coordinate Stakeholders)
+
+**Objective**: Facilitate effective communication và alignment among all project stakeholders để ensure project success với minimal conflicts.
+
+#### Input Requirements
+- **Stakeholder Map**: Identification của all project stakeholders với their roles
+- **Communication Preferences**: Stakeholder communication styles với preferences
+- **Project Timeline**: Key milestones, deliverables, decision points
+- **Conflict Areas**: Known areas of potential stakeholder disagreement
+- **Decision Authority**: Clear understanding của who makes different types decisions
+
+#### Task Execution Steps
+
+##### Phase 1: Stakeholder Analysis & Engagement Planning
+1. **Comprehensive stakeholder mapping**:
+   - Identify all internal với external stakeholders
+   - Document stakeholder interests, concerns, influence levels
+   - Map stakeholder relationships với potential conflict areas
+   - Understand decision-making authority của different stakeholders
+   - Plan engagement approaches tailored to each stakeholder group
+
+2. **Communication strategy development**:
+   - Define communication channels với frequency for each stakeholder
+   - Create stakeholder-specific communication templates
+   - Plan regular touchpoints với key stakeholders
+   - Design escalation paths cho conflict resolution
+   - Set up feedback mechanisms cho continuous stakeholder input
+
+##### Phase 2: Regular Stakeholder Engagement
+1. **Stakeholder meeting facilitation**:
+   - Facilitate sprint reviews với comprehensive stakeholder attendance
+   - Conduct stakeholder feedback sessions cho product direction
+   - Organize cross-functional alignment meetings
+   - Lead product roadmap discussions với priority negotiations
+   - Facilitate user acceptance testing sessions với business users
+
+2. **Conflict resolution & consensus building**:
+   - Identify stakeholder conflicts early với proactive mediation
+   - Facilitate discussions cho consensus building on key decisions
+   - Document decisions với rationale cho future reference
+   - Manage scope change requests với impact analysis
+   - Balance competing stakeholder priorities với business value focus
+
+##### Phase 3: Stakeholder Satisfaction & Continuous Improvement
+1. **Stakeholder satisfaction monitoring**:
+   - Collect regular feedback on project progress và communication
+   - Monitor stakeholder engagement levels với meeting participation
+   - Track stakeholder satisfaction với delivery quality
+   - Assess stakeholder confidence trong project success
+   - Identify areas cho stakeholder experience improvement
+
+2. **Communication process optimization**:
+   - Improve meeting effectiveness based on stakeholder feedback
+   - Optimize communication frequency với content relevance
+   - Enhance stakeholder reporting với better insights
+   - Streamline decision-making processes cho faster resolution
+   - Update stakeholder engagement approaches based on lessons learned
+
+#### Output Deliverable
+Comprehensive stakeholder coordination framework với:
+- Stakeholder engagement plan với communication schedule
+- Regular stakeholder meeting cadence với effective facilitation
+- Conflict resolution documentation với consensus-building outcomes
+- Stakeholder satisfaction metrics với improvement tracking
+- Decision documentation với clear rationale
+- Stakeholder feedback integration into product development
+
+#### Success Criteria
+- [ ] All stakeholders engaged appropriately với their role
+- [ ] Conflicts resolved constructively với win-win solutions
+- [ ] Decision-making efficient với clear authority
+- [ ] Stakeholder satisfaction high với project progress
+- [ ] Communication effective với minimal misunderstandings
+
+---
+
+### 5. 📊 Track Development Progress (Track Development Progress)
+
+**Objective**: Monitor và report development progress accurately, identifying risks early với enabling proactive management decisions.
+
+#### Input Requirements
+- **Sprint Plans**: Sprint goals, committed stories, team capacity plans
+- **Development Team Updates**: Daily progress, blockers, completion status
+- **Quality Metrics**: Testing progress, bug reports, code quality indicators
+- **Business Metrics**: User engagement, feature usage, business value delivery
+- **Stakeholder Expectations**: Delivery timelines, quality standards, scope agreements
+
+#### Task Execution Steps
+
+##### Phase 1: Progress Tracking Setup
+1. **Metrics framework establishment**:
+   - Define key performance indicators cho project success
+   - Set up tracking mechanisms cho story completion, velocity, quality
+   - Create dashboards cho real-time progress visibility
+   - Establish baseline measurements cho comparison
+   - Plan automated reporting để reduce manual overhead
+
+2. **Communication cadence planning**:
+   - Schedule regular progress review sessions với team
+   - Plan stakeholder update schedule với appropriate detail level
+   - Set up escalation triggers cho progress risk identification
+   - Create progress reporting templates cho consistency
+   - Plan celebration milestones cho team motivation
+
+##### Phase 2: Active Progress Monitoring
+1. **Sprint progress tracking**:
+   - Monitor daily progress toward sprint goals với story completion
+   - Track team velocity trends với capacity utilization
+   - Identify blockers early với resolution support
+   - Monitor quality metrics cho sustainable development pace
+   - Assess sprint goal achievement probability với risk mitigation
+
+2. **Stakeholder progress communication**:
+   - Provide regular progress updates to business stakeholders
+   - Communicate risks với impact analysis và mitigation plans
+   - Share success stories với business value demonstrations
+   - Facilitate progress review meetings với actionable outcomes
+   - Update project timeline với realistic completion estimates
+
+##### Phase 3: Progress Analysis & Optimization
+1. **Progress trend analysis**:
+   - Analyze velocity trends cho capacity planning improvement
+   - Identify patterns trong progress challenges với root cause analysis
+   - Evaluate effectiveness của progress tracking approaches
+   - Assess stakeholder satisfaction với progress communication
+   - Identify opportunities cho process improvement
+
+2. **Continuous improvement implementation**:
+   - Optimize tracking approaches based on team feedback
+   - Improve progress reporting clarity with stakeholder input
+   - Enhance risk identification với earlier warning systems
+   - Streamline progress review meetings cho efficiency
+   - Update tracking tools với better team workflow integration
+
+#### Output Deliverable
+Comprehensive progress tracking system với:
+- Real-time progress dashboards với key metrics
+- Regular progress reports với trend analysis
+- Risk identification với mitigation planning
+- Stakeholder communication với appropriate detail level
+- Process improvement recommendations với implementation plans
+- Team velocity và capacity analysis với forecasting
+
+#### Success Criteria
+- [ ] Progress accurately measured với timely reporting
+- [ ] Risks identified early với effective mitigation
+- [ ] Stakeholders informed appropriately với project status
+- [ ] Team productivity optimized với process improvements
+- [ ] Project delivery predictable với reliable forecasting
+
+---
+
+### 6. ✅ Quality Gate Reviews (Quality Gate Reviews)
+
+**Objective**: Conduct thorough quality validation at key project milestones để ensure deliverables meet business requirements với acceptable quality standards.
+
+#### Input Requirements
+- **Definition of Done**: Agreed quality standards cho story completion
+- **Business Requirements**: Original requirements với acceptance criteria
+- **Quality Standards**: Technical, usability, performance, security standards
+- **Testing Results**: Automated test results, manual testing outcomes, user feedback
+- **Stakeholder Expectations**: Business stakeholder quality expectations
+
+#### Task Execution Steps
+
+##### Phase 1: Quality Gate Preparation
+1. **Quality criteria establishment**:
+   - Define specific quality criteria cho each quality gate
+   - Create quality checklists với measurable standards
+   - Set up quality validation processes với clear responsibilities
+   - Plan quality gate timing với development milestones
+   - Design quality gate documentation templates
+
+2. **Quality validation setup**:
+   - Coordinate với QA team cho testing strategy alignment
+   - Set up user acceptance testing environments
+   - Plan stakeholder involvement trong quality validation
+   - Prepare quality gate review meetings với appropriate attendees
+   - Create quality issue escalation procedures
+
+##### Phase 2: Quality Gate Execution
+1. **Comprehensive quality assessment**:
+   - Review functional completeness against acceptance criteria
+   - Validate user experience quality với usability standards
+   - Assess performance quality với established benchmarks
+   - Review security compliance với organizational standards
+   - Evaluate business value delivery với success metrics
+
+2. **Stakeholder quality validation**:
+   - Facilitate user acceptance testing sessions với business users
+   - Conduct stakeholder demos với quality assessment
+   - Collect stakeholder feedback on deliverable quality
+   - Document quality issues với severity assessment
+   - Plan remediation approaches cho identified quality gaps
+
+##### Phase 3: Quality Gate Decision & Follow-up
+1. **Quality gate decision making**:
+   - Assess overall quality against gate criteria
+   - Make go/no-go decisions based on quality assessment
+   - Document quality gate outcomes với rationale
+   - Plan remediation work cho quality issues
+   - Communicate quality gate results to all stakeholders
+
+2. **Quality improvement implementation**:
+   - Track quality issue resolution với completion verification
+   - Implement process improvements based on quality learnings
+   - Update quality standards based on stakeholder feedback
+   - Enhance quality validation processes cho future gates
+   - Share quality lessons learned với broader organization
+
+#### Output Deliverable
+Quality gate validation với:
+- Comprehensive quality assessment against established criteria
+- Stakeholder acceptance với documented feedback
+- Quality issue log với resolution tracking
+- Quality gate decision documentation với rationale
+- Process improvement recommendations cho future quality gates
+- Quality metrics với trend analysis
+
+#### Success Criteria
+- [ ] Quality standards met hoặc exceeded at each gate
+- [ ] Stakeholder satisfaction với deliverable quality
+- [ ] Quality issues identified với resolution plans
+- [ ] Quality processes continuously improving
+- [ ] Business value delivered với acceptable quality
+
+---
+
+## 🏃‍♂️ Scrum Master (David) - Agile Process & Team Performance Tasks
+
+### 1. 🎯 Facilitate Agile Ceremonies (Facilitate Agile Ceremonies)
+
+**Objective**: Lead effective Scrum ceremonies that enable team collaboration, continuous improvement, với productive development workflows.
+
+#### Input Requirements
+- **Sprint Plans**: Sprint goals, backlog items, team commitments
+- **Team Dynamics**: Team maturity level, communication patterns, conflict areas
+- **Ceremony Standards**: Time-boxing, participation expectations, outcome requirements
+- **Improvement Areas**: Previous retrospective actions, process improvement goals
+- **Stakeholder Availability**: Product Owner và stakeholder participation schedules
+
+#### Task Execution Steps
+
+##### Phase 1: Ceremony Planning & Preparation
+1. **Sprint Planning facilitation**:
+   - Prepare sprint planning agenda với time-boxed activities
+   - Facilitate sprint goal creation với team consensus
+   - Guide story selection process with capacity considerations
+   - Ensure story breakdown với task identification
+   - Document sprint commitment with team agreement
+
+2. **Daily Standup facilitation**:
+   - Create focused daily standup format với three questions
+   - Facilitate impediment identification với resolution planning
+   - Ensure time-boxing với productive team coordination
+   - Track action items từ daily standups với follow-up
+   - Maintain standup focus on coordination rather than status reporting
+
+##### Phase 2: Sprint Review & Retrospective Facilitation
+1. **Sprint Review facilitation**:
+   - Prepare demo environment với stakeholder participation
+   - Facilitate product increment demonstration với user feedback
+   - Guide stakeholder feedback collection với actionable outcomes
+   - Review sprint goal achievement với team reflection
+   - Document feedback với product backlog implications
+
+2. **Sprint Retrospective facilitation**:
+   - Design retrospective format appropriate cho team needs
+   - Facilitate honest team reflection on process effectiveness
+   - Guide identification của improvement opportunities
+   - Ensure action item creation với ownership assignment
+   - Track previous retrospective actions với completion assessment
+
+##### Phase 3: Ceremony Effectiveness & Improvement
+1. **Ceremony effectiveness assessment**:
+   - Monitor ceremony outcomes với team satisfaction
+   - Assess time efficiency với value delivery của ceremonies
+   - Track action item completion từ ceremonies
+   - Evaluate team participation với engagement levels
+   - Identify ceremony improvement opportunities
+
+2. **Ceremony process optimization**:
+   - Adapt ceremony formats based on team feedback
+   - Improve ceremony preparation với better outcomes
+   - Enhance facilitation techniques cho team engagement
+   - Update ceremony documentation với best practices
+   - Share ceremony lessons learned với broader organization
+
+#### Output Deliverable
+Effective agile ceremony facilitation với:
+- Consistently facilitated sprint ceremonies with clear outcomes
+- Team action items với ownership và completion tracking
+- Retrospective improvements với implementation monitoring
+- Ceremony effectiveness metrics với continuous improvement
+- Team satisfaction với ceremony value và efficiency
+- Documentation của ceremony best practices và lessons learned
+
+#### Success Criteria
+- [ ] Ceremonies consistently valuable với productive outcomes
+- [ ] Team engaged với active participation
+- [ ] Action items tracked với completion accountability
+- [ ] Ceremony time-boxing respected với efficient facilitation
+- [ ] Continuous improvement evident từ ceremony outcomes
+
+---
+
+### 2. 🚫 Remove Development Impediments (Remove Development Impediments)
+
+**Objective**: Proactively identify, escalate, và resolve impediments that block hoặc slow down development team progress.
+
+#### Input Requirements
+- **Team Feedback**: Daily standup impediments, team concerns, blockers
+- **Organizational Context**: Company processes, resource availability, decision authorities
+- **Technical Environment**: Development tools, infrastructure, external dependencies
+- **External Dependencies**: Vendor relationships, third-party services, approval processes
+- **Escalation Paths**: Management structure, decision makers, resource allocators
+
+#### Task Execution Steps
+
+##### Phase 1: Impediment Identification & Analysis
+1. **Proactive impediment identification**:
+   - Monitor team communication cho early impediment signals
+   - Identify process bottlenecks through workflow observation
+   - Recognize technical blockers from development discussions
+   - Assess organizational impediments affecting team productivity
+   - Track recurring impediment patterns với root cause analysis
+
+2. **Impediment impact assessment**:
+   - Evaluate impediment severity với team productivity impact
+   - Assess timeline implications của different impediments
+   - Prioritize impediment resolution based on business impact
+   - Document impediment details với resolution urgency
+   - Plan parallel resolution approaches cho multiple impediments
+
+##### Phase 2: Impediment Resolution & Escalation
+1. **Direct impediment resolution**:
+   - Resolve team-level impediments through process facilitation
+   - Coordinate với IT/infrastructure teams cho technical blockers
+   - Facilitate communication cho cross-team dependencies
+   - Provide team training hoặc coaching cho skill-based impediments
+   - Update team processes cho workflow improvement
+
+2. **Escalation management**:
+   - Escalate organizational impediments to appropriate management level
+   - Coordinate với Product Owner cho business decision blockers
+   - Engage với external vendors cho third-party service issues
+   - Facilitate cross-department coordination cho process impediments
+   - Track escalated impediments với resolution accountability
+
+##### Phase 3: Impediment Prevention & Improvement
+1. **Impediment pattern analysis**:
+   - Identify recurring impediment causes với systemic solutions
+   - Analyze organizational patterns contributing to impediments
+   - Document impediment resolution effectiveness với lessons learned
+   - Share impediment insights với other teams
+   - Update processes cho impediment prevention
+
+2. **Preventive measures implementation**:
+   - Implement process improvements cho common impediment prevention
+   - Enhance team skills cho self-sufficient impediment resolution
+   - Improve organizational communication cho faster resolution
+   - Create impediment resolution playbooks cho common scenarios
+   - Establish proactive monitoring cho impediment early detection
+
+#### Output Deliverable
+Effective impediment management với:
+- Comprehensive impediment tracking với resolution status
+- Escalation procedures với clear ownership accountability
+- Root cause analysis với prevention measure implementation
+- Process improvements cho faster impediment resolution
+- Team productivity improvements từ impediment removal
+- Organizational insights cho systemic impediment reduction
+
+#### Success Criteria
+- [ ] Team impediments resolved promptly với minimal productivity impact
+- [ ] Escalation paths effective với timely resolution
+- [ ] Recurring impediments addressed với prevention measures
+- [ ] Team self-sufficiency improved cho impediment resolution
+- [ ] Organizational awareness của impediment patterns enhanced
+
+---
+
+### 3. 📈 Coach Team Performance (Coach Team Performance)
+
+**Objective**: Guide development team toward high performance through skills development, process optimization, với collaborative excellence.
+
+#### Input Requirements
+- **Team Assessment**: Current team skills, maturity level, performance metrics
+- **Performance Goals**: Team velocity targets, quality objectives, collaboration expectations
+- **Individual Development**: Team member growth areas, career aspirations, skill gaps
+- **Process Metrics**: Sprint velocity, cycle time, quality indicators, team satisfaction
+- **Organizational Context**: Company culture, available resources, performance standards
+
+#### Task Execution Steps
+
+##### Phase 1: Team Performance Assessment
+1. **Current state analysis**:
+   - Assess team collaboration effectiveness với communication patterns
+   - Evaluate individual team member contributions với growth opportunities
+   - Analyze team velocity trends với consistency patterns
+   - Review team quality metrics với improvement areas
+   - Identify team strengths với areas needing development
+
+2. **Performance gap identification**:
+   - Compare current performance with desired outcomes
+   - Identify specific skill gaps affecting team productivity
+   - Assess process maturity với optimization opportunities
+   - Evaluate team dynamics với collaboration improvement areas
+   - Document performance improvement priorities
+
+##### Phase 2: Coaching & Development Implementation
+1. **Individual coaching**:
+   - Provide one-on-one coaching cho skill development
+   - Support individual career growth với learning opportunities
+   - Address performance concerns với constructive feedback
+   - Facilitate knowledge sharing among team members
+   - Enable individual contributions to team success
+
+2. **Team coaching**:
+   - Facilitate team skill-sharing sessions
+   - Guide process improvement discussions
+   - Coach collaborative problem-solving techniques
+   - Support team decision-making capabilities
+   - Enhance team communication effectiveness
+
+##### Phase 3: Performance Monitoring & Continuous Improvement
+1. **Progress tracking**:
+   - Monitor team performance metrics với trend analysis
+   - Track individual development progress với goal achievement
+   - Assess coaching effectiveness với outcome measurement
+   - Evaluate team satisfaction với engagement levels
+   - Document performance improvements với success factors
+
+2. **Continuous improvement facilitation**:
+   - Guide retrospective discussions cho performance insights
+   - Implement team feedback cho process optimization
+   - Adapt coaching approaches based on team needs
+   - Share team success stories với organizational learning
+   - Plan ongoing development activities cho sustained improvement
+
+#### Output Deliverable
+Comprehensive team performance coaching với:
+- Team performance improvement với measurable outcomes
+- Individual development plans với progress tracking
+- Process optimization với team effectiveness enhancement
+- Team collaboration improvement với stronger dynamics
+- Performance metrics với trend analysis
+- Coaching best practices với lessons learned documentation
+
+#### Success Criteria
+- [ ] Team performance improved với sustained velocity increase
+- [ ] Individual team members developed với career progression
+- [ ] Team collaboration enhanced với better communication
+- [ ] Process efficiency improved với reduced waste
+- [ ] Team satisfaction increased với higher engagement
+
+---
+
+### 4. 🔄 Process Optimization (Process Optimization)
+
+**Objective**: Continuously analyze và improve development processes để maximize team efficiency, quality, với value delivery.
+
+#### Input Requirements
+- **Process Metrics**: Cycle time, lead time, throughput, quality indicators
+- **Team Feedback**: Retrospective insights, daily friction points, improvement suggestions
+- **Workflow Analysis**: Value stream mapping, bottleneck identification, waste assessment
+- **Industry Best Practices**: Agile methodologies, lean principles, continuous improvement techniques
+- **Organizational Constraints**: Company policies, resource limitations, compliance requirements
+
+#### Task Execution Steps
+
+##### Phase 1: Process Analysis & Measurement
+1. **Current state assessment**:
+   - Map current development workflow với value stream analysis
+   - Measure process efficiency với cycle time analysis
+   - Identify workflow bottlenecks với capacity constraints
+   - Assess process waste với non-value-added activities
+   - Document process pain points từ team feedback
+
+2. **Metrics establishment**:
+   - Define key process performance indicators
+   - Set up measurement systems cho continuous monitoring
+   - Establish baseline measurements cho improvement comparison
+   - Create process dashboards cho visibility
+   - Plan regular process health reviews
+
+##### Phase 2: Process Improvement Implementation
+1. **Process redesign**:
+   - Design improved workflows addressing identified bottlenecks
+   - Implement lean principles cho waste reduction
+   - Optimize handoff processes cho smoother transitions
+   - Enhance quality gates cho defect prevention
+   - Streamline approval processes cho faster decisions
+
+2. **Process experimentation**:
+   - Conduct small-scale process experiments với hypothesis testing
+   - Implement process changes với controlled rollouts
+   - Monitor process change effectiveness với data collection
+   - Adjust processes based on experimental results
+   - Scale successful process improvements
+
+##### Phase 3: Process Sustainability & Evolution
+1. **Process monitoring & maintenance**:
+   - Monitor process performance với ongoing measurement
+   - Track process adherence với compliance assessment
+   - Identify process drift với corrective actions
+   - Collect ongoing feedback cho process refinement
+   - Maintain process documentation với updates
+
+2. **Continuous improvement culture**:
+   - Encourage team suggestions cho process enhancement
+   - Facilitate process improvement discussions trong retrospectives
+   - Share process success stories với team motivation
+   - Train team members on process optimization techniques
+   - Embed improvement mindset trong team culture
+
+#### Output Deliverable
+Process optimization program với:
+- Improved development workflow với measurable efficiency gains
+- Process metrics dashboard với ongoing monitoring
+- Process documentation với clear procedures
+- Team training on optimized processes với adoption support
+- Continuous improvement framework với regular review cycles
+- Process lessons learned với best practices documentation
+
+#### Success Criteria
+- [ ] Process efficiency improved với measurable cycle time reduction
+- [ ] Team satisfaction increased với reduced friction
+- [ ] Quality improved với defect reduction
+- [ ] Process compliance maintained với documentation currency
+- [ ] Improvement culture embedded với team participation
+
+---
+
+### 5. 🤝 Stakeholder Coordination (Stakeholder Coordination)
+
+**Objective**: Facilitate effective communication và coordination between development team với external stakeholders để ensure alignment và project success.
+
+#### Input Requirements
+- **Stakeholder Map**: Development team, Product Owner, business stakeholders, management
+- **Communication Requirements**: Stakeholder information needs, preferred communication channels
+- **Project Status**: Sprint progress, impediments, risks, achievements
+- **Team Dynamics**: Team concerns, external pressure points, support needs
+- **Organizational Context**: Company communication culture, decision-making processes
+
+#### Task Execution Steps
+
+##### Phase 1: Stakeholder Communication Planning
+1. **Communication strategy development**:
+   - Identify all stakeholder communication touchpoints
+   - Plan regular communication cadence với appropriate stakeholders
+   - Design stakeholder-specific communication approaches
+   - Create escalation paths cho urgent issues
+   - Establish communication effectiveness metrics
+
+2. **Stakeholder expectation management**:
+   - Facilitate stakeholder expectation setting với realistic commitments
+   - Communicate team capacity với delivery capabilities
+   - Manage scope changes với stakeholder impact assessment
+   - Address stakeholder concerns với proactive solutions
+   - Maintain transparency với project risks và challenges
+
+##### Phase 2: Active Stakeholder Coordination
+1. **Regular stakeholder engagement**:
+   - Facilitate sprint reviews với meaningful stakeholder participation
+   - Provide regular project updates với relevant stakeholder information
+   - Coordinate stakeholder feedback collection với team integration
+   - Manage stakeholder requests với impact assessment
+   - Address stakeholder conflicts với collaborative resolution
+
+2. **Team advocacy**:
+   - Represent team interests trong stakeholder discussions
+   - Protect team time với appropriate stakeholder access
+   - Communicate team achievements với recognition
+   - Advocate cho team resource needs
+   - Shield team from inappropriate external pressure
+
+##### Phase 3: Stakeholder Relationship Improvement
+1. **Relationship effectiveness assessment**:
+   - Evaluate stakeholder satisfaction với team collaboration
+   - Assess communication effectiveness với stakeholder feedback
+   - Monitor stakeholder engagement với project success
+   - Identify relationship improvement opportunities
+   - Document stakeholder coordination lessons learned
+
+2. **Stakeholder relationship enhancement**:
+   - Improve stakeholder communication based on feedback
+   - Enhance stakeholder meeting effectiveness
+   - Build stronger stakeholder partnerships
+   - Facilitate stakeholder education on agile processes
+   - Strengthen organizational support cho development team
+
+#### Output Deliverable
+Effective stakeholder coordination với:
+- Regular stakeholder communication với satisfied engagement
+- Clear stakeholder expectations với managed scope changes
+- Team protection từ inappropriate external pressure
+- Strong stakeholder relationships với collaborative partnerships
+- Effective conflict resolution với win-win solutions
+- Improved organizational understanding của agile development
+
+#### Success Criteria
+- [ ] Stakeholder satisfaction high với team collaboration
+- [ ] Team protected từ inappropriate external interference
+- [ ] Communication clear với minimal misunderstandings
+- [ ] Stakeholder expectations realistic với achievable commitments
+- [ ] Organizational support strong cho team success
+
+---
+
+### 6. 📊 Metrics Analysis & Reporting (Metrics Analysis & Reporting)
+
+**Objective**: Collect, analyze, và report team performance metrics để enable data-driven improvement decisions và stakeholder transparency.
+
+#### Input Requirements
+- **Team Performance Data**: Velocity, cycle time, throughput, quality metrics
+- **Process Metrics**: Sprint completion rates, story point accuracy, impediment resolution
+- **Quality Indicators**: Bug rates, test coverage, customer satisfaction
+- **Team Health Metrics**: Team satisfaction, engagement, skill development
+- **Business Metrics**: Feature usage, business value delivery, customer impact
+
+#### Task Execution Steps
+
+##### Phase 1: Metrics Framework & Collection
+1. **Metrics strategy development**:
+   - Define key performance indicators aligned với team goals
+   - Establish metrics collection processes với automation where possible
+   - Create metrics dashboard cho real-time visibility
+   - Plan metrics review cadence với stakeholder reporting
+   - Set up data quality controls cho accurate measurement
+
+2. **Data collection implementation**:
+   - Implement automated metrics collection từ development tools
+   - Set up manual data collection cho qualitative metrics
+   - Create consistent data definitions với calculation methods
+   - Establish data validation procedures cho accuracy
+   - Plan data storage với historical trend analysis
+
+##### Phase 2: Analysis & Insights Generation
+1. **Performance trend analysis**:
+   - Analyze velocity trends với capacity utilization patterns
+   - Evaluate cycle time improvements với bottleneck identification
+   - Assess quality trends với defect patterns
+   - Review team satisfaction với engagement indicators
+   - Identify performance correlation patterns
+
+2. **Insights development**:
+   - Generate actionable insights từ metrics analysis
+   - Identify improvement opportunities từ data patterns
+   - Correlate team performance với external factors
+   - Benchmark team performance against industry standards
+   - Create predictive analytics cho capacity planning
+
+##### Phase 3: Reporting & Action Planning
+1. **Stakeholder reporting**:
+   - Create stakeholder-appropriate reports với relevant metrics
+   - Present metrics insights với business impact context
+   - Facilitate metrics review meetings với action planning
+   - Communicate performance achievements với team recognition
+   - Address stakeholder questions với data-driven explanations
+
+2. **Improvement action planning**:
+   - Use metrics insights cho process improvement priorities
+   - Plan team development activities based on performance gaps
+   - Set performance improvement goals với measurable targets
+   - Track improvement initiative effectiveness với metrics
+   - Update metrics strategy based on organizational learning
+
+#### Output Deliverable
+Comprehensive metrics program với:
+- Team performance dashboard với real-time visibility
+- Regular stakeholder reports với actionable insights
+- Performance improvement recommendations với data support
+- Trend analysis với predictive capabilities
+- Team recognition based on achievement metrics
+- Metrics-driven improvement initiatives với outcome tracking
+
+#### Success Criteria
+- [ ] Metrics provide actionable insights cho team improvement
+- [ ] Stakeholder reporting transparent với valuable information
+- [ ] Team performance trends positive với sustained improvement
+- [ ] Data-driven decisions evident trong process changes
+- [ ] Team engaged với metrics as improvement tools
+
+---
+
+## 🎯 Development Phase Success Metrics
+
+### Quality Gates
+- **Code Quality**: All code reviewed, tested, với standards compliance
+- **Feature Completion**: All user stories meet acceptance criteria
+- **Performance Standards**: Application meets performance benchmarks
+- **Security Validation**: All security requirements validated
+- **User Acceptance**: Stakeholder approval của completed features
+- **Documentation**: Complete technical và user documentation
+
+### Deliverable Completeness
+- **Working Software**: Fully functional features trong production-ready state
+- **Test Coverage**: Comprehensive test suite với minimum coverage thresholds
+- **User Documentation**: Complete user guides với training materials
+- **Technical Documentation**: API docs, architecture updates, maintenance guides
+- **Deployment Artifacts**: Production-ready deployment packages với rollback plans
+- **Monitoring Setup**: Operational monitoring với alerting configured
+
+### Team Performance Excellence
+- **Velocity Consistency**: Predictable team velocity với sustainable pace
+- **Quality Improvement**: Decreasing defect rates với improving code quality
+- **Team Satisfaction**: High team engagement với positive retrospective feedback
+- **Stakeholder Satisfaction**: Positive stakeholder feedback on deliveries
+- **Process Maturity**: Self-organizing team với continuous improvement mindset
+- **Knowledge Sharing**: Cross-team knowledge distribution với documentation
+
+---
+
+**Development Excellence Achieved! Ready để deploy exceptional software! 💻→⚙️✨**

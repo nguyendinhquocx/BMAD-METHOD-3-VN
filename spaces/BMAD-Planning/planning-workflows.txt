@@ -1,0 +1,449 @@
+# BMAD Planning Workflows - Quy Trình Làm Việc Chi Tiết Giai Đoạn Lập Kế Hoạch
+
+---
+
+## 🎯 Overview - Tổng Quan Quy Trình
+
+### Planning Phase Mission
+**Transform ý tưởng ban đầu thành comprehensive, validated product requirements sẵn sàng cho architecture design.**
+
+### Key Success Outcomes
+- ✅ **Clear Problem Definition**: Well-articulated problem statement với validated user need
+- ✅ **Comprehensive PRD**: Complete Product Requirements Document với all necessary detail
+- ✅ **Validated MVP Scope**: Clear boundaries của what's included/excluded from MVP
+- ✅ **User Understanding**: Deep insights about target users và their needs
+- ✅ **Market Intelligence**: Understanding của competitive landscape và opportunity
+- ✅ **Epic Structure**: Logical breakdown của development work
+- ✅ **Architecture Foundation**: Technical constraints và preferences identified
+
+---
+
+## 🚀 Workflow 1: New Project Planning (Greenfield)
+
+### Dành cho: Dự án hoàn toàn mới từ ý tưởng ban đầu
+
+### Phase 1: Discovery & Brainstorming (Tuần 1)
+
+#### Step 1.1: Initial Context Gathering (Day 1)
+**Agent**: Analyst (Mary)  
+**Duration**: 1-2 hours
+
+**Activities**:
+- Initial user interview về project vision
+- Capture initial requirements, constraints, assumptions
+- Identify key stakeholders và decision makers
+- Set expectations về planning process
+
+**Deliverables**:
+- Initial context document
+- Stakeholder map
+- Planning timeline
+
+#### Step 1.2: Brainstorming Session (Day 1-2)
+**Agent**: Analyst (Mary)  
+**Duration**: 2-3 hours (có thể split thành multiple sessions)
+
+**Pre-Session Prep**:
+- Review initial context
+- Prepare brainstorming environment
+- Identify facilitation techniques to use
+
+**Session Structure**:
+```markdown
+**Brainstorming Agenda** (90-120 minutes):
+├── Problem Framing (15 min)
+├── Divergent Ideation (45 min)
+├── Idea Building (30 min)  
+├── Initial Convergence (20 min)
+└── Next Steps Planning (10 min)
+```
+
+**Facilitation Techniques**:
+- "What if..." scenarios for expansion
+- Analogical thinking ("Like X but for Y")
+- First principles breakdown
+- SCAMPER method application
+- "Yes, and..." building exercises
+
+**Deliverables**:
+- Brainstorming session summary
+- Top 5-7 concept areas identified
+- Key insights about user needs
+- Research questions for further investigation
+
+#### Step 1.3: Concept Evaluation (Day 2-3)
+**Agent**: Analyst (Mary)  
+**Duration**: 4-6 hours
+
+**Activities**:
+- Evaluate concepts against feasibility, value, alignment
+- Prioritize concepts based on evaluation criteria
+- Identify top 2-3 concepts for deeper exploration
+- Plan research needs for concept validation
+
+**Evaluation Framework**:
+```markdown
+**Concept Evaluation Matrix**:
+| Concept | User Value | Feasibility | Market Size | Alignment | Total Score |
+|---------|------------|-------------|-------------|-----------|-------------|
+| Concept 1 | 8/10 | 7/10 | 9/10 | 8/10 | 32/40 |
+| Concept 2 | 9/10 | 6/10 | 7/10 | 9/10 | 31/40 |
+```
+
+**Deliverables**:
+- Concept evaluation report
+- Prioritized concept list
+- Research requirements for top concepts
+
+### Phase 2: Research & Validation (Tuần 2)
+
+#### Step 2.1: Research Planning (Day 4)
+**Agent**: Analyst (Mary)  
+**Duration**: 2-3 hours
+
+**Activities**:
+- Create detailed research prompt cho top concepts
+- Define research questions, methodology, sources
+- Set success criteria cho research phase
+- Plan research timeline và resource allocation
+
+**Research Planning Template**:
+```markdown
+**Research Plan**:
+├── **Primary Questions**: What do we need to validate?
+├── **Research Areas**: Market, Competition, Technology, Users
+├── **Methodology**: How will we gather information?
+├── **Sources**: Where will we look for answers?
+├── **Timeline**: When will research be completed?
+└── **Success Criteria**: How do we know when we have enough?
+```
+
+**Deliverables**:
+- Comprehensive research prompt
+- Research methodology document
+- Resource requirements
+
+#### Step 2.2: Research Execution (Day 4-8)
+**Agent**: Analyst (Mary) hoặc Specialized Research Agent  
+**Duration**: 1-2 weeks
+
+**Research Focus Areas**:
+
+##### Market Research
+- Market size và growth potential
+- Target user segments và needs
+- Current solutions và their limitations
+- Pricing models và revenue opportunities
+
+##### Competitive Analysis
+- Direct và indirect competitors
+- Competitive strengths và weaknesses
+- Market positioning opportunities
+- Differentiation strategies
+
+##### Technical Feasibility
+- Technology options và constraints
+- Integration requirements
+- Development complexity assessment
+- Resource requirements estimation
+
+##### User Validation
+- User interview planning và execution
+- Survey design và distribution
+- User journey mapping
+- Pain point validation
+
+**Deliverables**:
+- Market research report
+- Competitive analysis summary
+- Technical feasibility assessment
+- User validation findings
+
+#### Step 2.3: Research Synthesis (Day 9)
+**Agent**: Analyst (Mary)  
+**Duration**: 4-6 hours
+
+**Activities**:
+- Synthesize all research findings
+- Validate hoặc invalidate initial concepts
+- Identify refined concept direction
+- Prepare insights cho PRD development
+
+**Synthesis Framework**:
+```markdown
+**Research Synthesis Structure**:
+├── **Key Findings**: What did we learn?
+├── **Validated Assumptions**: What was confirmed?
+├── **Invalidated Assumptions**: What was disproven?
+├── **New Insights**: What surprised us?
+├── **Recommended Direction**: What should we build?
+└── **Outstanding Questions**: What still needs answers?
+```
+
+**Deliverables**:
+- Research synthesis report
+- Refined concept definition
+- User persona drafts
+- Market opportunity assessment
+
+### Phase 3: PRD Development (Tuần 3)
+
+#### Step 3.1: PRD Planning (Day 10)
+**Agent**: PM (John)  
+**Duration**: 2-3 hours
+
+**Handoff Activities**:
+- Review all research findings với Analyst
+- Understand validated concept direction
+- Clarify success metrics và business goals
+- Plan PRD development approach
+
+**PRD Planning Checklist**:
+- [ ] Research findings reviewed và understood
+- [ ] Business goals clarity confirmed
+- [ ] Success metrics defined
+- [ ] User personas validated
+- [ ] Technical constraints identified
+- [ ] Stakeholder input requirements planned
+
+**Deliverables**:
+- PRD development plan
+- Success metrics definition
+- Stakeholder engagement strategy
+
+#### Step 3.2: PRD Drafting (Day 10-12)
+**Agent**: PM (John)  
+**Duration**: 2-3 days
+
+**PRD Development Sequence**:
+```markdown
+**Day 10**: Foundation
+├── Executive Summary
+├── Problem Statement
+├── Business Goals & Success Metrics
+└── Market Context
+
+**Day 11**: Requirements
+├── User Analysis (Personas & Journeys)
+├── Functional Requirements
+├── Non-Functional Requirements
+└── UI/UX Requirements
+
+**Day 12**: Planning
+├── MVP Definition & Scope
+├── Epic Breakdown
+├── Technical Constraints
+└── Implementation Guidance
+```
+
+**Quality Standards**:
+- All requirements testable và verifiable
+- User stories follow consistent format
+- Acceptance criteria clearly defined
+- Dependencies identified và documented
+- Technical constraints realistic và specific
+
+**Deliverables**:
+- Complete PRD draft
+- Epic breakdown với priorities
+- MVP scope definition
+- Technical constraints document
+
+#### Step 3.3: PRD Validation (Day 13-14)
+**Agent**: PM (John)  
+**Duration**: 1-2 days
+
+**Validation Process**:
+```markdown
+**PRD Validation Steps**:
+├── **Self-Review**: PM checklist validation
+├── **Analyst Review**: Alignment với research findings
+├── **Technical Review**: Feasibility assessment
+├── **Stakeholder Review**: Business alignment
+└── **Final Integration**: Incorporate all feedback
+```
+
+**PM Checklist Review Categories**:
+- Problem Definition & Context
+- MVP Scope Definition  
+- User Experience Requirements
+- Functional Requirements
+- Non-Functional Requirements
+- Epic & Story Structure
+- Technical Guidance
+- Cross-Functional Requirements
+- Clarity & Communication
+
+**Deliverables**:
+- Validated PRD với checklist sign-off
+- Stakeholder approval documentation
+- Outstanding issues list với resolution plan
+
+### Phase 4: Planning Completion (Day 15)
+
+#### Step 4.1: Final Quality Review
+**Agents**: Both Analyst (Mary) và PM (John)  
+**Duration**: 2-3 hours
+
+**Joint Review Activities**:
+- Final consistency check across all documents
+- Ensure research insights properly reflected in PRD
+- Validate epic structure supports MVP goals
+- Confirm technical constraints realistic
+- Verify stakeholder alignment maintained
+
+#### Step 4.2: Architecture Handoff Preparation  
+**Agent**: PM (John)  
+**Duration**: 1-2 hours
+
+**Handoff Package Preparation**:
+```markdown
+**Architecture Handoff Package**:
+├── **PRD.md** (validated)
+├── **Research-Summary.md** (key insights)
+├── **User-Personas.md** (detailed personas)
+├── **Epic-Breakdown.md** (development structure)
+├── **Technical-Constraints.md** (architecture inputs)
+├── **Market-Context.md** (competitive landscape)
+└── **Handoff-Notes.md** (context for architecture team)
+```
+
+**Deliverables**:
+- Complete handoff package
+- Architecture phase success criteria
+- Communication plan với architecture team
+
+---
+
+## 🔄 Workflow 2: Existing Product Enhancement
+
+### Dành cho: Enhancement của existing product với new features
+
+### Modified Planning Approach
+
+#### Phase 1: Current State Analysis (3-4 days)
+- **Existing Product Audit**: Current features, user feedback, performance metrics
+- **Gap Analysis**: What's missing vs user needs
+- **Technical Debt Assessment**: Current architecture limitations
+- **User Research**: Additional needs và pain points
+
+#### Phase 2: Enhancement Strategy (3-4 days)  
+- **Opportunity Prioritization**: Which enhancements provide most value
+- **Integration Planning**: How new features fit với existing product
+- **Migration Strategy**: How to transition existing users
+- **Resource Assessment**: Development effort vs current team capacity
+
+#### Phase 3: Enhanced PRD Development (5-7 days)
+- **Existing System Integration**: How new features interact với current system
+- **Backward Compatibility**: Ensuring existing users aren't disrupted
+- **Phased Rollout Plan**: Strategy for gradual feature introduction
+- **Success Metrics**: How to measure enhancement success
+
+---
+
+## 🚨 Workflow 3: Pivot/Major Change Management
+
+### Dành cho: Major changes discovered during planning process
+
+### Change Management Process
+
+#### Phase 1: Change Impact Assessment (1-2 days)
+**Activities**:
+- Identify root cause của change requirement
+- Assess impact on completed work
+- Evaluate alternative approaches
+- Stakeholder communication và alignment
+
+#### Phase 2: Path Forward Evaluation (1-2 days)
+**Options Analysis**:
+- **Option A**: Minor Adjustment - Limited changes to current approach
+- **Option B**: Major Pivot - Significant direction change  
+- **Option C**: Scope Reduction - Remove features to stay on track
+- **Option D**: Resource Augmentation - Add resources to handle complexity
+
+#### Phase 3: Change Implementation (Variable)
+**Activities**:
+- Update all affected documents
+- Recommunicate với stakeholders
+- Adjust timeline và resource plans
+- Validate new direction với research
+
+#### Phase 4: Change Validation (1 day)
+**Activities**:
+- Ensure all documents consistent
+- Stakeholder alignment confirmation
+- Risk assessment of new direction
+- Success metrics adjustment
+
+---
+
+## 📊 Workflow Quality Metrics
+
+### Planning Phase Success Metrics
+
+#### Process Metrics
+- **Timeline Adherence**: 95% of milestones met on time
+- **Stakeholder Satisfaction**: 4.5/5 rating on planning process
+- **Document Quality**: All checklists pass với >90% score
+- **Research Coverage**: All key questions answered
+
+#### Outcome Metrics  
+- **Architecture Phase Success**: Architecture documents completed on time
+- **Requirement Stability**: <10% requirement changes during architecture
+- **User Validation**: User personas validated với real users
+- **Technical Feasibility**: No major technical blockers discovered
+
+#### Efficiency Metrics
+- **Planning Velocity**: Time from start to validated PRD
+- **Rework Rate**: Percentage của planning work that needed revision
+- **Stakeholder Cycles**: Number of review cycles needed for approval
+- **Knowledge Transfer**: Architecture team confidence level với handoff
+
+### Continuous Improvement Framework
+
+#### Weekly Retrospectives
+- What worked well trong planning process?
+- What could be improved?
+- What should we start/stop/continue doing?
+- How can we better prepare for architecture phase?
+
+#### Monthly Process Review
+- Review planning success metrics
+- Identify process improvement opportunities  
+- Update templates và workflows based on learnings
+- Share best practices across teams
+
+---
+
+## 🎯 Planning Workflow Decision Tree
+
+```
+❓ What type of planning project?
+├── New Product (Greenfield)
+│   ├── Complex/Uncertain → Full 3-week planning process
+│   └── Simple/Clear → Shortened 2-week planning process
+├── Product Enhancement
+│   ├── Major Feature Addition → Enhanced planning process
+│   └── Minor Feature Addition → Streamlined planning process  
+├── Product Pivot
+│   ├── Technology Change → Focus on technical research
+│   └── Market Change → Focus on market research
+└── Emergency/Urgent
+    ├── Fast-track planning process (1 week)
+    └── Minimum viable planning với ongoing refinement
+```
+
+---
+
+## 🚀 Planning Workflows Excellence!
+
+Các workflows này cung cấp:
+
+- 📋 **Structured Approach**: Clear phases với defined deliverables
+- 🎯 **Flexible Framework**: Adaptable to different project types
+- ✅ **Quality Gates**: Built-in validation at each step  
+- 🔄 **Change Management**: Systematic handling của pivots
+- 📊 **Success Metrics**: Clear measurement của planning effectiveness
+- 🤝 **Stakeholder Alignment**: Consistent communication và validation
+
+**Use these workflows to ensure consistent, high-quality planning outcomes across all projects! 🌟**

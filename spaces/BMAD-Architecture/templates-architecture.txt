@@ -1,0 +1,1310 @@
+# BMAD Architecture Templates - Templates cho Giai đoạn Thiết kế Kiến trúc
+
+---
+
+## 🏗️ System Architecture Template
+
+### Mục đích
+Comprehensive template để Architect tạo detailed system architecture document từ PRD requirements.
+
+### Template Structure
+
+```markdown
+# {Project Name} - System Architecture Document
+
+## Document Information
+- **Version**: 1.0
+- **Last Updated**: {Date}  
+- **Architect**: Fred
+- **Status**: {Draft/Review/Approved}
+- **Related Documents**: PRD.md, Frontend-Architecture.md, Infrastructure-Architecture.md
+
+## Table of Contents
+{Auto-generated hoặc manual TOC}
+
+## 1. Introduction & Executive Summary
+
+### 1.1 Architecture Overview
+{2-3 paragraph summary covering system's architecture, key components, technology choices, và architectural patterns used. Reference goals from PRD.}
+
+### 1.2 Relationship to Other Documents
+- **PRD Requirements**: This architecture directly implements requirements defined in PRD.md
+- **Frontend Architecture**: Frontend-specific design detailed in Frontend-Architecture.md  
+- **Infrastructure Architecture**: Infrastructure và DevOps design in Infrastructure-Architecture.md
+- **Technology Stack**: This document contains definitive technology selections for entire project
+
+## 2. High-Level Architecture Overview
+
+### 2.1 Architectural Style
+{Describe main architectural style - Monolith, Microservices, Serverless, Event-Driven, reflecting decision from PRD}
+
+### 2.2 Repository Structure  
+{Explain repository organization - Monorepo/Polyrepo approach}
+
+### 2.3 System Context Diagram
+```mermaid
+graph TD
+    A[User] --> B[Frontend Application]
+    B --> C[API Gateway] 
+    C --> D[Backend Services]
+    D --> E[Database]
+    D --> F[External APIs]
+    
+    %% Add system context relationships
+```
+
+### 2.4 Primary Data Flow
+{Describe user interaction hoặc data flow at conceptual level}
+
+## 3. Architectural Patterns & Design Decisions
+
+### 3.1 Core Architectural Patterns
+{List key high-level patterns chosen for architecture}
+
+- **Pattern 1**: {e.g., Event-Driven Architecture} 
+  - **Rationale**: {Why this pattern was chosen}
+  - **Implementation**: {How it's applied in this system}
+  - **Trade-offs**: {Benefits và limitations}
+
+- **Pattern 2**: {e.g., CQRS}
+  - **Rationale**: {Decision reasoning}
+  - **Implementation**: {Application details}
+  - **Trade-offs**: {Pros và cons}
+
+### 3.2 Design Principles
+- **Separation of Concerns**: {How responsibilities are divided}
+- **Single Responsibility**: {Component responsibility clarity}
+- **Dependency Inversion**: {How dependencies are managed}
+- **Open/Closed Principle**: {Extension strategy}
+
+## 4. System Components Architecture
+
+### 4.1 Component Overview
+{Describe major logical components or services and their responsibilities}
+
+```mermaid
+graph TB
+    subgraph "Frontend Layer"
+        A[Web Application]
+        B[Mobile App]
+    end
+    
+    subgraph "API Layer"  
+        C[API Gateway]
+        D[Authentication Service]
+    end
+    
+    subgraph "Business Logic Layer"
+        E[Core Service 1]
+        F[Core Service 2] 
+        G[Integration Service]
+    end
+    
+    subgraph "Data Layer"
+        H[Primary Database]
+        I[Cache Layer]
+        J[File Storage]
+    end
+    
+    A --> C
+    B --> C
+    C --> D
+    C --> E
+    C --> F
+    E --> H
+    F --> H
+    G --> K[External APIs]
+```
+
+### 4.2 Component Details
+
+#### Component A: {Component Name}
+- **Responsibility**: {What this component does}
+- **Technology**: {Primary technology/framework used}
+- **Interfaces**: {APIs exposed, dependencies consumed}
+- **Data Access**: {How it accesses data}
+- **Scalability**: {How it scales}
+
+#### Component B: {Component Name}  
+{Repeat structure for each major component}
+
+## 5. Data Architecture
+
+### 5.1 Data Model Overview
+{High-level description của data entities và relationships}
+
+### 5.2 Database Design
+
+#### Primary Database Schema
+```sql
+-- Core entities
+CREATE TABLE users (
+    id UUID PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE {entity_table} (
+    id UUID PRIMARY KEY,
+    user_id UUID REFERENCES users(id),
+    -- Add entity-specific columns
+);
+```
+
+### 5.3 Data Flow Patterns
+- **Read Patterns**: {How data is queried}
+- **Write Patterns**: {How data is created/updated}
+- **Consistency Model**: {ACID vs eventual consistency}
+- **Caching Strategy**: {What và how to cache}
+
+### 5.4 Data Migration Strategy
+{If applicable, approach for migrating existing data}
+
+## 6. API Architecture
+
+### 6.1 API Design Philosophy
+- **REST vs GraphQL**: {Choice và rationale}
+- **Versioning Strategy**: {How APIs evolve}
+- **Authentication**: {How APIs are secured}
+- **Rate Limiting**: {How usage is controlled}
+
+### 6.2 API Specifications
+
+#### Core API Endpoints
+```yaml
+# Authentication APIs
+POST /api/v1/auth/login
+POST /api/v1/auth/logout  
+POST /api/v1/auth/refresh
+
+# Resource APIs  
+GET    /api/v1/{resource}
+POST   /api/v1/{resource}
+PUT    /api/v1/{resource}/{id}
+DELETE /api/v1/{resource}/{id}
+```
+
+### 6.3 API Contracts
+{Define request/response schemas, error handling, status codes}
+
+## 7. Security Architecture
+
+### 7.1 Authentication Strategy
+- **Method**: {JWT, OAuth2, Session-based}
+- **Implementation**: {How auth is handled}
+- **Token Management**: {Lifecycle, refresh, revocation}
+
+### 7.2 Authorization Model
+- **Access Control**: {RBAC, ABAC, permissions}
+- **Resource Protection**: {How resources are protected}
+- **API Security**: {Rate limiting, input validation}
+
+### 7.3 Data Protection
+- **Encryption**: {At rest, in transit}
+- **PII Handling**: {Personal data protection}
+- **Audit Trails**: {Security logging}
+
+### 7.4 Security Best Practices
+- **Input Validation**: {Sanitization strategies}
+- **Output Encoding**: {XSS prevention}
+- **SQL Injection Prevention**: {Parameterized queries}
+- **CSRF Protection**: {Cross-site request forgery}
+
+## 8. Performance & Scalability Architecture
+
+### 8.1 Performance Requirements
+{Reference performance requirements from PRD}
+
+- **Response Times**: {Target response times}
+- **Throughput**: {Expected load}
+- **Concurrent Users**: {Scalability targets}
+
+### 8.2 Scalability Strategy
+- **Horizontal Scaling**: {How components scale out}
+- **Vertical Scaling**: {When to scale up}
+- **Load Balancing**: {Distribution strategy}
+- **Auto-scaling**: {Automatic scaling triggers}
+
+### 8.3 Caching Architecture
+- **Application Cache**: {In-memory caching}
+- **Database Cache**: {Query result caching}
+- **CDN Strategy**: {Static asset caching}
+- **Cache Invalidation**: {When và how to invalidate}
+
+### 8.4 Database Performance
+- **Indexing Strategy**: {Database optimization}
+- **Query Optimization**: {Efficient data access}
+- **Connection Pooling**: {Resource management}
+- **Read Replicas**: {Read scaling strategy}
+
+## 9. Integration Architecture
+
+### 9.1 External Integrations
+{List all external systems, APIs, services to integrate with}
+
+#### Integration 1: {External System Name}
+- **Purpose**: {Why this integration is needed}
+- **Method**: {REST API, GraphQL, Message Queue}
+- **Authentication**: {How to authenticate}
+- **Data Format**: {JSON, XML, Protocol Buffers}
+- **Error Handling**: {How failures are managed}
+- **Rate Limits**: {Usage restrictions}
+
+### 9.2 Internal Service Communication
+- **Communication Pattern**: {Synchronous vs Asynchronous}
+- **Protocol**: {HTTP, gRPC, Message Queues}
+- **Service Discovery**: {How services find each other}
+- **Circuit Breakers**: {Failure handling}
+
+### 9.3 Event Architecture (if applicable)
+- **Event Bus**: {Technology choice}
+- **Event Schema**: {Event structure}
+- **Event Sourcing**: {If implemented}
+- **Saga Patterns**: {Distributed transactions}
+
+## 10. Definitive Technology Stack
+
+{This section contains authoritative technology selections for entire project}
+
+| Category | Technology | Version | Description | Justification |
+|----------|------------|---------|-------------|---------------|
+| **Languages** | TypeScript | 5.0+ | Primary language | Type safety, developer experience |
+| | Python | 3.11+ | Data processing, ML | Rich ecosystem, performance |
+| **Runtime** | Node.js | 18.0+ | Server execution | JavaScript ecosystem |
+| **Backend Framework** | NestJS | 10.0+ | API development | Structure, TypeScript support |
+| **Frontend Framework** | React | 18.0+ | UI development | Component ecosystem |
+| **Database** | PostgreSQL | 15+ | Primary data store | ACID compliance, performance |
+| **Cache** | Redis | 7.0+ | Caching, sessions | Performance, scalability |
+| **Message Queue** | RabbitMQ | 3.11+ | Async processing | Reliability, routing |
+| **Search** | Elasticsearch | 8.0+ | Full-text search | Search capabilities |
+| **Monitoring** | Prometheus | 2.40+ | Metrics collection | Monitoring ecosystem |
+| **Logging** | ELK Stack | 8.0+ | Log aggregation | Log analysis |
+
+## 11. Error Handling & Resilience
+
+### 11.1 Error Handling Strategy
+- **Error Categories**: {System, Business, Validation errors}
+- **Error Propagation**: {How errors bubble up}
+- **Error Response Format**: {Consistent error structure}
+- **Logging Strategy**: {What và how to log}
+
+### 11.2 Resilience Patterns
+- **Retry Logic**: {When và how to retry}
+- **Circuit Breaker**: {Failure detection và recovery}
+- **Timeout Handling**: {Request timeout management}
+- **Graceful Degradation**: {Service degradation strategy}
+
+### 11.3 Health Checks & Monitoring
+- **Health Endpoints**: {System health indicators}
+- **Dependency Checks**: {External system health}
+- **Performance Metrics**: {Key performance indicators}
+- **Alerting**: {When và how to alert}
+
+## 12. Testing Strategy
+
+### 12.1 Testing Philosophy
+{Reference testing strategy from PRD, expand with technical details}
+
+### 12.2 Testing Pyramid
+- **Unit Tests**: {Component/function level testing}
+- **Integration Tests**: {Service interaction testing}
+- **Contract Tests**: {API contract validation}
+- **End-to-End Tests**: {Full system testing}
+
+### 12.3 Testing Infrastructure
+- **Test Environments**: {Test environment strategy}
+- **Test Data**: {Test data management}
+- **Automated Testing**: {CI/CD integration}
+- **Performance Testing**: {Load và stress testing}
+
+## 13. Development Guidelines
+
+### 13.1 Coding Standards
+{Detailed coding standards for chosen technologies}
+
+- **Code Style**: {Linting rules, formatting}
+- **Naming Conventions**: {Variables, functions, classes}
+- **Code Organization**: {File structure, modules}
+- **Documentation**: {Code documentation requirements}
+
+### 13.2 Development Workflow
+- **Git Workflow**: {Branching strategy}
+- **Code Review**: {Review process, criteria}
+- **Deployment Process**: {How code gets deployed}
+- **Environment Management**: {Dev, staging, prod}
+
+### 13.3 AI Agent Optimization
+{Special considerations for AI developer agent implementation}
+
+- **Clear Interfaces**: {Well-defined component boundaries}
+- **Consistent Patterns**: {Predictable code patterns}
+- **Comprehensive Documentation**: {Detailed implementation guides}
+- **Modular Design**: {Independent, testable components}
+
+## 14. Deployment & Operations
+
+### 14.1 Deployment Strategy
+{Reference Infrastructure Architecture document}
+
+- **Containerization**: {Docker strategy}
+- **Orchestration**: {Kubernetes, deployment patterns}
+- **CI/CD Integration**: {Pipeline integration}
+- **Blue-Green Deployment**: {Zero-downtime deployment}
+
+### 14.2 Operational Considerations
+- **Monitoring**: {System monitoring approach}
+- **Logging**: {Centralized logging strategy}
+- **Backup & Recovery**: {Data protection}
+- **Disaster Recovery**: {System recovery planning}
+
+## 15. Migration & Evolution Strategy
+
+### 15.1 Phased Implementation
+{How to implement architecture incrementally}
+
+- **Phase 1**: {MVP implementation}
+- **Phase 2**: {Feature expansion}
+- **Phase 3**: {Optimization và scaling}
+
+### 15.2 Architecture Evolution
+- **Version Management**: {How architecture evolves}
+- **Backward Compatibility**: {Legacy support}
+- **Technology Upgrades**: {Upgrade strategy}
+- **Refactoring Plan**: {Technical debt management}
+
+## 16. Risk Assessment & Mitigation
+
+### 16.1 Technical Risks
+| Risk | Probability | Impact | Mitigation Strategy |
+|------|-------------|---------|-------------------|
+| Technology choice proves inadequate | Medium | High | Proof of concept, early validation |
+| Performance targets not met | Low | High | Performance testing, optimization |
+| Security vulnerabilities | Medium | High | Security review, penetration testing |
+
+### 16.2 Integration Risks
+| Risk | Probability | Impact | Mitigation Strategy |
+|------|-------------|---------|-------------------|
+| External API changes | Medium | Medium | Versioning, adapter pattern |
+| Third-party service downtime | High | Medium | Fallback mechanisms, caching |
+
+## 17. Decision Records
+
+### 17.1 Architecture Decision Record (ADR) Template
+```markdown
+# ADR-001: {Decision Title}
+
+## Status
+{Proposed/Accepted/Deprecated}
+
+## Context
+{What is the issue that we're seeing that is motivating this decision?}
+
+## Decision
+{What is the change that we're proposing and/or doing?}
+
+## Consequences
+{What becomes easier or more difficult to do because of this change?}
+```
+
+### 17.2 Key Decisions
+- **ADR-001**: Technology Stack Selection
+- **ADR-002**: Database Choice
+- **ADR-003**: API Design Approach
+- **ADR-004**: Authentication Strategy
+
+## 18. Appendices
+
+### A. Glossary
+{Technical terms và definitions}
+
+### B. References
+{External documentation, standards, best practices}
+
+### C. Diagrams Source
+{Mermaid diagrams source code for maintenance}
+
+---
+
+**Document History**
+
+| Version | Date | Changes | Author |
+|---------|------|---------|---------|
+| 1.0 | {Date} | Initial architecture design | Fred (Architect) |
+| 1.1 | {Date} | {Description of changes} | {Author} |
+
+---
+
+**Review & Approval**
+
+| Role | Name | Status | Date | Comments |
+|------|------|---------|------|----------|
+| Senior Architect | | ✅ Approved | | |
+| Tech Lead | | 🔄 Pending | | |
+| Security Architect | | ✅ Approved | | |
+| Platform Engineer | | ✅ Approved | | |
+```
+
+---
+
+## 🎨 Frontend Architecture Template
+
+### Mục đích  
+Detailed template để Design Architect tạo comprehensive frontend architecture document.
+
+### Template Structure
+
+```markdown
+# {Project Name} - Frontend Architecture Document
+
+## Document Information
+- **Version**: 1.0
+- **Last Updated**: {Date}
+- **Design Architect**: Jane
+- **Status**: {Draft/Review/Approved}
+- **Related Documents**: System-Architecture.md, UI-UX-Specifications.md
+
+## Table of Contents
+{Auto-generated hoặc manual TOC}
+
+## 1. Introduction
+
+### 1.1 Frontend Architecture Overview
+{Overview của frontend architecture, key components, technology choices, và design patterns}
+
+### 1.2 Relationship to System Architecture
+- **System Architecture**: References main architecture document  
+- **API Integration**: How frontend consumes backend APIs
+- **Technology Stack**: Inherits core technology decisions
+- **Security Integration**: Implements frontend portion của security architecture
+
+## 2. Frontend Philosophy & Patterns
+
+### 2.1 Core Framework & Libraries
+{Based on system architecture technology stack}
+
+- **Primary Framework**: {React, Vue, Angular}
+- **State Management**: {Redux Toolkit, Zustand, Pinia}
+- **Routing**: {React Router, Vue Router}
+- **UI Components**: {Material-UI, Ant Design, Chakra UI}
+- **Build Tool**: {Vite, Webpack, Rollup}
+
+### 2.2 Component Architecture Philosophy
+- **Design System**: {Atomic Design, Component-driven development}
+- **Component Patterns**: {Presentational/Container, Compound components}
+- **State Management**: {Local vs Global state strategy}
+- **Data Flow**: {Unidirectional data flow, event handling}
+
+### 2.3 Styling Approach
+- **CSS Strategy**: {CSS Modules, Styled Components, Tailwind CSS}
+- **Design Tokens**: {Color palette, typography, spacing}
+- **Responsive Design**: {Mobile-first, breakpoint strategy}
+- **Theming**: {Light/dark mode, customization}
+
+## 3. Detailed Frontend Directory Structure
+
+```
+frontend/
+├── public/                     # Static assets
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/             # Reusable UI components
+│   │   ├── atoms/              # Basic components (Button, Input)
+│   │   ├── molecules/          # Composed components (SearchBox)
+│   │   ├── organisms/          # Complex components (Header, Form)
+│   │   └── templates/          # Page layouts
+│   ├── pages/                  # Route components/page views  
+│   │   ├── Home/
+│   │   ├── Dashboard/
+│   │   └── Settings/
+│   ├── hooks/                  # Custom React hooks
+│   ├── services/               # API services và data fetching
+│   ├── store/                  # State management (Redux/Zustand)
+│   │   ├── slices/             # State slices/modules
+│   │   └── middleware/         # Custom middleware
+│   ├── utils/                  # Utility functions
+│   ├── constants/              # App constants
+│   ├── types/                  # TypeScript type definitions
+│   ├── styles/                 # Global styles, themes
+│   │   ├── globals.css
+│   │   ├── variables.css
+│   │   └── themes/
+│   ├── assets/                 # Static assets (images, fonts)
+│   ├── App.tsx                 # Root component
+│   └── index.tsx               # Application entry point
+├── tests/                      # Testing files
+│   ├── __mocks__/             # Mock files
+│   ├── components/            # Component tests
+│   └── e2e/                   # End-to-end tests
+├── docs/                       # Frontend documentation
+├── .env.example               # Environment variables template
+├── package.json               # Dependencies và scripts
+├── tsconfig.json              # TypeScript configuration
+├── vite.config.ts             # Build configuration
+└── README.md                  # Setup và development guide
+```
+
+## 4. Component Design System
+
+### 4.1 Atomic Design Implementation
+
+#### Atoms (Basic Building Blocks)
+```typescript
+// Button Component Example
+interface ButtonProps {
+  variant: 'primary' | 'secondary' | 'danger';
+  size: 'small' | 'medium' | 'large';
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  children: React.ReactNode;
+}
+
+export const Button: React.FC<ButtonProps> = ({ ... }) => {
+  // Implementation
+};
+```
+
+#### Molecules (Component Combinations)
+```typescript
+// SearchBox Component Example  
+interface SearchBoxProps {
+  placeholder?: string;
+  onSearch: (query: string) => void;
+  suggestions?: string[];
+  loading?: boolean;
+}
+
+export const SearchBox: React.FC<SearchBoxProps> = ({ ... }) => {
+  // Combines Input atom + Button atom
+};
+```
+
+#### Organisms (Complex Components)
+```typescript
+// Navigation Header Example
+interface HeaderProps {
+  user?: User;
+  onLogout?: () => void;
+  navigationItems: NavigationItem[];
+}
+
+export const Header: React.FC<HeaderProps> = ({ ... }) => {
+  // Complex component với multiple molecules
+};
+```
+
+### 4.2 Component Specification Template
+{Template for documenting individual components}
+
+```markdown
+## Component: {ComponentName}
+
+### Purpose
+{What this component does và why it exists}
+
+### Props Interface
+| Prop | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| variant | 'primary' \| 'secondary' | No | 'primary' | Button styling variant |
+| size | 'sm' \| 'md' \| 'lg' | No | 'md' | Button size |
+
+### Usage Example
+```typescript
+<Button variant="primary" size="lg" onClick={handleClick}>
+  Click Me
+</Button>
+```
+
+### Styling Notes
+- Uses design system color tokens
+- Responsive sizing based on breakpoints
+- Supports light/dark theme
+
+### Accessibility
+- ARIA labels implemented
+- Keyboard navigation support
+- Screen reader compatible
+```
+
+## 5. State Management Architecture
+
+### 5.1 State Management Strategy
+{Detailed approach based on chosen state management solution}
+
+#### Global State Structure
+```typescript
+interface AppState {
+  auth: AuthState;
+  ui: UIState;
+  features: {
+    dashboard: DashboardState;
+    settings: SettingsState;
+  };
+}
+
+interface AuthState {
+  user: User | null;
+  token: string | null;
+  isAuthenticated: boolean;
+  loading: boolean;
+}
+```
+
+#### State Slices Example (Redux Toolkit)
+```typescript
+// authSlice.ts
+export const authSlice = createSlice({
+  name: 'auth',
+  initialState,
+  reducers: {
+    loginStart: (state) => {
+      state.loading = true;
+    },
+    loginSuccess: (state, action) => {
+      state.user = action.payload.user;
+      state.token = action.payload.token;
+      state.isAuthenticated = true;
+      state.loading = false;
+    },
+    loginFailure: (state) => {
+      state.loading = false;
+    },
+  },
+});
+```
+
+### 5.2 Async State Management
+```typescript
+// Thunk example for async operations
+export const loginUser = createAsyncThunk(
+  'auth/login',
+  async ({ email, password }: LoginCredentials) => {
+    const response = await authService.login(email, password);
+    return response.data;
+  }
+);
+```
+
+### 5.3 Local State Guidelines
+- Component-specific state uses React useState/useReducer
+- Form state managed với React Hook Form hoặc Formik
+- UI state (modals, dropdowns) kept local when possible
+- Global state reserved for cross-component data
+
+## 6. API Integration Layer
+
+### 6.1 HTTP Client Configuration
+```typescript
+// api/client.ts
+import axios from 'axios';
+
+const apiClient = axios.create({
+  baseURL: process.env.VITE_API_BASE_URL,
+  timeout: 10000,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+// Request interceptor for auth
+apiClient.interceptors.request.use((config) => {
+  const token = getAuthToken();
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+// Response interceptor for error handling
+apiClient.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      // Handle unauthorized
+      store.dispatch(logout());
+    }
+    return Promise.reject(error);
+  }
+);
+```
+
+### 6.2 Service Layer Pattern
+```typescript
+// services/userService.ts
+export class UserService {
+  static async getUser(id: string): Promise<User> {
+    const response = await apiClient.get(`/users/${id}`);
+    return response.data;
+  }
+  
+  static async updateUser(id: string, data: UpdateUserData): Promise<User> {
+    const response = await apiClient.put(`/users/${id}`, data);
+    return response.data;
+  }
+}
+```
+
+### 6.3 Error Handling Strategy
+- **Global Error Boundary**: Catch và display unexpected errors
+- **API Error Handling**: Centralized error processing trong interceptors
+- **User Feedback**: Toast notifications cho success/error states
+- **Retry Logic**: Automatic retry cho network failures
+- **Offline Support**: Service worker cho offline functionality (if needed)
+
+## 7. Routing & Navigation
+
+### 7.1 Route Structure
+```typescript
+// Router configuration
+export const AppRoutes = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        
+        {/* Protected routes */}
+        <Route element={<ProtectedRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+        
+        {/* 404 fallback */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+```
+
+### 7.2 Route Protection
+```typescript
+// ProtectedRoute component
+const ProtectedRoute = () => {
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) return <LoadingSpinner />;
+  
+  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+};
+```
+
+### 7.3 Navigation Patterns
+- **Programmatic Navigation**: useNavigate hook
+- **Link Components**: React Router Link với accessibility
+- **Breadcrumbs**: Hierarchical navigation
+- **Tab Navigation**: For multi-step forms hoặc sections
+
+## 8. Performance Optimization
+
+### 8.1 Code Splitting Strategy
+```typescript
+// Lazy loading routes
+const Dashboard = lazy(() => import('../pages/Dashboard'));
+const Settings = lazy(() => import('../pages/Settings'));
+
+// Lazy loading với error boundary
+const LazyComponent = ({ Component }: { Component: React.ComponentType }) => (
+  <Suspense fallback={<LoadingSpinner />}>
+    <ErrorBoundary fallback={<ErrorFallback />}>
+      <Component />
+    </ErrorBoundary>
+  </Suspense>
+);
+```
+
+### 8.2 Bundle Optimization
+- **Tree Shaking**: Remove unused code
+- **Code Splitting**: Route-based và feature-based splitting  
+- **Dynamic Imports**: Load components on demand
+- **Bundle Analysis**: Regular bundle size monitoring
+
+### 8.3 Runtime Performance
+- **React.memo**: Prevent unnecessary re-renders
+- **useMemo/useCallback**: Expensive computation memoization
+- **Virtual Scrolling**: For large lists (react-window)
+- **Image Optimization**: Lazy loading, WebP format, responsive images
+
+### 8.4 Caching Strategy
+- **HTTP Caching**: Leverage browser caching headers
+- **Service Worker**: Cache static assets và API responses
+- **React Query**: API response caching và synchronization
+- **Local Storage**: Cache user preferences và settings
+
+## 9. Testing Strategy
+
+### 9.1 Component Testing
+```typescript
+// Example component test
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Button } from '../Button';
+
+describe('Button Component', () => {
+  it('renders với correct text', () => {
+    render(<Button>Click me</Button>);
+    expect(screen.getByText('Click me')).toBeInTheDocument();
+  });
+  
+  it('calls onClick when clicked', () => {
+    const handleClick = jest.fn();
+    render(<Button onClick={handleClick}>Click me</Button>);
+    
+    fireEvent.click(screen.getByText('Click me'));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+});
+```
+
+### 9.2 Integration Testing
+- **React Testing Library**: Component integration testing
+- **MSW (Mock Service Worker)**: API mocking trong tests
+- **User Event Testing**: Real user interaction simulation
+- **Context Testing**: State management integration tests
+
+### 9.3 E2E Testing
+```typescript
+// Playwright E2E test example
+import { test, expect } from '@playwright/test';
+
+test('user can login và access dashboard', async ({ page }) => {
+  await page.goto('/login');
+  await page.fill('[data-testid=email]', 'user@example.com');
+  await page.fill('[data-testid=password]', 'password');
+  await page.click('[data-testid=login-button]');
+  
+  await expect(page).toHaveURL('/dashboard');
+  await expect(page.locator('h1')).toContainText('Dashboard');
+});
+```
+
+## 10. Accessibility Implementation
+
+### 10.1 Accessibility Standards
+- **WCAG 2.1 AA Compliance**: Target accessibility level
+- **Semantic HTML**: Use appropriate HTML elements
+- **ARIA Implementation**: Labels, roles, states for custom components
+- **Keyboard Navigation**: Full keyboard accessibility
+- **Screen Reader Support**: Compatible với assistive technologies
+
+### 10.2 Accessibility Testing
+- **axe-core**: Automated accessibility testing
+- **Manual Testing**: Keyboard navigation, screen reader testing
+- **Color Contrast**: WCAG compliant color combinations
+- **Focus Management**: Proper focus indicators và management
+
+### 10.3 Accessibility Components
+```typescript
+// Accessible Modal example
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  title: string;
+  children: React.ReactNode;
+}
+
+export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
+  useEffect(() => {
+    // Trap focus within modal
+    // Handle escape key
+    // Prevent body scroll
+  }, [isOpen]);
+  
+  if (!isOpen) return null;
+  
+  return (
+    <div role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h2 id="modal-title">{title}</h2>
+      {children}
+      <button onClick={onClose} aria-label="Close modal">×</button>
+    </div>
+  );
+};
+```
+
+## 11. Build & Deployment
+
+### 11.1 Build Configuration
+```typescript
+// vite.config.ts
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
+      },
+    },
+  },
+  define: {
+    __VERSION__: JSON.stringify(process.env.npm_package_version),
+  },
+});
+```
+
+### 11.2 Environment Configuration
+```typescript
+// Environment variables
+interface ImportMetaEnv {
+  readonly VITE_API_BASE_URL: string;
+  readonly VITE_APP_TITLE: string;
+  readonly VITE_ENVIRONMENT: 'development' | 'staging' | 'production';
+}
+```
+
+### 11.3 CI/CD Integration
+- **Build Pipeline**: Automated build on commits
+- **Quality Gates**: Linting, testing, type checking
+- **Bundle Analysis**: Size monitoring và reporting
+- **Deployment**: Automatic deployment to staging/production
+
+## 12. Security Considerations
+
+### 12.1 Frontend Security
+- **XSS Prevention**: Content Security Policy, input sanitization
+- **CSRF Protection**: Token-based protection
+- **Secure Storage**: Avoid storing sensitive data in localStorage
+- **Content Security Policy**: Restrict resource loading
+- **HTTPS Only**: Enforce secure connections
+
+### 12.2 Authentication Security
+- **Token Storage**: HttpOnly cookies vs localStorage trade-offs
+- **Token Expiry**: Automatic token refresh logic
+- **Session Management**: Secure session handling
+- **Logout Security**: Clear all user data on logout
+
+## 13. Developer Experience
+
+### 13.1 Development Tools
+- **Hot Reloading**: Fast development feedback
+- **TypeScript**: Type safety và IDE support
+- **ESLint/Prettier**: Code quality và formatting
+- **Husky**: Pre-commit hooks for quality gates
+
+### 13.2 Documentation
+- **Storybook**: Component documentation và playground
+- **API Documentation**: Frontend service documentation
+- **Style Guide**: Design system documentation
+- **Onboarding Guide**: Developer setup instructions
+
+## 14. Monitoring & Analytics
+
+### 14.1 Error Tracking
+```typescript
+// Error boundary với reporting
+class ErrorBoundary extends React.Component {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Send error to monitoring service
+    errorReporting.captureException(error, {
+      extra: errorInfo,
+      tags: { component: 'ErrorBoundary' },
+    });
+  }
+}
+```
+
+### 14.2 Performance Monitoring
+- **Web Vitals**: Core Web Vitals tracking
+- **Bundle Monitoring**: Bundle size tracking
+- **Runtime Performance**: Component render performance
+- **User Analytics**: User interaction tracking
+
+---
+
+**Document History**
+
+| Version | Date | Changes | Author |
+|---------|------|---------|---------|
+| 1.0 | {Date} | Initial frontend architecture | Jane (Design Architect) |
+```
+
+---
+
+## ☁️ Infrastructure Architecture Template
+
+### Mục đích
+Comprehensive template để Platform Engineer tạo detailed infrastructure architecture document.
+
+### Template Structure
+
+```markdown
+# {Project Name} - Infrastructure Architecture Document
+
+## Document Information
+- **Version**: 1.0
+- **Last Updated**: {Date}
+- **Platform Engineer**: Alex
+- **Status**: {Draft/Review/Approved}
+- **Related Documents**: System-Architecture.md, Security-Requirements.md
+
+## Table of Contents
+
+## 1. Infrastructure Overview
+
+### 1.1 Infrastructure Philosophy
+{Cloud-native, containerization, infrastructure-as-code approach}
+
+### 1.2 High-Level Architecture
+```mermaid
+graph TD
+    subgraph "Production Environment"
+        A[Load Balancer] --> B[Kubernetes Cluster]
+        B --> C[Application Pods]
+        B --> D[Database Pods]
+        B --> E[Cache Pods]
+    end
+    
+    subgraph "CI/CD Pipeline"
+        F[Git Repository] --> G[GitHub Actions]
+        G --> H[Build & Test]
+        H --> I[Deploy to Staging]
+        I --> J[Deploy to Production]
+    end
+```
+
+## 2. Cloud Platform Architecture
+
+### 2.1 Cloud Provider Selection
+- **Primary Cloud**: {AWS/Azure/GCP}
+- **Multi-Cloud Strategy**: {If applicable}
+- **Region Selection**: {Primary và secondary regions}
+- **Availability Zones**: {Distribution strategy}
+
+### 2.2 Core Services
+| Service Category | Service | Purpose | Justification |
+|-----------------|---------|---------|---------------|
+| Compute | Kubernetes (EKS/AKS/GKE) | Container orchestration | Scalability, portability |
+| Database | RDS (PostgreSQL) | Primary data store | Managed service, reliability |
+| Cache | ElastiCache (Redis) | Performance optimization | Low latency, scalability |
+| Storage | S3/Blob Storage | Object storage | Durability, cost-effective |
+| Networking | VPC/VNet | Network isolation | Security, control |
+
+## 3. Container Platform Architecture
+
+### 3.1 Kubernetes Configuration
+```yaml
+# Example cluster configuration
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: production
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  namespace: production
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: main-app
+  template:
+    metadata:
+      labels:
+        app: main-app
+    spec:
+      containers:
+      - name: app
+        image: app:latest
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+```
+
+### 3.2 Container Strategy
+- **Base Images**: {Security-hardened base images}
+- **Multi-stage Builds**: {Optimize container size}
+- **Security Scanning**: {Image vulnerability scanning}
+- **Registry Management**: {Container registry strategy}
+
+## 4. CI/CD Pipeline Architecture
+
+### 4.1 Pipeline Design
+```yaml
+# GitHub Actions workflow example
+name: CI/CD Pipeline
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run Tests
+      run: |
+        npm install
+        npm run test
+        npm run lint
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build Docker Image
+      run: docker build -t app:${{ github.sha }} .
+    
+    - name: Push to Registry
+      run: docker push app:${{ github.sha }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to Kubernetes
+      run: kubectl set image deployment/app app=app:${{ github.sha }}
+```
+
+### 4.2 Environment Strategy
+- **Development**: {Automatic deployment from develop branch}
+- **Staging**: {Automatic deployment from main branch}
+- **Production**: {Manual approval required}
+- **Feature Branches**: {Temporary environments for testing}
+
+## 5. Monitoring & Observability
+
+### 5.1 Monitoring Stack
+- **Metrics**: Prometheus + Grafana
+- **Logging**: ELK Stack (Elasticsearch, Logstash, Kibana)
+- **Tracing**: Jaeger hoặc Zipkin
+- **Alerting**: AlertManager + PagerDuty
+- **Uptime Monitoring**: External monitoring service
+
+### 5.2 Key Metrics
+```yaml
+# Prometheus monitoring rules
+groups:
+- name: application
+  rules:
+  - alert: HighErrorRate
+    expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.1
+    for: 5m
+    annotations:
+      summary: High error rate detected
+      
+  - alert: HighMemoryUsage
+    expr: container_memory_usage_bytes / container_spec_memory_limit_bytes > 0.8
+    for: 10m
+    annotations:
+      summary: High memory usage
+```
+
+## 6. Security Architecture
+
+### 6.1 Network Security
+- **VPC Design**: {Network segmentation strategy}
+- **Security Groups**: {Firewall rules}
+- **Network Policies**: {Kubernetes network policies}
+- **WAF**: {Web Application Firewall configuration}
+
+### 6.2 Access Control
+- **RBAC**: {Role-based access control}
+- **Service Accounts**: {Kubernetes service accounts}
+- **Secrets Management**: {HashiCorp Vault, cloud secret managers}
+- **Certificate Management**: {TLS certificate automation}
+
+### 6.3 Compliance
+- **SOC2**: {Controls implementation}
+- **GDPR**: {Data protection measures}
+- **Encryption**: {At rest và in transit}
+- **Audit Logging**: {Comprehensive audit trails}
+
+## 7. Disaster Recovery & Backup
+
+### 7.1 Backup Strategy
+- **Database Backups**: {Daily automated backups với point-in-time recovery}
+- **Application Data**: {Critical data backup procedures}
+- **Configuration Backup**: {Infrastructure configuration backup}
+- **Cross-Region Backup**: {Disaster recovery backup strategy}
+
+### 7.2 Disaster Recovery Plan
+- **RTO Target**: {Recovery Time Objective}
+- **RPO Target**: {Recovery Point Objective}
+- **Failover Procedures**: {Automated/manual failover steps}
+- **DR Testing**: {Regular disaster recovery testing}
+
+## 8. Cost Optimization
+
+### 8.1 Resource Optimization
+- **Right-sizing**: {Instance size optimization}
+- **Auto-scaling**: {Horizontal và vertical scaling}
+- **Spot Instances**: {Cost-effective compute options}
+- **Reserved Capacity**: {Long-term cost savings}
+
+### 8.2 Cost Monitoring
+- **Budget Alerts**: {Spending threshold alerts}
+- **Resource Tagging**: {Cost allocation tracking}
+- **Usage Analytics**: {Regular usage review}
+- **Optimization Recommendations**: {Automated cost optimization}
+
+## 9. Scalability Architecture
+
+### 9.1 Horizontal Scaling
+```yaml
+# Horizontal Pod Autoscaler
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: app-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: app-deployment
+  minReplicas: 2
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+```
+
+### 9.2 Database Scaling
+- **Read Replicas**: {Read scaling strategy}
+- **Connection Pooling**: {Database connection management}
+- **Sharding Strategy**: {If horizontal database scaling needed}
+- **Caching**: {Database query caching}
+
+---
+
+**Document History**
+
+| Version | Date | Changes | Author |
+|---------|------|---------|---------|
+| 1.0 | {Date} | Initial infrastructure architecture | Alex (Platform Engineer) |
+```
+
+---
+
+## 🚀 Architecture Templates Excellence!
+
+Các templates này cung cấp comprehensive framework cho:
+
+- 🏗️ **System Architecture**: Complete technical system design
+- 🎨 **Frontend Architecture**: Detailed UI/UX và component architecture
+- ☁️ **Infrastructure Architecture**: Cloud-native infrastructure design
+- 📋 **Quality Assurance**: Built-in validation và review processes
+- 🤖 **AI-Optimized**: Designed specifically cho AI developer agents
+- 📚 **Documentation Standards**: Consistent, maintainable documentation
+
+**Use these templates to create bulletproof technical architectures! 🛡️✨**

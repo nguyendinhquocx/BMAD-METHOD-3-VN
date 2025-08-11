@@ -1,0 +1,344 @@
+# BMAD Workflow Guide - Hướng Dẫn Quy Trình
+
+## 🎯 Làm thế nào để sử dụng BMAD Method hiệu quả
+
+---
+
+## 🚀 Quick Start - Bắt Đầu Nhanh
+
+### Bước 1: Xác định giai đoạn hiện tại
+```
+❓ Câu hỏi để tự đánh giá:
+├── Tôi có ý tưởng nhưng chưa rõ requirements? → 📋 Planning
+├── Tôi có PRD nhưng chưa có technical design? → 🏗️ Architecture  
+├── Tôi có architecture nhưng chưa có implementation plan? → 💻 Development
+├── Tôi có code nhưng chưa deploy production? → ⚙️ Operations
+└── Tôi không chắc chắn? → Tiếp tục ở BMAD-Main
+```
+
+### Bước 2: Chuyển sang Space phù hợp
+- Click vào link space tương ứng
+- Load context từ giai đoạn trước (nếu có)
+- Bắt đầu làm việc với agents chuyên biệt
+
+### Bước 3: Follow workflow của space đó
+- Mỗi space có workflow riêng
+- Sử dụng checklists để validate
+- Hoàn thành output cần thiết trước khi chuyển giai đoạn
+
+---
+
+## 📋 Phase 1: Planning Workflow
+
+### 🎯 Mục tiêu: Từ ý tưởng → PRD hoàn chỉnh
+
+### Space: BMAD-Planning
+**Agents chính**: Analyst (Mary), PM (John)
+
+### Step-by-step process:
+
+#### 1.1 Brainstorming Session
+```
+Với Analyst (Mary):
+├── Mô tả ý tưởng ban đầu
+├── Explore vấn đề cần giải quyết  
+├── Identify target users
+├── Research competitors & market
+└── Generate insights & opportunities
+```
+
+#### 1.2 Deep Research (Optional)
+```  
+Nếu cần research sâu hơn:
+├── Create research prompt với Analyst
+├── Conduct detailed market analysis
+├── Technical feasibility study
+└── Generate comprehensive research report
+```
+
+#### 1.3 PRD Development
+```
+Với PM (John):
+├── Define business goals & success metrics
+├── Specify target users & personas
+├── Detail functional requirements
+├── Set non-functional requirements
+├── Define MVP scope  
+├── Identify technical constraints
+└── Create epic breakdown
+```
+
+### 📝 Outputs cần thiết:
+- ✅ `PRD.md` - Product Requirements Document
+- ✅ `epics-overview.md` - Epic definitions
+- ✅ `user-personas.md` - Target user profiles  
+- ✅ `mvp-scope.md` - MVP scope definition
+
+### 🚪 Exit Criteria:
+- ✅ PRD pass PM Checklist validation
+- ✅ MVP scope clearly defined
+- ✅ Technical constraints identified
+- ✅ Stakeholder approval obtained
+
+---
+
+## 🏗️ Phase 2: Architecture Workflow  
+
+### 🎯 Mục tiêu: Từ PRD → Technical Design
+
+### Space: BMAD-Architecture
+**Agents chính**: Architect (Fred), Design Architect (Jane), Platform Engineer (Alex)
+
+### Step-by-step process:
+
+#### 2.1 System Architecture Design
+```
+Với Architect (Fred):
+├── Analyze PRD requirements
+├── Select technology stack
+├── Design system components  
+├── Define data architecture
+├── Specify API contracts
+├── Plan security architecture
+└── Document architectural decisions
+```
+
+#### 2.2 Frontend Architecture Design
+```
+Với Design Architect (Jane):
+├── Design component architecture
+├── Plan state management strategy
+├── Create UI/UX specifications
+├── Define frontend build process
+├── Plan responsive design approach
+└── Document frontend patterns
+```
+
+#### 2.3 Infrastructure Architecture Design
+```
+Với Platform Engineer (Alex):
+├── Design cloud infrastructure
+├── Plan CI/CD pipeline
+├── Design monitoring strategy  
+├── Plan security implementation
+├── Define deployment strategy
+└── Document operational procedures
+```
+
+### 📝 Outputs cần thiết:
+- ✅ `architecture.md` - System architecture
+- ✅ `frontend-architecture.md` - Frontend design
+- ✅ `infrastructure-architecture.md` - DevOps architecture
+- ✅ `api-specifications.md` - API contracts
+- ✅ `data-models.md` - Database schemas
+- ✅ `tech-stack.md` - Technology choices
+
+### 🚪 Exit Criteria:
+- ✅ Architecture pass Architect Checklist
+- ✅ Frontend architecture completed
+- ✅ Infrastructure design approved
+- ✅ All technical decisions documented
+
+---
+
+## 💻 Phase 3: Development Workflow
+
+### 🎯 Mục tiêu: Từ Architecture → Development-ready Stories
+
+### Space: BMAD-Development  
+**Agents chính**: Product Owner (Sarah), Scrum Master (Bob)
+
+### Step-by-step process:
+
+#### 3.1 Epic Breakdown
+```
+Với PO (Sarah):
+├── Analyze PRD & Architecture docs
+├── Break down epics into detailed stories
+├── Define acceptance criteria
+├── Plan story dependencies  
+├── Validate against MVP scope
+└── Ensure implementation feasibility
+```
+
+#### 3.2 Story Development
+```
+Với SM (Bob):
+├── Create development-ready stories
+├── Add implementation guidance
+├── Define testing requirements
+├── Plan story sequencing
+├── Validate story quality
+└── Prepare handoff to developers
+```
+
+### 📝 Outputs cần thiết:
+- ✅ `epics/` folder - Detailed epic files
+- ✅ `stories/` folder - Development-ready stories  
+- ✅ `development-guidelines.md` - Coding standards
+- ✅ `testing-strategy.md` - Test approach
+
+### 🚪 Exit Criteria:
+- ✅ All stories pass Story Draft Checklist
+- ✅ Dependencies mapped and sequenced
+- ✅ Testing approach defined
+- ✅ Ready for Claude Code implementation
+
+---
+
+## ⚡ Phase 4: Implementation Workflow
+
+### 🎯 Mục tiêu: Từ Stories → Working Software
+
+### Tool: Claude Code + AI Developer Agents
+
+### Step-by-step process:
+
+#### 4.1 Claude Code Setup
+```bash
+# Install and configure Claude Code
+npm install -g @anthropic/claude-code
+claude-code init project-name
+claude-code config load bmad-development-config.json
+```
+
+#### 4.2 Story Implementation Loop
+```
+For each story:
+├── claude-code story start path/to/story.md
+├── Claude Code analyzes requirements  
+├── Generates implementation plan
+├── Writes code + tests
+├── Validates functionality
+├── Marks story complete
+└── Prepares next story
+```
+
+#### 4.3 Quality Validation
+```
+Automated by Claude Code:
+├── Run all tests (unit, integration, e2e)
+├── Code quality checks (linting, type-checking)
+├── Security scanning  
+├── Performance validation
+└── Documentation updates
+```
+
+### 📝 Outputs cần thiết:
+- ✅ Working code implementation
+- ✅ Comprehensive test coverage
+- ✅ Updated documentation
+- ✅ Validated functionality
+
+### 🚪 Exit Criteria:
+- ✅ All stories pass Definition of Done  
+- ✅ Code quality metrics met
+- ✅ Integration tests passing
+- ✅ Ready for production deployment
+
+---
+
+## ⚙️ Phase 5: Operations Workflow
+
+### 🎯 Mục tiêu: Từ Code → Production System
+
+### Space: BMAD-Operations
+**Agents chính**: Platform Engineer (Alex)
+
+### Step-by-step process:
+
+#### 5.1 Production Deployment
+```
+Với Platform Engineer (Alex):
+├── Setup production infrastructure
+├── Configure CI/CD pipeline
+├── Deploy application  
+├── Validate deployment
+└── Setup monitoring & alerting
+```
+
+#### 5.2 Operations Setup
+```  
+├── Configure monitoring dashboards
+├── Setup log aggregation
+├── Create operational runbooks
+├── Plan disaster recovery
+└── Establish support procedures
+```
+
+### 📝 Outputs cần thiết:
+- ✅ Production deployment
+- ✅ Monitoring & alerting
+- ✅ Operational documentation
+- ✅ Support procedures
+
+---
+
+## 🔄 Iterative Process
+
+### Post-Launch Iteration:
+```
+Production → Feedback → Analysis → Planning → ...
+└── Continuous improvement cycle
+```
+
+### Feedback Integration:
+- User feedback → Product backlog  
+- Performance metrics → Architecture optimization
+- Operational issues → Infrastructure improvements
+
+---
+
+## ⚠️ Common Pitfalls & Solutions
+
+### ❌ Skipping Phases
+**Problem**: Jumping từ idea straight to coding
+**Solution**: Follow sequential workflow, build proper foundation
+
+### ❌ Incomplete Handoffs  
+**Problem**: Missing context khi chuyển phases
+**Solution**: Use handoff protocols, include necessary documents
+
+### ❌ Quality Gate Bypass
+**Problem**: Skip checklists to "save time"  
+**Solution**: Invest in quality early, saves time long-term
+
+### ❌ Scope Creep
+**Problem**: Adding features beyond MVP
+**Solution**: Strict adherence to PRD, change control process
+
+---
+
+## 🎯 Success Metrics
+
+### Planning Success:
+- ✅ Clear, validated PRD
+- ✅ Well-defined MVP scope
+- ✅ Stakeholder alignment
+
+### Architecture Success:  
+- ✅ Comprehensive technical design
+- ✅ Technology decisions documented
+- ✅ Implementation roadmap clear
+
+### Development Success:
+- ✅ All stories implemented
+- ✅ Quality metrics achieved  
+- ✅ Functionality validated
+
+### Operations Success:
+- ✅ Stable production deployment
+- ✅ Monitoring & alerting active
+- ✅ Support processes operational
+
+---
+
+## 🚀 Ready to Start?
+
+1. **Assess current state** của dự án
+2. **Choose appropriate phase** để bắt đầu
+3. **Navigate to correct space** 
+4. **Follow the workflow** outlined above
+5. **Use quality gates** để ensure success
+
+**Let's build something amazing with BMAD! 🎉**

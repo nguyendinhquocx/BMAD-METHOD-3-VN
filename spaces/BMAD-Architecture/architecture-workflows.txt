@@ -1,0 +1,495 @@
+# BMAD Architecture Workflows - Quy trình Thiết kế Kiến trúc Chi tiết
+
+---
+
+## 🏗️ Core Architecture Development Workflow
+
+### 📋 Input Requirements from Planning Phase
+
+**Nhận từ BMAD-Planning:**
+- ✅ **Validated PRD**: Complete Product Requirements Document 
+- ✅ **User Personas**: Target user profiles và needs analysis
+- ✅ **Market Research**: Competitive analysis và opportunity assessment  
+- ✅ **Technical Constraints**: Platform, integration, compliance requirements
+- ✅ **Epic Breakdown**: Feature prioritization và development roadmap
+
+**Quality Gates:**
+- [ ] PRD addresses all functional/non-functional requirements
+- [ ] User journeys clearly defined với system interaction points
+- [ ] Technical constraints documented với specific limitations
+- [ ] Success metrics defined với measurable targets
+
+---
+
+## 🔄 Primary Architecture Workflow: Comprehensive System Design
+
+### Phase 1: Architecture Foundation (Week 1)
+
+#### Step 1A: Requirements Deep Dive (Architect - Fred)
+```yaml
+Objective: Transform PRD requirements thành technical specifications
+Duration: 2-3 days
+Deliverable: Technical Requirements Analysis
+
+Process:
+  1. Analyze PRD Requirements:
+     - Map functional requirements to system capabilities
+     - Extract non-functional requirements (performance, security, scalability)
+     - Identify integration touchpoints với external systems
+     - Document compliance requirements
+
+  2. System Decomposition:
+     - Break system thành core domain services
+     - Identify shared services và cross-cutting concerns
+     - Map user journeys to system interactions
+     - Define system boundaries và external dependencies
+
+  3. Technical Constraint Analysis:
+     - Document platform constraints và preferences
+     - Identify integration requirements với existing systems
+     - Analyze compliance requirements (GDPR, SOC2, etc.)
+     - Document performance và scalability targets
+```
+
+#### Step 1B: Technology Research Initiation (Architect - Fred)
+```yaml
+Objective: Begin comprehensive technology evaluation
+Duration: 1-2 days
+Deliverable: Technology Research Plan
+
+Process:
+  1. Technology Category Identification:
+     - Frontend framework options
+     - Backend framework choices
+     - Database technology needs
+     - Cloud platform considerations
+     - Third-party service requirements
+
+  2. Create Research Framework:
+     - Define evaluation criteria matrix
+     - Identify proof-of-concept needs
+     - Plan technology compatibility testing
+     - Set timeline cho technology decisions
+```
+
+#### Step 1C: Initial UI/UX Architecture Planning (Design Architect - Jane)
+```yaml
+Objective: Begin frontend architecture planning based on PRD
+Duration: 2 days
+Deliverable: Frontend Strategy Outline
+
+Process:
+  1. Analyze UI/UX Requirements:
+     - Review user journeys từ PRD perspective
+     - Identify complex interaction requirements
+     - Analyze responsive design needs
+     - Document accessibility requirements
+
+  2. Initial Frontend Strategy:
+     - Evaluate component architecture approaches
+     - Consider state management complexity
+     - Plan integration với system architecture
+     - Outline performance requirements
+```
+
+### Phase 2: Technology Selection & Core Architecture (Week 2)
+
+#### Step 2A: Technology Stack Finalization (Architect - Fred)
+```yaml
+Objective: Complete technology evaluation và make final selections
+Duration: 3-4 days
+Deliverable: Definitive Technology Stack Document
+
+Process:
+  1. Technology Evaluation:
+     - Complete comparative analysis cho each technology category
+     - Create evaluation matrices với scoring
+     - Conduct proof-of-concept implementations where needed
+     - Assess team capability với different options
+
+  2. Final Technology Selection:
+     - Select specific versions (not ranges) cho all technologies
+     - Document rationale cho each major selection
+     - Validate technology compatibility across stack
+     - Plan learning curve và team preparation
+
+  3. Technology Integration Planning:
+     - Design technology integration patterns
+     - Plan development environment setup
+     - Design build và deployment integration
+     - Plan testing strategy across technologies
+```
+
+#### Step 2B: System Architecture Design (Architect - Fred)
+```yaml
+Objective: Create comprehensive system architecture
+Duration: 3-4 days  
+Deliverable: Complete System Architecture Document
+
+Process:
+  1. High-Level Architecture Design:
+     - Create system component diagram
+     - Define component responsibilities và boundaries
+     - Design inter-component communication patterns
+     - Plan data flow và storage strategies
+
+  2. API Design:
+     - Design RESTful API structure
+     - Plan GraphQL schema nếu applicable
+     - Design authentication và authorization flows
+     - Plan API versioning strategy
+
+  3. Data Architecture:
+     - Design database schema và relationships
+     - Plan data access patterns
+     - Design caching strategies
+     - Plan data migration approaches
+
+  4. Security Architecture:
+     - Design authentication mechanisms
+     - Plan authorization models
+     - Design data protection approaches
+     - Plan security monitoring
+```
+
+#### Step 2C: Infrastructure Planning Initiation (Platform Engineer - Alex)
+```yaml
+Objective: Begin infrastructure architecture planning
+Duration: 2-3 days
+Deliverable: Infrastructure Strategy Outline
+
+Process:
+  1. Infrastructure Requirements Analysis:
+     - Analyze system architecture infrastructure needs
+     - Identify compute, storage, network requirements
+     - Plan multi-environment strategy (dev, staging, prod)
+     - Assess compliance và security infrastructure needs
+
+  2. Cloud Platform Selection:
+     - Evaluate cloud platform options
+     - Plan hybrid hoặc multi-cloud strategies nếu needed
+     - Identify key cloud services required
+     - Plan cost optimization approaches
+```
+
+### Phase 3: Detailed Architecture Development (Week 3)
+
+#### Step 3A: Frontend Architecture Deep Dive (Design Architect - Jane)
+```yaml
+Objective: Create comprehensive frontend architecture document
+Duration: 4-5 days
+Deliverable: Complete Frontend Architecture Document
+
+Process:
+  1. Component Architecture Design:
+     - Design component hierarchy (Atomic Design pattern)
+     - Create component naming conventions
+     - Plan shared component library structure
+     - Design component props và API contracts
+
+  2. State Management Architecture:
+     - Design global state structure
+     - Plan component-level state patterns
+     - Design action và reducer patterns nếu using Redux
+     - Plan state synchronization với backend
+
+  3. Build và Performance Architecture:
+     - Plan webpack/build configuration
+     - Design code splitting strategies
+     - Plan performance optimization approaches
+     - Design progressive loading patterns
+
+  4. Frontend Integration Design:
+     - Plan API integration patterns
+     - Design authentication flow trong frontend
+     - Plan error handling strategies
+     - Design responsive breakpoint strategies
+```
+
+#### Step 3B: Infrastructure Architecture Completion (Platform Engineer - Alex)  
+```yaml
+Objective: Complete infrastructure architecture design
+Duration: 4-5 days
+Deliverable: Complete Infrastructure Architecture Document
+
+Process:
+  1. Detailed Infrastructure Design:
+     - Design network architecture với security zones
+     - Plan compute resource sizing và auto-scaling
+     - Design storage strategies cho different data types
+     - Plan load balancing và traffic management
+
+  2. Security Infrastructure:
+     - Design identity và access management (IAM)
+     - Plan network security controls
+     - Design data encryption approaches
+     - Plan security monitoring và compliance
+
+  3. DevOps Infrastructure:
+     - Design CI/CD pipeline infrastructure
+     - Plan deployment strategies (blue-green, canary)
+     - Design monitoring và logging infrastructure
+     - Plan disaster recovery procedures
+
+  4. Cost Optimization:
+     - Plan resource usage optimization
+     - Design auto-scaling policies
+     - Plan cost monitoring dashboards
+     - Identify reserved capacity opportunities
+```
+
+#### Step 3C: Architecture Integration Planning (All Architects)
+```yaml
+Objective: Ensure all architectures integrate seamlessly
+Duration: 1-2 days
+Deliverable: Architecture Integration Plan
+
+Process:
+  1. Cross-Architecture Validation:
+     - Validate technology choices align across architectures
+     - Check integration points are properly designed
+     - Verify performance targets are consistent
+     - Ensure security controls coordinate properly
+
+  2. Integration Testing Strategy:
+     - Plan end-to-end integration testing
+     - Design data flow validation approaches
+     - Plan deployment integration testing
+     - Design monitoring integration validation
+```
+
+### Phase 4: Architecture Validation & Handoff (Week 4)
+
+#### Step 4A: Architecture Quality Validation (All Architects)
+```yaml
+Objective: Validate architecture quality với comprehensive checklists
+Duration: 2-3 days
+Deliverable: Architecture Validation Reports
+
+Process:
+  1. System Architecture Validation (Architect - Fred):
+     - Execute Architect Solution Validation Checklist
+     - Document validation results và findings
+     - Identify critical issues requiring resolution
+     - Plan remediation approaches
+
+  2. Frontend Architecture Validation (Design Architect - Jane):
+     - Execute Frontend Architecture Validation Checklist  
+     - Validate UI/UX implementation approach
+     - Check component architecture soundness
+     - Verify performance optimization plans
+
+  3. Infrastructure Architecture Validation (Platform Engineer - Alex):
+     - Execute Infrastructure Validation Checklist
+     - Validate security và compliance controls
+     - Check resilience và disaster recovery plans
+     - Verify operational readiness
+```
+
+#### Step 4B: Architecture Documentation Finalization (All Architects)
+```yaml
+Objective: Complete all architecture documentation
+Duration: 2-3 days
+Deliverable: Complete Architecture Documentation Suite
+
+Process:
+  1. Documentation Review:
+     - Review all architecture documents cho completeness
+     - Ensure consistency across all documents
+     - Validate implementation guidance is clear
+     - Check diagrams và specifications are accurate
+
+  2. AI Agent Optimization Review:
+     - Verify architecture is optimized cho AI implementation
+     - Check component modularity supports AI development
+     - Ensure implementation patterns are clear
+     - Validate examples và templates are provided
+
+  3. Handoff Preparation:
+     - Create architecture handoff presentation
+     - Prepare implementation guidance summaries
+     - Plan architecture review meetings
+     - Prepare Q&A materials
+```
+
+#### Step 4C: Development Handoff (All Architects)
+```yaml
+Objective: Successfully hand off architecture to development phase
+Duration: 1-2 days
+Deliverable: Architecture Handoff Complete
+
+Process:
+  1. Architecture Presentation:
+     - Present complete architecture to stakeholders
+     - Review key technology decisions và rationale
+     - Discuss implementation priorities
+     - Address questions và concerns
+
+  2. Development Team Preparation:
+     - Review implementation guidance với development leads
+     - Plan development environment setup
+     - Discuss development phase priorities
+     - Establish architecture support procedures
+
+  3. Phase Transition:
+     - Transfer to BMAD-Development space
+     - Ensure all deliverables are complete
+     - Establish ongoing architecture support
+     - Plan architecture evolution procedures
+```
+
+---
+
+## 🔄 Alternative Workflows
+
+### ⚡ Fast-Track Architecture Workflow (2 Weeks)
+
+**Use When**: Simple applications với well-understood requirements, experienced team, standard technology stack
+
+#### Week 1: Foundation & Technology
+- Day 1-2: Requirements analysis + initial technology research
+- Day 3-4: Technology selection + high-level architecture
+- Day 5: Frontend strategy + infrastructure planning
+
+#### Week 2: Detailed Design & Validation
+- Day 1-2: System architecture completion
+- Day 3: Frontend architecture completion  
+- Day 4: Infrastructure architecture completion
+- Day 5: Validation + handoff preparation
+
+#### Success Criteria:
+- [ ] Simple application với standard patterns
+- [ ] Experienced team familiar với chosen technologies
+- [ ] Well-defined requirements với minimal unknowns
+- [ ] Acceptable risk level cho accelerated timeline
+
+### 🔬 Research-Heavy Architecture Workflow (6 Weeks)
+
+**Use When**: Complex applications với emerging technologies, high uncertainty, novel technical challenges
+
+#### Weeks 1-2: Extensive Research Phase
+- Deep technology research với proof-of-concepts
+- Complex integration feasibility studies
+- Performance benchmarking studies
+- Security assessment deep dives
+
+#### Weeks 3-4: Iterative Architecture Design
+- Multiple architecture iteration cycles
+- Prototype validation của key architectural decisions
+- Stakeholder feedback integration
+- Risk mitigation planning
+
+#### Weeks 5-6: Validation & Optimization
+- Comprehensive architecture validation
+- Performance optimization planning
+- Security hardening planning
+- Detailed implementation planning
+
+#### Success Criteria:
+- [ ] Complex technical challenges require extensive research
+- [ ] Multiple technology options need thorough evaluation
+- [ ] High-stakes project requiring maximum confidence
+- [ ] Timeline allows cho thorough investigation
+
+### 🔄 Legacy System Integration Workflow (4-5 Weeks)
+
+**Use When**: Significant integration với existing systems, migration requirements, legacy constraints
+
+#### Week 1: Legacy System Analysis
+- Comprehensive legacy system assessment
+- Integration point identification
+- Migration strategy development
+- Risk assessment cho legacy interactions
+
+#### Week 2-3: Architecture Design với Legacy Integration
+- Architecture design với legacy integration patterns
+- Migration planning với phased approaches
+- Data migration strategy development
+- Legacy system impact assessment
+
+#### Week 4-5: Integration Validation & Planning
+- Integration testing strategy development
+- Migration plan validation
+- Rollback procedure planning
+- Legacy system support planning
+
+#### Success Criteria:
+- [ ] Significant legacy system integration required
+- [ ] Migration strategy needs detailed planning
+- [ ] Legacy constraints significantly impact architecture choices
+- [ ] Risk mitigation critical cho business continuity
+
+---
+
+## ⚠️ Risk Management & Quality Gates
+
+### Critical Success Factors
+
+#### Must-Have Quality Gates:
+1. **Requirements Alignment**: 100% của PRD requirements addressed
+2. **Technology Validation**: All technology choices validated và compatible
+3. **Security Compliance**: All security requirements met
+4. **Performance Viability**: Architecture meets performance targets
+5. **Implementation Readiness**: Clear guidance provided cho development
+6. **AI Optimization**: Architecture optimized cho AI agent implementation
+
+#### Risk Mitigation Strategies:
+
+##### High-Risk Scenarios:
+- **Technology Uncertainty**: Extended research phase với proof-of-concepts
+- **Complex Integration**: Detailed integration testing strategy
+- **Performance Concerns**: Performance modeling và load testing planning
+- **Security Requirements**: Security architecture review với specialists
+- **Timeline Pressure**: Fast-track workflow với increased validation
+
+##### Quality Assurance:
+- **Peer Review**: All major architecture decisions reviewed by team
+- **Stakeholder Validation**: Regular stakeholder review sessions
+- **Checklist Validation**: Comprehensive checklist-based validation
+- **Documentation Quality**: Detailed documentation review for completeness
+
+---
+
+## 🎯 Architecture Phase Success Metrics
+
+### Quantitative Metrics:
+- **Requirements Coverage**: 100% của PRD requirements mapped to technical solutions
+- **Technology Decisions**: 100% của technology choices finalized với rationale
+- **Validation Completion**: 100% của validation checklists completed
+- **Documentation Completeness**: All required documents completed với quality review
+
+### Qualitative Assessment:
+- **Technical Excellence**: Architecture demonstrates technical best practices
+- **Implementation Readiness**: Development team confident in architecture
+- **Stakeholder Confidence**: Stakeholders approve architecture approach
+- **Future-Proofing**: Architecture designed cho scalability và evolution
+
+### Handoff Readiness Criteria:
+- [ ] All architecture documents complete và validated
+- [ ] Technology stack finalized với specific versions
+- [ ] Implementation guidance detailed và actionable
+- [ ] Development team prepared với architecture understanding
+- [ ] Risk mitigation plans in place cho identified concerns
+
+---
+
+## 🚀 Next Phase Preparation: Development Planning
+
+### Outputs Delivered to BMAD-Development:
+- ✅ **Complete System Architecture**: Detailed technical specification
+- ✅ **Frontend Architecture**: UI/UX implementation plan
+- ✅ **Infrastructure Architecture**: Cloud infrastructure design
+- ✅ **Technology Stack**: Finalized với specific versions
+- ✅ **Implementation Guidance**: Detailed development instructions
+- ✅ **Validation Reports**: Quality assurance documentation
+
+### Development Phase Success Setup:
+- Clear sprint planning guidance từ architecture
+- Development environment setup instructions
+- Code structure templates và patterns
+- Testing strategy aligned với architecture
+- CI/CD pipeline design ready cho implementation
+
+---
+
+**Architecture Excellence Delivered! Sẵn sàng chuyển đổi thành working software! 🏗️→💻✨**

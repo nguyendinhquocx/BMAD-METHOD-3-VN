@@ -1,0 +1,291 @@
+# BMAD Space Navigator - Hướng Dẫn Điều Hướng
+
+## 🗺️ Bản đồ toàn bộ hệ thống BMAD Spaces
+
+---
+
+## 📍 Bạn Đang Ở Đây: BMAD-Main
+
+### 🏠 BMAD-Main Space
+**Vai trò**: Trung tâm điều phối và điểm khởi đầu
+**Khi sử dụng**: 
+- Bắt đầu dự án mới
+- Không chắc chắn về giai đoạn hiện tại  
+- Cần overview về toàn bộ process
+- Cần hướng dẫn chọn space phù hợp
+
+**Nội dung chính**:
+- ✅ `agent-config-main.txt` - BMAD Orchestrator configuration
+- ✅ `bmad-overview.txt` - Tổng quan phương pháp BMAD
+- ✅ `workflow-guide.txt` - Hướng dẫn quy trình chi tiết
+- ✅ `space-navigator.txt` - File này, navigation guide
+- ✅ `personas-core.txt` - BMAD Orchestrator persona
+
+---
+
+## 🧭 Space Navigation Map
+
+```
+🏠 BMAD-Main (Bạn ở đây)
+├── 📋 BMAD-Planning
+│   ├── 🧠 Analyst (Mary) - Brainstorming & Research
+│   └── 📊 Product Manager (John) - PRD Creation
+├── 🏗️ BMAD-Architecture  
+│   ├── 🔧 Architect (Fred) - System Design
+│   ├── 🎨 Design Architect (Jane) - Frontend & UI/UX
+│   └── ☁️ Platform Engineer (Alex) - Infrastructure
+├── 💻 BMAD-Development
+│   ├── 📝 Product Owner (Sarah) - Epic Breakdown
+│   ├── 🏃 Scrum Master (Bob) - Story Creation  
+│   └── 🤖 Developer Agents - Implementation
+└── ⚙️ BMAD-Operations
+    ├── 🚀 Platform Engineer (Alex) - Deployment
+    └── 📊 Operations Team - Monitoring
+```
+
+---
+
+## 📋 BMAD-Planning Space
+
+### 🎯 Khi nào chuyển sang Planning?
+- ✅ Bạn có ý tưởng mới cần phát triển
+- ✅ Cần brainstorm và research market  
+- ✅ Muốn tạo PRD từ requirements thô
+- ✅ Cần define MVP scope
+
+### 👥 Agents có sẵn:
+- **🧠 Analyst (Mary)**: Brainstorming expert, Research specialist
+- **📊 Product Manager (John)**: PRD creation, Requirements definition
+
+### 📂 Files chính:
+- `personas-planning.txt` - Analyst & PM personas
+- `templates-planning.txt` - PRD templates, Project brief templates  
+- `checklists-planning.txt` - PM validation checklist
+- `tasks-planning.txt` - Brainstorming & research tasks
+- `planning-workflows.txt` - Detailed planning processes
+
+### 🚀 Cách bắt đầu:
+1. **Mô tả ý tưởng** của bạn cho Analyst
+2. **Chọn mode**: Brainstorming hoặc Deep Research
+3. **Phát triển PRD** với Product Manager
+4. **Validate** với PM Checklist
+
+### 🎯 Outputs mong muốn:
+- ✅ `PRD.md` - Product Requirements Document
+- ✅ `epics-overview.md` - Epic definitions
+- ✅ `user-personas.md` - Target users
+- ✅ `mvp-scope.md` - MVP scope clear
+
+### ➡️ Sau Planning chuyển đến: 🏗️ **BMAD-Architecture**
+
+---
+
+## 🏗️ BMAD-Architecture Space
+
+### 🎯 Khi nào chuyển sang Architecture?
+- ✅ Đã có PRD hoàn chỉnh và validated
+- ✅ Cần thiết kế technical architecture
+- ✅ Muốn select technology stack
+- ✅ Cần design UI/UX và frontend architecture
+
+### 👥 Agents có sẵn:
+- **🔧 Architect (Fred)**: System architecture, Tech stack selection
+- **🎨 Design Architect (Jane)**: Frontend architecture, UI/UX design  
+- **☁️ Platform Engineer (Alex)**: Infrastructure design, DevOps planning
+
+### 📂 Files chính:
+- `personas-architecture.txt` - Architecture team personas
+- `templates-architecture.txt` - Architecture document templates
+- `checklists-architecture.txt` - Architecture validation checklist  
+- `tasks-architecture.txt` - Design & tech selection tasks
+- `patterns-library.txt` - Common architecture patterns
+
+### 🚀 Cách bắt đầu:
+1. **Load PRD** từ Planning phase
+2. **Thiết kế system architecture** với Architect
+3. **Design frontend & UI/UX** với Design Architect
+4. **Plan infrastructure** với Platform Engineer
+5. **Validate** với Architecture Checklist
+
+### 🎯 Outputs mong muốn:
+- ✅ `architecture.md` - System architecture document
+- ✅ `frontend-architecture.md` - Frontend specifications
+- ✅ `infrastructure-architecture.md` - Infrastructure design
+- ✅ `api-specifications.md` - API contracts
+- ✅ `data-models.md` - Database schemas
+
+### ➡️ Sau Architecture chuyển đến: 💻 **BMAD-Development**
+
+---
+
+## 💻 BMAD-Development Space
+
+### 🎯 Khi nào chuyển sang Development?
+- ✅ Đã có Architecture documents hoàn chỉnh
+- ✅ Cần breakdown epics thành stories
+- ✅ Muốn prepare development-ready tasks
+- ✅ Sẵn sàng cho implementation với Claude Code
+
+### 👥 Agents có sẵn:
+- **📝 Product Owner (Sarah)**: Epic breakdown, Story validation
+- **🏃 Scrum Master (Bob)**: Story creation, Development preparation
+- **🤖 Developer Agents**: Ready for Claude Code integration
+
+### 📂 Files chính:
+- `personas-development.txt` - PO, SM, Developer personas
+- `templates-development.txt` - Story templates, DoD criteria
+- `checklists-development.txt` - Story validation checklists
+- `tasks-development.txt` - Story creation & dev tasks  
+- `dev-guidelines.txt` - Coding standards & best practices
+
+### 🚀 Cách bắt đầu:
+1. **Load Architecture docs** từ Architecture phase
+2. **Breakdown epics** với Product Owner
+3. **Create detailed stories** với Scrum Master  
+4. **Validate stories** với Story Draft Checklist
+5. **Prepare for Claude Code** implementation
+
+### 🎯 Outputs mong muốn:
+- ✅ `epics/` folder - Detailed epic definitions
+- ✅ `stories/` folder - Development-ready stories
+- ✅ `development-guidelines.md` - Coding standards
+- ✅ `testing-strategy.md` - Test approach
+
+### ➡️ Sau Development chuyển đến: ⚡ **Claude Code Implementation**
+
+---
+
+## ⚙️ BMAD-Operations Space
+
+### 🎯 Khi nào chuyển sang Operations?
+- ✅ Đã có working code từ implementation
+- ✅ Cần deploy lên production
+- ✅ Muốn setup monitoring & alerting
+- ✅ Cần establish operational procedures
+
+### 👥 Agents có sẵn:
+- **☁️ Platform Engineer (Alex)**: Production deployment, Infrastructure management
+- **📊 Operations Team**: Monitoring, Support procedures
+
+### 📂 Files chính:
+- `personas-operations.txt` - Platform engineer & ops team personas
+- `checklists-operations.txt` - Infrastructure validation checklist
+- `tasks-operations.txt` - Deployment & monitoring tasks
+- `operational-guides.txt` - Production procedures  
+- `troubleshooting.txt` - Common issues & solutions
+
+### 🚀 Cách bắt đầu:
+1. **Load code** từ Development phase
+2. **Setup production infrastructure** với Platform Engineer
+3. **Deploy application** với automated CI/CD
+4. **Configure monitoring** & alerting systems
+5. **Establish operations** procedures
+
+### 🎯 Outputs mong muốn:
+- ✅ Production deployment running
+- ✅ Monitoring & alerting active
+- ✅ Operational runbooks created
+- ✅ Support procedures established
+
+### ➡️ Sau Operations: 🔄 **Continuous Improvement & Next Iteration**
+
+---
+
+## 🔄 Navigation Patterns
+
+### 🚀 Linear Flow (Recommended cho dự án mới):
+```
+BMAD-Main → Planning → Architecture → Development → Operations
+```
+
+### 🔄 Iterative Flow (Cho improvements):
+```
+Operations → Planning (next features) → Architecture → Development → Operations
+```
+
+### 🆘 Problem-Solving Flow:
+```
+Any Space → BMAD-Main (for guidance) → Appropriate Space
+```
+
+### 🔧 Maintenance Flow:
+```
+Operations → Architecture (for changes) → Development → Operations
+```
+
+---
+
+## 📞 Handoff Protocols
+
+### 📋 Planning → 🏗️ Architecture
+**Required deliverables**:
+- ✅ `PRD.md` validated with PM Checklist
+- ✅ `epics-overview.md` 
+- ✅ `mvp-scope.md`
+- ✅ `technical-constraints.md`
+
+### 🏗️ Architecture → 💻 Development  
+**Required deliverables**:
+- ✅ `architecture.md` validated with Architecture Checklist
+- ✅ `frontend-architecture.md`
+- ✅ `api-specifications.md`
+- ✅ `data-models.md`
+
+### 💻 Development → ⚡ Implementation
+**Required deliverables**:
+- ✅ All stories pass Story Draft Checklist
+- ✅ Dependencies mapped
+- ✅ Testing strategy defined
+- ✅ Development environment ready
+
+### ⚡ Implementation → ⚙️ Operations
+**Required deliverables**:
+- ✅ Working code with passing tests
+- ✅ Documentation updated  
+- ✅ All stories completed
+- ✅ Performance validated
+
+---
+
+## 🆘 Troubleshooting Navigation
+
+### ❓ "Tôi không biết mình đang ở giai đoạn nào"
+**Solution**: Ở lại BMAD-Main, mô tả current state cho BMAD Orchestrator
+
+### ❓ "Tôi cần quay lại giai đoạn trước"
+**Solution**: Navigate về space trước, identify missing pieces, complete them
+
+### ❓ "Tôi cần thông tin từ nhiều spaces"
+**Solution**: Start with BMAD-Main, gather context, then go to most relevant space
+
+### ❓ "Tôi gặp lỗi khi implementation"
+**Solution**: 
+1. Check Development space cho story quality
+2. Review Architecture space cho technical decisions  
+3. Go to Operations space nếu là deployment issue
+
+---
+
+## 🎯 Quick Decision Tree
+
+```
+❓ Tôi nên đi đâu?
+├── Có ý tưởng mới → 📋 BMAD-Planning
+├── Có PRD, cần technical design → 🏗️ BMAD-Architecture  
+├── Có architecture, cần implementation plan → 💻 BMAD-Development
+├── Có code, cần deploy → ⚙️ BMAD-Operations
+├── Cần overview hoặc guidance → 🏠 BMAD-Main
+└── Gặp vấn đề không rõ → 🏠 BMAD-Main (for troubleshooting)
+```
+
+---
+
+## 🚀 Ready to Navigate?
+
+1. **Xác định current state** của dự án
+2. **Chọn space phù hợp** từ options above  
+3. **Click vào space link** (sẽ được cập nhật khi spaces ready)
+4. **Load required context** từ previous phases
+5. **Start working** với agents trong space đó!
+
+**Happy navigating! 🧭✨**
