@@ -1,0 +1,450 @@
+# BMAD-Mini Templates - Essential Templates Cho Dự Án Nhỏ
+
+---
+
+## 🎯 **Mini-PRD Template** - Lightweight Product Requirements
+
+### 📋 **Template: Mini Product Requirements Document**
+
+```markdown
+# [Project Name] - Mini PRD
+
+## 🎯 **Goal** 
+[One clear sentence: What problem does this solve và for whom?]
+Example: "Create a personal portfolio website to showcase my development projects and attract job opportunities."
+
+## 👥 **Target Users**
+[Who will use this? 1-2 sentences max]
+Example: "Tech recruiters và hiring managers looking to evaluate my skills, và potential clients seeking freelance developers."
+
+## ✅ **Features (MVP - Version 1)**
+- **Feature 1**: [Brief description với user value]
+- **Feature 2**: [Brief description với user value]  
+- **Feature 3**: [Brief description với user value]
+- **Feature 4**: [Brief description với user value]
+- **Feature 5**: [Brief description với user value]
+
+*Maximum 5-7 features cho MVP. Keep it focused!*
+
+## 🚫 **Not Included (V1)**
+[Features that would be nice but not essential cho MVP]
+- Future feature 1: Why it's V2
+- Future feature 2: Why it's V2
+- Future feature 3: Why it's V2
+
+## 🎨 **Design Direction**
+- **Style**: [Modern, minimal, colorful, professional, etc.]
+- **Inspiration**: [1-2 reference sites you like]
+- **Mood**: [Clean, playful, corporate, artistic, etc.]
+
+## 🔧 **Tech Preferences**
+- **Frontend**: [Any specific framework preference? Why?]
+- **Backend**: [API needed? Database? What type?]
+- **Hosting**: [Vercel, Netlify, AWS? Budget constraints?]
+- **Timeline**: [When do you need this live?]
+- **Budget**: [Free tier only, hoặc budget available?]
+
+## ✅ **Success Criteria**
+[How do you know this is successful? Be specific]
+- Success metric 1: [Measurable outcome]
+- Success metric 2: [Measurable outcome]
+- Success metric 3: [Measurable outcome]
+
+## 📱 **Device Support**
+- [ ] Desktop
+- [ ] Tablet  
+- [ ] Mobile
+- [ ] All responsive
+
+## 🎯 **Performance Goals**
+- Load time: [< 3 seconds typical]
+- Lighthouse score: [> 90 typical]
+- SEO needs: [Important? Không important?]
+
+---
+*Estimated completion time: [Your guess]*
+*Last updated: [Date]*
+```
+
+---
+
+## 🏗️ **Quick Architecture Template** - Rapid Tech Decisions
+
+### 📐 **Template: Technical Architecture Summary**
+
+```markdown
+# [Project] - Quick Architecture & Design
+
+## 🏗️ **Tech Stack Decision**
+
+### Frontend Choice: [Framework Name]
+**Why**: [1-2 sentences explaining rationale]
+**Alternatives considered**: [What else you looked at]
+**Trade-offs**: [What you're giving up vs gaining]
+
+### Backend/API: [Choice]  
+**Why**: [1-2 sentences explaining rationale]
+**Data needs**: [Database type, complexity level]
+**Authentication**: [Needed? How complex?]
+
+### Styling Approach: [CSS/Framework]
+**Why**: [Speed vs customization rationale]
+**Component library**: [Using existing hoặc custom?]
+
+### Hosting & Deployment: [Platform]
+**Why**: [Cost, ease, performance rationale]
+**Domain**: [Custom domain needed?]
+**CI/CD**: [Automated deployment approach]
+
+## 📱 **Key Screens & User Flow**
+
+### Screen 1: [Homepage/Landing]
+- **Purpose**: [What user accomplishes here]
+- **Main elements**: [Hero, nav, key sections]
+- **User actions**: [What can they do?]
+
+### Screen 2: [Main Feature Screen]  
+- **Purpose**: [Core functionality]
+- **Main elements**: [Key components, interactions]
+- **User actions**: [Primary user flow]
+
+### Screen 3: [Secondary Screen]
+- **Purpose**: [Supporting functionality]  
+- **Main elements**: [What's displayed]
+- **User actions**: [How they engage]
+
+## 🔄 **User Journey**
+**Happy Path**: Start → [Step 1] → [Step 2] → [Step 3] → Goal Achieved
+**Key interactions**: [Most important user actions]
+**Error handling**: [What happens when things go wrong]
+
+## 📦 **Implementation Approach**
+
+### Phase 1: Core Foundation (Days 1-X)
+- [ ] Project setup với chosen tech stack
+- [ ] Basic layout và routing structure  
+- [ ] Core styling system implemented
+- [ ] [Key feature 1] basic version
+- [ ] [Key feature 2] basic version
+
+### Phase 2: Feature Complete (Days X-Y)
+- [ ] [Remaining MVP features]
+- [ ] Responsive design implementation
+- [ ] Error handling và edge cases
+- [ ] Performance optimization basics
+
+### Phase 3: Polish & Deploy (Days Y-Z)
+- [ ] UI/UX polish và animations
+- [ ] SEO optimization (if needed)
+- [ ] Production deployment setup
+- [ ] Basic analytics/monitoring
+
+## ⚡ **Performance Strategy**
+- **Images**: [Optimization approach]
+- **Code splitting**: [Bundle optimization plan]
+- **Caching**: [Browser và CDN strategy]
+- **Core Web Vitals**: [LCP, FID, CLS targets]
+
+## 🔒 **Security Considerations**
+- **Data protection**: [What sensitive data, how protected]
+- **Authentication**: [Security level needed]
+- **API security**: [Rate limiting, validation approach]
+- **HTTPS**: [SSL certificate plan]
+
+## 📊 **Monitoring & Analytics**
+- **User analytics**: [Google Analytics, Vercel Analytics, etc.]
+- **Performance monitoring**: [Core Web Vitals tracking]
+- **Error tracking**: [How to catch và fix bugs]
+- **Uptime monitoring**: [Production health checks]
+
+---
+*Architecture completed by: [Agent name]*
+*Review date: [Date]*
+*Approved by: [Stakeholder]*
+```
+
+---
+
+## 🚀 **Mini Development Tasks Template** - Actionable Implementation
+
+### ⚙️ **Template: Development Task Breakdown**
+
+```markdown
+# [Project] - Development Tasks
+
+## 🏗️ **Phase 1: Setup & Foundation**
+*Estimated: 1-2 days*
+
+### Task 1.1: Project Initialization
+- [ ] Create project với [Framework] và [Language]
+- [ ] Install essential dependencies (styling, routing, etc.)
+- [ ] Setup development environment (linting, formatting)
+- [ ] Initialize Git repository với proper .gitignore
+- [ ] Create basic README với setup instructions
+- [ ] Configure deployment pipeline (GitHub Actions, Vercel, etc.)
+
+**Acceptance Criteria:**
+- Project runs locally với `npm run dev`
+- All linting và type checking passes
+- Deployment pipeline connects successfully
+- Basic folder structure established
+
+### Task 1.2: Layout & Styling Foundation
+- [ ] Implement basic layout structure (header, main, footer)
+- [ ] Setup responsive breakpoint system
+- [ ] Create color scheme và typography scale
+- [ ] Implement dark/light theme (if needed)
+- [ ] Add basic navigation functionality
+- [ ] Setup icon system (icon library hoặc SVG approach)
+
+**Acceptance Criteria:**
+- Layout responsive on mobile, tablet, desktop
+- Navigation works on all screen sizes
+- Typography và colors consistent across pages
+- Theme switching functional (if applicable)
+
+---
+
+## ✨ **Phase 2: Core Features Implementation**
+*Estimated: 3-5 days*
+
+### Task 2.1: [Primary Feature Name]
+- [ ] Create [feature] UI components
+- [ ] Implement [feature] core functionality
+- [ ] Add proper error handling
+- [ ] Test edge cases và user scenarios
+- [ ] Add loading states và user feedback
+- [ ] Ensure responsive behavior
+
+**Acceptance Criteria:**
+- Feature works as designed in PRD
+- Error states handled gracefully
+- Loading states provide clear feedback
+- Mobile experience optimized
+- Basic accessibility considerations met
+
+### Task 2.2: [Secondary Feature Name]  
+- [ ] Build [feature] interface
+- [ ] Connect to data source/API (if needed)
+- [ ] Implement user interactions
+- [ ] Add form validation (if applicable)
+- [ ] Test integration with other features
+- [ ] Performance optimization
+
+**Acceptance Criteria:**
+- Feature integrates smoothly với existing code
+- Data flows correctly through application
+- Forms validate properly với good UX
+- No performance regression introduced
+
+### Task 2.3: [Third Feature Name]
+- [ ] Design component architecture
+- [ ] Implement feature logic
+- [ ] Add any required third-party integrations
+- [ ] Create user-friendly interface
+- [ ] Test cross-browser compatibility
+- [ ] Document any complex logic
+
+**Acceptance Criteria:**
+- Works consistently across modern browsers
+- Third-party integrations stable
+- Code is maintainable và documented
+- User interface intuitive và accessible
+
+---
+
+## 🚀 **Phase 3: Polish, Optimize & Deploy**
+*Estimated: 1-3 days*
+
+### Task 3.1: Performance & SEO
+- [ ] Optimize images và assets (compression, formats)
+- [ ] Implement code splitting và lazy loading
+- [ ] Add meta tags cho SEO (if needed)  
+- [ ] Setup analytics tracking (Google Analytics, etc.)
+- [ ] Test và optimize Core Web Vitals
+- [ ] Add structured data markup (if applicable)
+
+**Acceptance Criteria:**
+- Lighthouse Performance score > 90
+- SEO score > 95 (if SEO important)
+- Analytics tracking events properly
+- Page load times < 3 seconds on 3G
+
+### Task 3.2: Production Deployment
+- [ ] Configure production environment variables
+- [ ] Setup custom domain (if needed)
+- [ ] Configure SSL certificate
+- [ ] Test production deployment thoroughly
+- [ ] Setup error monitoring (Sentry, LogRocket, etc.)
+- [ ] Create backup và recovery plan
+
+**Acceptance Criteria:**
+- Production site fully functional
+- Custom domain working với HTTPS
+- Error monitoring capturing issues
+- Deployment process documented
+
+### Task 3.3: Final Polish & Testing
+- [ ] Cross-device testing (mobile, tablet, desktop)
+- [ ] Cross-browser testing (Chrome, Firefox, Safari, Edge)
+- [ ] Accessibility audit và improvements
+- [ ] User acceptance testing với stakeholders
+- [ ] Performance testing under realistic conditions
+- [ ] Create user documentation (if needed)
+
+**Acceptance Criteria:**
+- Works consistently across target devices/browsers
+- Meets WCAG 2.1 AA accessibility standards
+- Stakeholder approval received
+- User documentation complete và helpful
+
+---
+
+## 🔄 **Quality Checklist**
+
+### Before Each Phase Completion:
+- [ ] Code review completed (self-review minimum)
+- [ ] All acceptance criteria met
+- [ ] Manual testing on target devices
+- [ ] Performance benchmarks achieved
+- [ ] No console errors in production
+- [ ] Documentation updated
+
+### Final Launch Checklist:
+- [ ] All MVP features working properly
+- [ ] Production deployment stable
+- [ ] Monitoring và analytics active
+- [ ] Performance targets met
+- [ ] Security considerations addressed
+- [ ] Team/stakeholder sign-off received
+
+---
+*Tasks created by: [Agent name]*
+*Timeline estimate: [X days total]*
+*Last updated: [Date]*
+```
+
+---
+
+## 🎨 **Quick Wireframe Template** - Visual Planning
+
+### 📐 **Template: Basic Screen Layouts**
+
+```markdown
+# [Project] - Quick Wireframes & UI Planning
+
+## 📱 **Screen 1: [Homepage/Landing Page]**
+
+### Desktop Layout (1200px+)
+```
++--------------------------------------------------+
+|  LOGO              NAV MENU           CONTACT    |
++--------------------------------------------------+
+|                                                  |
+|    HERO SECTION                    [IMAGE/       |
+|    - Main Headline                  GRAPHIC]     |
+|    - Subheading                                  |
+|    - CTA Button                                  |
+|                                                  |
++--------------------------------------------------+
+|                                                  |
+|    FEATURE SECTION 1              FEATURE 2     |
+|    - Icon/Image                   - Icon/Image   |
+|    - Description                  - Description  |
+|                                                  |
++--------------------------------------------------+
+|              FOOTER CONTENT                      |
++--------------------------------------------------+
+```
+
+### Mobile Layout (320px-767px)  
+```
++------------------------+
+|  LOGO        HAMBURGER |
++------------------------+
+|                        |
+|    [IMAGE/GRAPHIC]     |
+|                        |
+|    HERO SECTION        |
+|    - Main Headline     |
+|    - Subheading        |
+|    - CTA Button        |
+|                        |
++------------------------+
+|    FEATURE 1           |
+|    - Icon              |
+|    - Description       |
++------------------------+
+|    FEATURE 2           |
+|    - Icon              |
+|    - Description       |
++------------------------+
+|    FOOTER              |
++------------------------+
+```
+
+## 📄 **Screen 2: [Main Feature Page]**
+
+### Key Components:
+- **Header**: [Navigation elements]
+- **Main Content**: [Primary functionality]
+- **Sidebar**: [Secondary information/actions]
+- **Footer**: [Links, contact, etc.]
+
+### User Interactions:
+- Click: [What happens on primary click action]
+- Hover: [Visual feedback on hover]
+- Form submission: [What happens after form submit]
+- Error states: [How errors are displayed]
+
+## 🔄 **User Flow Diagram**
+
+```
+START
+  ↓
+[Landing Page]
+  ↓ (Click CTA)
+[Feature Page]
+  ↓ (Complete Action)
+[Success Page]
+  ↓
+END (Goal Achieved)
+
+Alternative Flow:
+[Landing Page] → [About Page] → [Contact Page] → [Success]
+```
+
+---
+*Wireframes created: [Date]*
+*Approved by: [Stakeholder]*
+```
+
+---
+
+## 🎯 **Template Usage Guidelines**
+
+### 🚀 **How to Use These Templates**
+
+1. **Start với Mini-PRD**: Define project scope clearly
+2. **Move to Quick Architecture**: Make technical decisions fast
+3. **Create Development Tasks**: Break work into actionable items
+4. **Sketch Wireframes**: Visualize key screens
+5. **Execute với Claude Code**: Use tasks cho automated development
+
+### ⚡ **Customization Tips**
+
+- **Adjust timeline**: Scale up/down based on project complexity
+- **Skip sections**: Remove parts không relevant cho your project
+- **Add specifics**: Include domain-specific requirements
+- **Iterate quickly**: These are starting points, evolve as needed
+
+### 🎯 **Quality Standards**
+
+- Keep templates **actionable** - every item should be clear
+- Make acceptance criteria **measurable** - avoid vague goals
+- Include **realistic timelines** - based on single developer capacity
+- Provide **upgrade path** - easy transition to full BMAD Method
+
+---
+
+**These templates designed for speed với quality. Use them to get từ idea to production trong 3-10 days! 🚀**

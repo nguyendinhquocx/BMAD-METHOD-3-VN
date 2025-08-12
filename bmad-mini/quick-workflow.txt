@@ -1,0 +1,543 @@
+# BMAD-Mini Quick Workflow - 3 Phases Cho Dự Án Nhỏ
+
+---
+
+## 🎯 **Overview: Lightning Fast Development**
+
+### ⚡ **BMAD-Mini Mission**
+**"From idea to production trong 3-10 days với structured approach và high quality."**
+
+### 🎪 **3-Phase Structure**
+```
+Phase 1: QUICK PLANNING (1-2 days)
+    ├── Rapid requirements gathering
+    ├── MVP definition
+    └── Project scope lock
+
+Phase 2: RAPID DESIGN (1-2 days)  
+    ├── Tech stack decisions
+    ├── UI/UX wireframes
+    └── Implementation roadmap
+
+Phase 3: BUILD & SHIP (2-7 days)
+    ├── Development execution
+    ├── Testing & polish
+    └── Production deployment
+```
+
+### 🚀 **Total Timeline**: 4-11 days từ idea → live product
+
+---
+
+## 📋 **Phase 1: Quick Planning** 
+### ⏱️ Duration: 1-2 days | Agent: Alex (Analyst-PM)
+
+### 🎯 **Phase Objectives**
+- Transform fuzzy idea thành clear, actionable requirements
+- Define MVP scope với realistic timeline
+- Identify technical constraints và user needs
+- Create foundation cho design phase
+
+### 🔄 **Workflow Process**
+
+#### **Step 1.1: Lightning Discovery (2 hours)**
+**When**: Project start, unclear requirements
+**Agent**: Alex (Analyst-PM)
+
+**Discovery Session Structure**:
+```markdown
+Hour 1: Problem & Opportunity Exploration
+├── 15 min: Current situation analysis
+├── 15 min: Problem statement refinement  
+├── 15 min: Target user identification
+├── 15 min: Competitive landscape quick scan
+
+Hour 2: Solution & Scope Definition
+├── 20 min: Feature brainstorming session
+├── 20 min: MVP vs nice-to-have classification
+├── 10 min: Success metrics definition
+├── 10 min: Timeline & resource assessment
+```
+
+**Key Questions Alex Asks**:
+- "What problem keeps your users awake at night?"
+- "If you could build only ONE feature, what would deliver most value?"
+- "Who is your ideal user? What's their typical day like?"
+- "How will you know this project succeeded?"
+- "What's the absolute minimum viable product?"
+- "What constraints do we have? (time, budget, technical)"
+
+**Output**: 
+- Problem statement (1 paragraph)
+- User persona (1-2 sentences)
+- Feature list (5-10 items, prioritized)
+- Success metrics (2-3 measurable outcomes)
+
+#### **Step 1.2: Mini-PRD Creation (3-4 hours)**
+**When**: After discovery session
+**Agent**: Alex (Analyst-PM)
+
+**PRD Development Process**:
+```markdown
+PRD Creation Timeline:
+├── Hour 1: Goal, users, problem statement
+├── Hour 2: Feature breakdown với user stories
+├── Hour 3: Technical preferences, constraints
+├── Hour 4: Success criteria, timeline, review
+```
+
+**Mini-PRD Structure**:
+- **Goal**: Clear one-sentence project purpose
+- **Target Users**: Specific user description
+- **MVP Features**: 5-7 core features maximum
+- **Not Included**: Features pushed to V2
+- **Design Direction**: Visual style preferences
+- **Tech Preferences**: Framework, hosting, constraints
+- **Success Criteria**: Measurable outcomes
+
+**Alex's Quality Checklist**:
+- [ ] Goal statement clear và compelling?
+- [ ] Target user specific (not "everyone")?
+- [ ] MVP features focused (not feature creep)?
+- [ ] Success criteria measurable?
+- [ ] Technical constraints realistic?
+- [ ] Timeline achievable với available resources?
+
+#### **Step 1.3: Stakeholder Alignment (1 hour)**
+**When**: PRD draft complete
+**Agent**: Alex (Analyst-PM)
+
+**Alignment Process**:
+- Present Mini-PRD to stakeholders
+- Gather feedback về scope, timeline, expectations
+- Adjust requirements based on input
+- Get formal approval to proceed
+- Document any changes hoặc assumptions
+
+**Phase 1 Success Criteria**:
+- [ ] Mini-PRD approved by stakeholders
+- [ ] MVP scope clearly defined và realistic
+- [ ] User needs validated
+- [ ] Technical constraints identified
+- [ ] Timeline agreed upon
+- [ ] Ready for design phase handoff
+
+**Handoff Package to Phase 2**:
+- ✅ Validated Mini-PRD document
+- ✅ User context summary
+- ✅ Technical constraint list
+- ✅ Success metrics definition
+
+**Typical Phase 1 Timeline**:
+- **Simple Projects**: 4-6 hours (single day)
+- **Medium Projects**: 8-10 hours (1-2 days)
+- **Complex Projects**: 12-16 hours (2 days)
+
+---
+
+## 🏗️ **Phase 2: Rapid Design**
+### ⏱️ Duration: 1-2 days | Agent: Sam (Architect-Designer)
+
+### 🎯 **Phase Objectives**
+- Select optimal tech stack cho project requirements
+- Design user experience và interface  
+- Create system architecture foundation
+- Prepare detailed implementation roadmap
+
+### 🔄 **Workflow Process**
+
+#### **Step 2.1: Tech Stack Selection (2-3 hours)**
+**When**: PRD handoff received
+**Agent**: Sam (Architect-Designer)
+
+**Technology Decision Framework**:
+```markdown
+Tech Stack Decision Process:
+├── 30 min: Requirements analysis (PRD review)
+├── 60 min: Technology options evaluation
+├── 30 min: Architecture planning
+├── 30 min: Tool ecosystem selection
+├── 30 min: Decision documentation
+```
+
+**Sam's Decision Matrix**:
+```markdown
+Evaluation Criteria (Score 1-10):
+├── Development Speed: How fast can we build?
+├── Learning Curve: How familiar is technology?
+├── Performance: Will it be fast enough?
+├── Scalability: Can it handle growth?
+├── Maintenance: Easy to update và extend?
+├── Cost: Fits budget constraints?
+├── Community: Good support và resources?
+```
+
+**Common Tech Stack Patterns Sam Uses**:
+
+**Static Website (Blog, Portfolio)**:
+- Frontend: Next.js + Tailwind CSS
+- Content: MDX hoặc Headless CMS
+- Hosting: Vercel hoặc Netlify
+- Timeline: 3-5 days
+
+**Web Application (Dashboard, Tool)**:
+- Frontend: React + TypeScript + Tailwind
+- Backend: Next.js API Routes hoặc Supabase
+- Database: PostgreSQL hoặc Firebase
+- Hosting: Vercel with database provider
+- Timeline: 5-10 days
+
+**E-commerce (Simple Store)**:
+- Frontend: Next.js + TypeScript
+- Payments: Stripe hoặc PayPal
+- Products: Sanity hoặc Shopify API
+- Hosting: Vercel
+- Timeline: 7-12 days
+
+#### **Step 2.2: UX/UI Design (3-4 hours)**
+**When**: Tech stack decided
+**Agent**: Sam (Architect-Designer)
+
+**Design Process**:
+```markdown
+UI Design Sprint:
+├── 30 min: User flow mapping
+├── 60 min: Mobile wireframe sketching  
+├── 60 min: Desktop layout planning
+├── 45 min: Component architecture
+├── 45 min: Design system basics
+```
+
+**Sam's Design Approach**:
+- **Mobile-First**: Design for 320px screen first
+- **Component-Thinking**: Reusable UI elements
+- **Accessibility-Ready**: WCAG 2.1 AA by design
+- **Performance-Conscious**: Minimal assets, fast loading
+- **User-Centric**: Prioritize user goals over visual flair
+
+**Design Deliverables**:
+- **Wireframes**: Key screens (mobile + desktop)
+- **Component List**: Reusable UI elements needed
+- **Design System**: Colors, typography, spacing
+- **User Flow**: How users navigate through app
+- **Interaction Notes**: Hover states, transitions, micro-animations
+
+#### **Step 2.3: System Architecture (1-2 hours)**
+**When**: UI design complete  
+**Agent**: Sam (Architect-Designer)
+
+**Architecture Planning**:
+```markdown
+System Design Elements:
+├── 30 min: Data flow architecture
+├── 30 min: API endpoint planning
+├── 30 min: State management strategy
+├── 30 min: Performance optimization plan
+```
+
+**Architecture Decisions**:
+- **Frontend Structure**: Component hierarchy, routing
+- **State Management**: Local state vs global state approach
+- **Data Flow**: How information moves through system
+- **API Design**: Endpoints needed, data structures
+- **Performance Strategy**: Code splitting, lazy loading, caching
+
+#### **Step 2.4: Implementation Roadmap (1 hour)**
+**When**: Architecture complete
+**Agent**: Sam (Architect-Designer)
+
+**Roadmap Creation**:
+```markdown
+Development Plan:
+├── 15 min: Task breakdown và sequencing
+├── 15 min: Dependencies identification
+├── 15 min: Risk assessment
+├── 15 min: Timeline estimation với buffer
+```
+
+**Phase 2 Success Criteria**:
+- [ ] Tech stack selected với clear rationale
+- [ ] UI wireframes complete cho all key screens
+- [ ] System architecture documented
+- [ ] Component library planned
+- [ ] Implementation roadmap với realistic timeline
+- [ ] All technical decisions documented
+
+**Handoff Package to Phase 3**:
+- ✅ Technical architecture document
+- ✅ UI wireframes và component specifications
+- ✅ Design system guidelines
+- ✅ Detailed implementation roadmap
+- ✅ Performance targets và requirements
+
+**Typical Phase 2 Timeline**:
+- **Simple Projects**: 6-8 hours (1 day)
+- **Medium Projects**: 10-14 hours (1.5 days)  
+- **Complex Projects**: 16-20 hours (2 days)
+
+---
+
+## 🚀 **Phase 3: Build & Ship**
+### ⏱️ Duration: 2-7 days | Agent: Chris (Developer-Ops)
+
+### 🎯 **Phase Objectives**
+- Transform design package into working application
+- Ensure high code quality và performance standards
+- Deploy securely to production environment
+- Setup monitoring và maintenance procedures
+
+### 🔄 **Workflow Process**
+
+#### **Step 3.1: Project Setup & Foundation (4-8 hours)**
+**When**: Design handoff received
+**Agent**: Chris (Developer-Ops)
+
+**Foundation Setup Checklist**:
+```markdown
+Project Initialization:
+├── 1 hour: Create project với chosen tech stack
+├── 1 hour: Setup development environment
+├── 1 hour: Configure build tools, linting, formatting
+├── 1 hour: Initialize Git với proper structure
+├── 2 hours: Create basic layout và routing
+├── 1 hour: Setup component library foundation
+├── 1 hour: Configure deployment pipeline
+```
+
+**Chris's Setup Standards**:
+- **Clean Code**: ESLint, Prettier, TypeScript (if applicable)
+- **Version Control**: Git với meaningful commit messages
+- **Development Environment**: Hot reload, fast builds
+- **Testing Setup**: Unit test framework configured
+- **CI/CD Pipeline**: Automated deployment ready
+- **Documentation**: README với setup instructions
+
+**Foundation Deliverables**:
+- Project runs locally với `npm run dev`
+- Basic routing và navigation working
+- Component library structure established  
+- Deployment pipeline connected
+- Development workflow optimized
+
+#### **Step 3.2: Core Feature Implementation (1-4 days)**
+**When**: Foundation setup complete
+**Agent**: Chris (Developer-Ops)
+
+**Feature Development Process**:
+```markdown
+Implementation Sprint:
+├── Day 1: Core feature 1 + basic UI
+├── Day 2: Core feature 2 + integrations  
+├── Day 3: Core feature 3 + error handling
+├── Day 4: Feature polish + edge cases
+```
+
+**Chris's Development Standards**:
+- **Component-First**: Build reusable UI components
+- **Mobile-Responsive**: Test on mobile devices regularly
+- **Error Handling**: Graceful failure states
+- **Performance**: Monitor bundle size, loading speed
+- **Accessibility**: Keyboard navigation, screen readers
+- **User Experience**: Loading states, feedback, animations
+
+**Quality Checkpoints**:
+- [ ] Feature works as specified in PRD
+- [ ] Mobile experience excellent
+- [ ] Error states handled gracefully  
+- [ ] Loading performance acceptable (<3s)
+- [ ] Cross-browser compatibility tested
+- [ ] Basic accessibility requirements met
+
+#### **Step 3.3: Testing & Polish (4-8 hours)**
+**When**: Core features complete
+**Agent**: Chris (Developer-Ops)
+
+**Quality Assurance Process**:
+```markdown
+Testing & Polish Sprint:
+├── 2 hours: Cross-device testing
+├── 2 hours: Performance optimization
+├── 1 hour: SEO setup (if needed)
+├── 1 hour: Analytics integration
+├── 2 hours: Final UI polish
+```
+
+**Chris's Quality Standards**:
+- **Performance**: Lighthouse score >90
+- **Accessibility**: Basic WCAG 2.1 compliance  
+- **SEO**: Meta tags, structured data (if needed)
+- **Cross-browser**: Chrome, Firefox, Safari, Edge
+- **Mobile**: Great experience on iOS và Android
+- **Loading Speed**: <3 seconds on 3G connection
+
+#### **Step 3.4: Production Deployment (2-4 hours)**
+**When**: Testing complete, stakeholder approval
+**Agent**: Chris (Developer-Ops)
+
+**Deployment Process**:
+```markdown
+Go-Live Checklist:
+├── 30 min: Final code review và testing
+├── 30 min: Production environment setup
+├── 30 min: Domain và SSL configuration
+├── 30 min: Deploy to production
+├── 30 min: Post-deployment validation
+├── 30 min: Monitoring và analytics setup
+├── 30 min: Documentation updates
+```
+
+**Production Readiness Checklist**:
+- [ ] All features working properly
+- [ ] Performance benchmarks met
+- [ ] Security best practices implemented
+- [ ] SSL certificate configured
+- [ ] Analytics tracking active
+- [ ] Error monitoring setup
+- [ ] Backup strategy in place
+- [ ] Documentation complete
+
+#### **Step 3.5: Handoff & Documentation (1-2 hours)**
+**When**: Production deployment successful
+**Agent**: Chris (Developer-Ops)
+
+**Project Completion Package**:
+```markdown
+Final Deliverables:
+├── ✅ Working application in production
+├── ✅ Performance report (Lighthouse scores)
+├── ✅ Analytics dashboard access
+├── ✅ Source code với documentation
+├── ✅ Deployment instructions
+├── ✅ Maintenance guidelines
+```
+
+**Phase 3 Success Criteria**:
+- [ ] Application fully functional in production
+- [ ] All MVP features working correctly
+- [ ] Performance targets achieved
+- [ ] Analytics và monitoring operational
+- [ ] Stakeholder acceptance received
+- [ ] Documentation complete för future maintenance
+
+**Typical Phase 3 Timeline**:
+- **Simple Projects**: 2-3 days
+- **Medium Projects**: 4-6 days
+- **Complex Projects**: 5-8 days
+
+---
+
+## 🎯 **Quality Gates Between Phases**
+
+### 🚪 **Phase 1 → Phase 2 Gate**
+**Requirements**:
+- [ ] Mini-PRD approved by stakeholders
+- [ ] MVP scope realistic và achievable
+- [ ] User needs clearly understood
+- [ ] Technical constraints identified
+- [ ] Success metrics defined
+
+**Handoff Meeting** (15 minutes):
+- Alex presents PRD to Sam
+- Sam asks clarifying questions
+- Any scope adjustments agreed upon
+- Timeline expectations confirmed
+
+### 🚪 **Phase 2 → Phase 3 Gate**
+**Requirements**:
+- [ ] Tech stack selected với rationale
+- [ ] UI design complete với wireframes
+- [ ] System architecture documented
+- [ ] Implementation roadmap detailed
+- [ ] Performance targets defined
+
+**Handoff Meeting** (30 minutes):
+- Sam presents design package to Chris
+- Chris reviews technical feasibility
+- Any implementation concerns addressed
+- Timeline và deliverable expectations set
+
+### 🚪 **Phase 3 → Client Gate**
+**Requirements**:
+- [ ] Application deployed và functional
+- [ ] Performance benchmarks achieved  
+- [ ] All MVP features working
+- [ ] Analytics và monitoring active
+- [ ] Documentation complete
+- [ ] Client acceptance received
+
+---
+
+## 📊 **BMAD-Mini Success Metrics**
+
+### ⚡ **Speed Metrics**
+- **Discovery to PRD**: <8 hours typical
+- **Design Phase**: <16 hours typical
+- **Development Phase**: <7 days typical
+- **Total Timeline**: 3-10 days idea to production
+
+### 🎯 **Quality Metrics**
+- **Lighthouse Performance**: >90 score
+- **Mobile Experience**: Fully responsive
+- **Accessibility**: WCAG 2.1 basic compliance
+- **Cross-browser**: Works on major browsers
+- **User Satisfaction**: Stakeholder approval
+
+### 💰 **Efficiency Metrics**  
+- **Rework Rate**: <10% of initial work
+- **Scope Creep**: <20% feature additions
+- **Bug Rate**: <5 critical bugs post-launch
+- **Time to Value**: Working prototype trong 48 hours
+
+---
+
+## 🔄 **Workflow Adaptations**
+
+### ⚡ **Express Mode** (1-3 days total)
+**When**: Extremely simple projects, prototypes
+**Adaptations**:
+- Combine Phase 1 và 2 (4 hours)
+- Skip detailed wireframes
+- Use proven tech stack
+- Minimal features only
+
+### 🎯 **Standard Mode** (3-7 days total)
+**When**: Typical small projects
+**Process**: Full 3-phase workflow as described
+
+### 🏗️ **Extended Mode** (7-14 days total)  
+**When**: Complex features, multiple integrations
+**Adaptations**:
+- Extended discovery period
+- Detailed technical planning
+- Phased development approach
+- More thorough testing
+
+---
+
+## 🚀 **BMAD-Mini Advantages**
+
+### ✅ **Compared to Ad-Hoc Development**
+- **Structure**: Clear phases prevent chaos
+- **Quality**: Built-in checkpoints ensure standards
+- **Speed**: Parallel work, no rework
+- **Documentation**: Decisions captured, maintainable
+
+### ✅ **Compared to Traditional Methodologies**
+- **Faster**: Days instead of weeks/months
+- **Focused**: MVP-first approach
+- **Flexible**: Can adapt scope quickly
+- **AI-Optimized**: Perfect for Claude Code integration
+
+### ✅ **Compared to Full BMAD Method**
+- **Lighter**: No process overhead
+- **Single Space**: Easy to manage  
+- **Quick Start**: No complex setup
+- **Upgradeable**: Can evolve to full BMAD
+
+---
+
+## 🎉 **Ready to Ship Fast!**
+
+**BMAD-Mini delivers structured approach without bureaucracy. Perfect balance của speed, quality, và professionalism cho small projects.**
+
+**Use this workflow to go từ idea → production trong 3-10 days với confidence! 🚀**
