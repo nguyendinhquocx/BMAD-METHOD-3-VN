@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
+import { syncAfterCompanyChange } from '@/lib/auto-sync'
 import type { Database } from '@/lib/database.types'
 
 type Company = Database['public']['Tables']['companies']['Row']
@@ -96,6 +97,9 @@ export default function CompanyForm({ company, onClose, onSave, userProfile }: C
 
         if (error) throw error
       }
+
+      // Trigger auto-sync to Google Sheets
+      syncAfterCompanyChange()
 
       onSave()
     } catch (error) {
