@@ -1,0 +1,545 @@
+# BMAD Operations Workflows - Quy Trình Vận Hành Chi Tiết
+
+---
+
+## 🎯 Overview - Tổng Quan Quy Trình
+
+### Operations Phase Mission
+**Deploy, monitor, và maintain production systems với reliability, security, và optimal performance cho end users.**
+
+### Key Success Outcomes
+- ✅ **Production Deployment**: Application running stably in production environment
+- ✅ **CI/CD Pipeline**: Automated testing, building, và deployment processes
+- ✅ **Monitoring & Alerting**: Comprehensive observability với proactive issue detection
+- ✅ **Security Compliance**: Security scanning, vulnerability management, compliance adherence
+- ✅ **Performance Optimization**: System performing within defined SLA requirements
+- ✅ **Incident Response**: Runbooks, escalation procedures, postmortem processes
+- ✅ **Infrastructure as Code**: All infrastructure versioned, repeatable, và auditable
+- ✅ **Disaster Recovery**: Backup strategies, recovery procedures tested và documented
+
+---
+
+## 🚀 Workflow 1: Initial Production Deployment (Greenfield)
+
+### Dành cho: First time deployment của new application to production
+
+### Phase 1: Pre-Deployment Setup (Week 1)
+
+#### Step 1.1: Infrastructure Planning (Day 1-2)
+**Agent**: DevOps Engineer (Tom)  
+**Duration**: 1-2 days
+
+**Activities**:
+- Review architecture documents từ development phase
+- Assess infrastructure requirements (compute, storage, network)
+- Plan cloud resource allocation và sizing
+- Design network topology với security considerations
+- Plan monitoring và logging architecture
+
+**Infrastructure Planning Template**:
+```markdown
+**Infrastructure Requirements**:
+├── **Compute**: CPU, Memory, Scaling requirements
+├── **Storage**: Database, File storage, Backup needs
+├── **Network**: Load balancing, CDN, Security groups
+├── **Security**: SSL certificates, Secrets management, Access control
+├── **Monitoring**: Metrics, Logs, Alerting endpoints
+└── **Backup**: Data backup, Recovery point objectives
+```
+
+**Deliverables**:
+- Infrastructure architecture diagram
+- Resource sizing recommendations
+- Security configuration plan
+- Monitoring strategy document
+
+#### Step 1.2: Infrastructure Provisioning (Day 2-3)
+**Agent**: DevOps Engineer (Tom)  
+**Duration**: 1-2 days
+
+**Activities**:
+- Create Infrastructure as Code templates (Terraform, CloudFormation, etc.)
+- Provision production environment resources
+- Configure security groups, IAM roles, network policies
+- Setup SSL certificates và domain configuration
+- Validate infrastructure connectivity và security
+
+**Infrastructure as Code Standards**:
+```markdown
+**IaC Best Practices**:
+├── **Version Control**: All infrastructure code in Git
+├── **Modular Design**: Reusable modules cho common components
+├── **Environment Separation**: Dev, Staging, Production isolation
+├── **State Management**: Centralized state với locking
+├── **Security Scanning**: Automated security policy validation
+└── **Documentation**: Clear README với setup instructions
+```
+
+**Deliverables**:
+- IaC templates (Terraform/CloudFormation files)
+- Provisioned infrastructure environments
+- Security configuration documentation
+- Infrastructure access credentials (securely stored)
+
+#### Step 1.3: CI/CD Pipeline Setup (Day 3-5)
+**Agent**: DevOps Engineer (Tom)  
+**Duration**: 2-3 days
+
+**Pipeline Stages Setup**:
+
+##### Build Stage
+```yaml
+# Example GitHub Actions Pipeline
+name: Production Deployment Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+      - name: Setup environment
+      - name: Install dependencies
+      - name: Run tests
+      - name: Security scanning
+      - name: Build application
+      - name: Build container image
+```
+
+##### Test Stage
+- Unit tests execution
+- Integration tests với staging database
+- Security vulnerability scanning
+- Code quality analysis
+- Performance benchmarking
+
+##### Deploy Stage
+- Blue-green deployment strategy
+- Health checks và smoke tests
+- Rollback mechanism configuration
+- Post-deployment validation
+
+**Deliverables**:
+- Complete CI/CD pipeline configuration
+- Automated testing framework
+- Deployment scripts với rollback capability
+- Pipeline documentation và runbooks
+
+### Phase 2: Monitoring & Security Setup (Week 2)
+
+#### Step 2.1: Monitoring System Configuration (Day 6-8)
+**Agent**: DevOps Engineer (Tom)  
+**Duration**: 2-3 days
+
+**Monitoring Stack Components**:
+```markdown
+**Observability Stack**:
+├── **Metrics**: Application metrics, Infrastructure metrics, Business metrics
+├── **Logs**: Application logs, Infrastructure logs, Audit logs
+├── **Traces**: Distributed tracing cho microservices
+├── **Alerts**: Smart alerting với escalation policies
+├── **Dashboards**: Real-time visualization và monitoring
+└── **SLA Monitoring**: Service level tracking và reporting
+```
+
+**Monitoring Implementation**:
+- Setup metrics collection (Prometheus, CloudWatch, DataDog)
+- Configure centralized logging (ELK Stack, Splunk, CloudWatch Logs)
+- Implement distributed tracing (Jaeger, Zipkin, X-Ray)
+- Create operational dashboards (Grafana, Kibana)
+- Configure alerting rules với escalation policies
+
+**Alert Configuration Examples**:
+```yaml
+# Critical Alerts
+- Application downtime (> 30 seconds)
+- High error rate (> 5% in 5 minutes)
+- Response time degradation (> 2 seconds 95th percentile)
+- CPU usage sustained > 80% cho 10 minutes
+- Memory usage > 90% cho 5 minutes
+- Disk space < 10% available
+
+# Warning Alerts  
+- High response time (> 1 second 95th percentile)
+- Elevated error rate (> 2% in 10 minutes)
+- CPU usage > 70% cho 15 minutes
+- Database connection pool > 80% utilized
+```
+
+**Deliverables**:
+- Complete monitoring stack deployed
+- Operational dashboards configured
+- Alert rules configured với escalation
+- Monitoring runbooks và troubleshooting guides
+
+#### Step 2.2: Security Hardening (Day 8-10)
+**Agent**: DevOps Engineer (Tom)  
+**Duration**: 2-3 days
+
+**Security Implementation Checklist**:
+```markdown
+**Production Security Hardening**:
+├── **Network Security**: WAF, Security groups, VPC configuration
+├── **Access Control**: IAM policies, MFA, Least privilege principle
+├── **Data Protection**: Encryption at rest và in transit
+├── **Secrets Management**: Secure credential storage và rotation
+├── **Compliance**: SOC2, PCI DSS, GDPR requirements
+├── **Vulnerability Management**: Regular scanning và patching
+├── **Audit Logging**: Comprehensive audit trail
+└── **Incident Response**: Security incident procedures
+```
+
+**Security Automation**:
+- Automated vulnerability scanning in CI/CD
+- Secret rotation policies
+- Security policy as code
+- Compliance reporting automation
+- Intrusion detection system configuration
+
+**Deliverables**:
+- Security hardening implementation
+- Compliance documentation
+- Security scanning automation
+- Incident response procedures
+
+### Phase 3: Deployment & Go-Live (Week 3)
+
+#### Step 3.1: Staging Deployment & Testing (Day 11-12)
+**Agent**: DevOps Engineer (Tom)  
+**Duration**: 1-2 days
+
+**Staging Validation Process**:
+```markdown
+**Pre-Production Validation**:
+├── **Functional Testing**: All features working như expected
+├── **Performance Testing**: Load testing với production-like data
+├── **Security Testing**: Penetration testing, vulnerability assessment
+├── **Integration Testing**: All external services functioning
+├── **Backup & Recovery**: Restore procedures tested
+├── **Monitoring Validation**: All alerts và dashboards working
+└── **Runbook Validation**: Operational procedures tested
+```
+
+**Load Testing Framework**:
+- Traffic simulation với realistic user patterns
+- Database performance under load
+- API response time validation
+- Resource utilization monitoring
+- Breaking point identification
+
+**Deliverables**:
+- Staging environment fully validated
+- Performance test results
+- Security test clearance
+- Go-live readiness checklist completed
+
+#### Step 3.2: Production Deployment (Day 13)
+**Agent**: DevOps Engineer (Tom)  
+**Duration**: 4-6 hours
+
+**Deployment Day Procedure**:
+```markdown
+**Go-Live Timeline** (Recommended: Early morning, low traffic):
+├── **Pre-Deployment** (30 min)
+│   ├── Team assembly và communication channels
+│   ├── Rollback plan confirmation
+│   ├── Monitoring dashboard setup
+│   └── Stakeholder notification
+├── **Deployment Execution** (60-90 min)
+│   ├── Blue-green deployment initiation
+│   ├── Health checks validation
+│   ├── Smoke tests execution
+│   └── Traffic cutover (gradual)
+├── **Post-Deployment** (60 min)
+│   ├── System monitoring với extended observation
+│   ├── User acceptance validation
+│   ├── Performance metrics validation
+│   └── Success confirmation communication
+└── **Cleanup** (30 min)
+    ├── Old version decommissioning
+    ├── Documentation updates
+    └── Team debrief scheduling
+```
+
+**Rollback Criteria**:
+- Error rate > 5% trong 10 minutes
+- Response time > 3 seconds 95th percentile
+- Any critical functionality not working
+- Security incident detected
+- Database connectivity issues
+
+**Deliverables**:
+- Application successfully deployed to production
+- All health checks passing
+- Monitoring confirming stable operation
+- Go-live communication sent to stakeholders
+
+#### Step 3.3: Post-Deployment Monitoring (Day 13-15)
+**Agent**: DevOps Engineer (Tom)  
+**Duration**: 2-3 days intensive monitoring
+
+**24/7 Monitoring Period**:
+- Continuous system health monitoring
+- User experience tracking
+- Performance metrics analysis
+- Error rate monitoring
+- Business metrics validation
+
+**Daily Status Reports**:
+```markdown
+**Daily Production Health Report**:
+├── **System Status**: Uptime, Response times, Error rates
+├── **User Experience**: Active users, Session duration, Conversion rates  
+├── **Infrastructure**: Resource utilization, Cost analysis
+├── **Security**: Security events, Vulnerability status
+├── **Business Impact**: Revenue impact, User satisfaction
+└── **Action Items**: Issues identified, Optimizations planned
+```
+
+**Deliverables**:
+- 72-hour stable operation confirmation
+- Performance baseline established
+- Any critical issues resolved
+- Operations team handoff completed
+
+---
+
+## 🔄 Workflow 2: Feature Release Deployment
+
+### Dành cho: Deploying new features to existing production system
+
+### Modified Deployment Approach
+
+#### Phase 1: Feature Release Planning (2-3 days)
+- **Release Scope Analysis**: What's changing, impact assessment
+- **Deployment Strategy**: Blue-green, Canary, Feature flags
+- **Rollback Plan**: How to quickly revert nếu có issues
+- **User Communication**: Release notes, user notifications
+
+#### Phase 2: Canary Deployment (1-2 days)
+- **Limited User Rollout**: 5-10% traffic initially
+- **A/B Testing Setup**: Compare new vs old functionality
+- **Monitoring Enhancement**: Additional metrics cho new features
+- **Gradual Rollout**: 25%, 50%, 100% traffic progression
+
+#### Phase 3: Full Release & Monitoring (2-3 days)
+- **Complete Feature Activation**: All users access new features
+- **User Adoption Monitoring**: Usage patterns, feedback collection
+- **Performance Impact**: Resource utilization changes
+- **Business Metrics**: Feature success measurement
+
+---
+
+## 🚨 Workflow 3: Incident Response & Recovery
+
+### Dành cho: Production incidents requiring immediate response
+
+### Incident Response Process
+
+#### Phase 1: Incident Detection & Triage (0-15 minutes)
+**Alert Categories**:
+```markdown
+**Incident Severity Levels**:
+├── **P0 (Critical)**: Complete service outage
+├── **P1 (High)**: Major feature not working, affects >50% users
+├── **P2 (Medium)**: Minor feature issues, affects <50% users  
+├── **P3 (Low)**: Performance degradation, doesn't affect functionality
+└── **P4 (Informational)**: Monitoring alerts, no user impact
+```
+
+**Immediate Response Actions**:
+- Alert acknowledgment trong 5 minutes
+- Incident commander assignment
+- Communication channels setup
+- Initial impact assessment
+- Escalation if needed
+
+#### Phase 2: Investigation & Mitigation (15-60 minutes)
+**Investigation Framework**:
+```markdown
+**Troubleshooting Steps**:
+├── **Symptoms**: What is users experiencing?
+├── **Timeline**: When did issue start? What changed recently?
+├── **Logs Analysis**: Error messages, Stack traces, System events
+├── **Monitoring Data**: Metrics trends, Performance degradation
+├── **Infrastructure**: Server health, Network connectivity, Database status
+└── **Dependencies**: External services, Third-party APIs
+```
+
+**Mitigation Strategies**:
+- Quick fixes (restart services, clear caches)
+- Traffic routing (redirect to healthy instances)
+- Feature flags (disable problematic features)
+- Rollback (revert to previous working version)
+- Scaling (add more resources nếu capacity issue)
+
+#### Phase 3: Resolution & Recovery (1-4 hours)
+**Resolution Process**:
+- Root cause identification
+- Permanent fix implementation
+- Verification of fix effectiveness
+- System stability monitoring
+- User communication về resolution
+
+#### Phase 4: Post-Incident Review (24-48 hours after)
+**Post-Mortem Process**:
+```markdown
+**Post-Mortem Structure**:
+├── **Incident Summary**: What happened, When, Impact
+├── **Timeline**: Detailed sequence of events
+├── **Root Cause**: Why did incident occur?
+├── **Response Analysis**: What went well? What could improve?
+├── **Prevention**: How to prevent similar incidents?
+└── **Action Items**: Specific improvements với owners và deadlines
+```
+
+---
+
+## ⚡ Workflow 4: Performance Optimization
+
+### Dành cho: Improving system performance và user experience
+
+### Performance Optimization Process
+
+#### Phase 1: Performance Baseline & Analysis (3-5 days)
+**Performance Metrics Collection**:
+```markdown
+**Key Performance Indicators**:
+├── **Response Time**: API endpoints, Page load times
+├── **Throughput**: Requests per second, Transactions per minute
+├── **Resource Utilization**: CPU, Memory, Disk, Network
+├── **Database Performance**: Query times, Connection pools
+├── **User Experience**: Time to first byte, Time to interactive
+└── **Business Metrics**: Conversion rates, User engagement
+```
+
+**Performance Analysis Tools**:
+- Application Performance Monitoring (APM)
+- Database query analysis
+- Load testing với realistic traffic
+- User experience monitoring
+- Infrastructure metrics analysis
+
+#### Phase 2: Optimization Implementation (5-7 days)
+**Optimization Strategies**:
+- Code optimization (algorithm improvements, memory management)
+- Database optimization (query tuning, indexing, caching)
+- Infrastructure scaling (horizontal/vertical scaling)
+- Caching implementation (Redis, CDN, application-level)
+- Asset optimization (compression, minification, lazy loading)
+
+#### Phase 3: Validation & Monitoring (2-3 days)
+**Performance Validation**:
+- Before/after comparison
+- Load testing với optimizations
+- User experience impact measurement
+- Cost-benefit analysis
+- Long-term performance monitoring setup
+
+---
+
+## 🔧 Workflow 5: Infrastructure Updates & Maintenance
+
+### Dành cho: Regular infrastructure updates và security patches
+
+### Maintenance Process
+
+#### Phase 1: Maintenance Planning (1-2 days)
+- **Update Assessment**: What needs updating, Security patches, System upgrades
+- **Impact Analysis**: Downtime requirements, User impact, Rollback plan
+- **Maintenance Window**: Scheduled maintenance time, User notification
+- **Testing Strategy**: How to validate updates
+
+#### Phase 2: Staging Updates & Testing (2-3 days)
+- **Staging Environment Updates**: Apply updates to staging first
+- **Comprehensive Testing**: Functionality, Performance, Security validation
+- **Update Documentation**: Change logs, Known issues, Rollback procedures
+- **Team Preparation**: Update runbooks, Communication plans
+
+#### Phase 3: Production Updates (1 day)
+- **Maintenance Execution**: Apply updates during scheduled window
+- **Validation Testing**: Post-update system validation
+- **Monitoring**: Extended monitoring period sau updates
+- **Communication**: Update completion notification
+
+---
+
+## 📊 Operations Workflow Quality Metrics
+
+### Operational Excellence Metrics
+
+#### Deployment Metrics
+- **Deployment Frequency**: How often deployments occur
+- **Lead Time**: Time from code commit to production
+- **Deployment Success Rate**: Percentage of successful deployments
+- **Mean Time to Recovery**: Time to recover từ incidents
+
+#### System Performance Metrics
+- **Availability**: System uptime percentage (target: 99.9%+)
+- **Response Time**: API response time 95th percentile
+- **Error Rate**: Application error rate (target: <1%)
+- **Throughput**: Requests per second handled
+
+#### Security & Compliance Metrics
+- **Vulnerability Resolution Time**: Time to fix security issues
+- **Compliance Score**: Adherence to security policies
+- **Incident Response Time**: Time to respond to security incidents
+- **Audit Pass Rate**: Successful compliance audits
+
+### Continuous Improvement Framework
+
+#### Weekly Operations Review
+- Review performance metrics trends
+- Identify optimization opportunities
+- Plan infrastructure improvements
+- Update operational procedures
+
+#### Monthly Infrastructure Review
+- Analyze cost optimization opportunities
+- Review scaling requirements
+- Plan technology upgrades
+- Update disaster recovery procedures
+
+---
+
+## 🎯 Operations Workflow Decision Tree
+
+```
+❓ What type of operational activity?
+├── New Application Deployment
+│   ├── Complex Application → Full 3-week deployment process
+│   └── Simple Application → Streamlined 2-week deployment
+├── Feature Release
+│   ├── High-risk Change → Canary deployment với gradual rollout
+│   └── Low-risk Change → Blue-green deployment
+├── Production Incident
+│   ├── P0/P1 Incident → Immediate war room, All hands response
+│   └── P2/P3 Incident → Standard incident response process
+├── Performance Issues
+│   ├── Critical Performance → Emergency optimization workflow
+│   └── Gradual Degradation → Planned optimization workflow
+└── Maintenance & Updates
+    ├── Security Patches → Emergency patching workflow
+    └── Regular Updates → Scheduled maintenance workflow
+```
+
+---
+
+## 🚀 Operations Workflows Excellence!
+
+Các workflows này cung cấp:
+
+- ⚡ **Reliable Deployments**: Proven processes cho zero-downtime deployments
+- 📊 **Comprehensive Monitoring**: Full observability với proactive alerting
+- 🔒 **Security First**: Security hardening và compliance built-in
+- 🚨 **Incident Readiness**: Structured incident response với fast recovery
+- ⚖️ **Performance Optimization**: Continuous improvement của system performance
+- 🔧 **Infrastructure Management**: Systematic approach to infrastructure maintenance
+- 📈 **Operational Excellence**: Metrics-driven continuous improvement
+
+**Use these workflows to ensure rock-solid, scalable, secure production operations! 🌟**

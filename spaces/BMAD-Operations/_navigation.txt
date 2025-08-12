@@ -1,0 +1,155 @@
+# BMAD Operations Space Navigation
+
+## 📍 Current Location
+**Space**: BMAD-Operations  
+**Phase**: Operations & Deployment  
+**Purpose**: Deploy, monitor, and maintain production systems with reliability and security
+
+---
+
+## 🧭 BMAD Navigation Links
+
+### 🔗 Other BMAD Spaces
+- 🏠 **BMAD-Main**: [Navigation Hub] - Return for overview và guidance
+- 📋 **BMAD-Planning**: [Planning Space] - Initial phase: Requirements & analysis
+- 🏗️ **BMAD-Architecture**: [Architecture Space] - Design phase: System architecture  
+- 💻 **BMAD-Development**: [Development Space] - Previous phase: Implementation & testing
+
+---
+
+## ⚙️ Current Phase: Operations & Deployment
+
+### 🎯 Phase Objectives
+- Deploy applications to production environments safely
+- Implement comprehensive monitoring và alerting systems
+- Establish CI/CD pipelines cho automated deployments
+- Ensure security, performance, và reliability standards
+- Create operational runbooks và incident response procedures
+- Maintain infrastructure với zero-downtime strategies
+
+### 👥 Available Agents in This Space
+- 🔧 **DevOps Engineer (Tom)**: Infrastructure automation, deployment expert với 10+ years experience
+
+---
+
+## 📂 Files Available in This Space
+
+### Core Files
+- **personas-operations.txt**: DevOps Engineer persona với specialized deployment capabilities
+- **templates-operations.txt**: Production deployment plan, monitoring setup templates
+- **checklists-operations.txt**: Infrastructure validation, deployment readiness checklists  
+- **tasks-operations.txt**: Deployment, monitoring, infrastructure management tasks
+- **operations-workflows.txt**: Detailed operational workflows cho different deployment scenarios
+- **_navigation.txt**: This file - navigation guide
+
+---
+
+## 🚀 How to Get Started in Operations Space
+
+### Step 1: Identify Your Deployment Stage
+```
+❓ What describes your current state?
+├── First production deployment → Use Initial Deployment workflow
+├── Feature deployment → Use Feature Release workflow  
+├── Infrastructure changes → Use Infrastructure Update workflow
+├── Performance issues → Use Performance Optimization workflow
+├── Security updates → Use Security Patch workflow
+└── Incident response → Use Incident Management workflow
+```
+
+### Step 2: Choose Your Operational Focus
+- **For New Deployments**: Setup complete CI/CD pipeline và monitoring
+- **For Updates**: Use blue-green hoặc canary deployment strategies
+- **For Maintenance**: Focus on monitoring, alerting, và performance optimization
+- **For Scaling**: Implement auto-scaling và load balancing strategies
+
+### Step 3: Follow DevOps Best Practices
+1. **Infrastructure as Code**: All infrastructure defined in version control
+2. **Automated Testing**: Comprehensive testing in CI/CD pipeline  
+3. **Monitoring**: Full observability với metrics, logs, và tracing
+4. **Security**: Security scanning, vulnerability management, compliance
+5. **Incident Response**: Runbooks, alerting, và post-mortem processes
+
+---
+
+## ➡️ Ready for Production?
+
+### ⚙️ Current Phase Success Criteria
+- [ ] Production environment configured và secured
+- [ ] CI/CD pipeline functional với automated testing
+- [ ] Monitoring và alerting systems operational
+- [ ] Security scanning và compliance checks passing
+- [ ] Performance benchmarks met hoặc exceeded  
+- [ ] Incident response procedures documented và tested
+- [ ] Backup và disaster recovery plans validated
+- [ ] Team trained on operational procedures
+
+### 🔄 Continuous Operations Cycle
+**After Initial Deployment**: Maintain continuous improvement cycle:
+- Regular security updates và patches
+- Performance monitoring và optimization
+- Capacity planning và scaling
+- Incident response và post-mortems
+- Infrastructure updates và modernization
+
+---
+
+## 🆘 Need Help?
+
+### 📖 Available Resources
+- **templates-operations.txt**: All templates cho operational artifacts
+- **tasks-operations.txt**: Detailed task instructions cho DevOps operations
+- **checklists-operations.txt**: Production readiness và quality checklists
+- **operations-workflows.txt**: Complete operational workflow guidance
+
+### 🏠 Return to Main Hub
+If you need overall guidance hoặc want to understand how Operations fits into bigger BMAD process, return to **BMAD-Main space**.
+
+### 🤝 Agent Assistance  
+- **DevOps Engineer (Tom)**: Expert in CI/CD, container orchestration, infrastructure automation, monitoring systems
+
+---
+
+## 🎯 Quick Start Commands
+
+### For New Deployments:
+1. "Deploy my application to production" → **Production Deployment workflow**
+2. "Setup monitoring for my application" → **Monitoring Setup task**  
+3. "Configure CI/CD pipeline" → **Pipeline Configuration task**
+
+### For Maintenance:
+1. "My application has performance issues" → **Performance Optimization workflow**
+2. "I need to update infrastructure" → **Infrastructure Update workflow**
+3. "Security vulnerability detected" → **Security Patch workflow**
+
+### For Scaling:
+1. "Application needs to handle more traffic" → **Scaling Strategy task**
+2. "Setup load balancing" → **Load Balancer Configuration**
+
+### For Incidents:
+1. "Production is down!" → **Incident Response workflow**
+2. "Need to rollback deployment" → **Rollback Procedure**
+
+---
+
+## 🏆 Operations Excellence
+
+### Key Metrics to Track
+- **Availability**: 99.9%+ uptime target
+- **Performance**: Response time < 200ms for 95th percentile
+- **Deployment**: Mean time to deployment < 15 minutes
+- **Recovery**: Mean time to recovery < 30 minutes
+- **Security**: Zero critical vulnerabilities in production
+
+### Best Practices
+- ✅ Infrastructure as Code cho all environments
+- ✅ Automated testing trong CI/CD pipeline
+- ✅ Blue-green hoặc canary deployments
+- ✅ Comprehensive monitoring với alerting
+- ✅ Regular security scans và updates
+- ✅ Incident response playbooks
+- ✅ Regular backup và disaster recovery testing
+
+---
+
+**Ready for Rock-Solid Operations! Deploy with confidence! ⚙️🚀**
